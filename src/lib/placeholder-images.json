@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-new",
-      "description": "A mosque at sunset with a beautiful sky.",
-      "imageUrl": "https://images.unsplash.com/photo-1564121211835-e88c852648ab?auto=format&fit=crop&q=80&w=1920",
-      "imageHint": "mosque sunset"
+      "description": "An open Quran on a book stand with prayer beads.",
+      "imageUrl": "https://images.unsplash.com/photo-1604272186548-403370b4a1a3?auto=format&fit=crop&q=80&w=1920",
+      "imageHint": "quran prayer"
     },
     {
       "id": "new-course-1",
@@ -107,6 +107,12 @@
       "description": "A professional certificate template.",
       "imageUrl": "https://images.unsplash.com/photo-1697086279220-bcaea17a8734?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjZXJ0aWZpY2F0ZSUyMHRlbXBsYXRlfGVufDB8fHx8MTc3MTMzODI5MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "certificate template"
+    },
+    {
+      "id": "hero-1",
+      "description": "An open Quran on a book stand with intricate details.",
+      "imageUrl": "https://images.unsplash.com/photo-1530522129033-7265101034e3?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "quran stand"
     }
   ]
 }
