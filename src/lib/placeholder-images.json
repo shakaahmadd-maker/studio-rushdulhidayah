@@ -1,3 +1,94 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A person reading the Quran in a peaceful, well-lit room.",
+      "imageUrl": "https://images.unsplash.com/photo-1618190405497-00f284b5dda5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZWFkaW5nJTIwcXVyYW58ZW58MHx8fHwxNzcxMzM4MjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "reading quran"
+    },
+    {
+      "id": "course-1",
+      "description": "Arabic calligraphy of the first letters of the alphabet.",
+      "imageUrl": "https://images.unsplash.com/photo-1629212094410-e5bd12fe49c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcmFiaWMlMjBjYWxsaWdyYXBoeXxlbnwwfHx8fDE3NzEyNjIyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "arabic calligraphy"
+    },
+    {
+      "id": "course-2",
+      "description": "An open Quran with a beautiful bookmarker.",
+      "imageUrl": "https://images.unsplash.com/photo-1609665662034-39a381ce402a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvcGVuJTIwcXVyYW58ZW58MHx8fHwxNzcxMjQzODkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "open quran"
+    },
+    {
+      "id": "course-3",
+      "description": "A person in deep concentration, symbolizing memorization.",
+      "imageUrl": "https://images.unsplash.com/photo-1518644730709-0835105d9daa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjB0aGlua2luZ3xlbnwwfHx8fDE3NzEyODkxNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person thinking"
+    },
+    {
+      "id": "course-4",
+      "description": "An old manuscript with translations, signifying knowledge and wisdom.",
+      "imageUrl": "https://images.unsplash.com/photo-1764509195129-1ea255a907b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbmNpZW50JTIwbWFudXNjcmlwdHxlbnwwfHx8fDE3NzEzMzgyOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient manuscript"
+    },
+    {
+      "id": "course-5",
+      "description": "A child happily learning, with colorful books.",
+      "imageUrl": "https://images.unsplash.com/photo-1529390079861-591de354faf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGlsZCUyMGxlYXJuaW5nfGVufDB8fHx8MTc3MTIzMjkyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child learning"
+    },
+    {
+      "id": "course-6",
+      "description": "A prayer rug inside a mosque.",
+      "imageUrl": "https://images.unsplash.com/photo-1589725617150-0ef95799033f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcmF5ZXIlMjBydWd8ZW58MHx8fHwxNzcxMjUyOTYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "prayer rug"
+    },
+    {
+      "id": "tutor-1",
+      "description": "Portrait of a friendly and knowledgeable male tutor.",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzEyNjI5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "tutor-2",
+      "description": "Portrait of a warm and professional female tutor.",
+      "imageUrl": "https://images.unsplash.com/photo-1610655507808-a59293f4e332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MTIyMDQ1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "tutor-3",
+      "description": "Portrait of an engaging and patient male tutor.",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwdGVhY2hlcnxlbnwwfHx8fDE3NzEyNzE4MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male teacher"
+    },
+    {
+      "id": "tutor-4",
+      "description": "Portrait of a kind and smiling female tutor.",
+      "imageUrl": "https://images.unsplash.com/photo-1615538785945-6625ccdb4b25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjB0ZWFjaGVyfGVufDB8fHx8MTc3MTI3MTgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female teacher"
+    },
+    {
+      "id": "student-1",
+      "description": "Portrait of a mother.",
+      "imageUrl": "https://images.unsplash.com/photo-1570888510609-56a3c0562fa0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3RoZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzEyODgwNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mother portrait"
+    },
+    {
+      "id": "student-2",
+      "description": "Portrait of a man in his 30s.",
+      "imageUrl": "https://images.unsplash.com/photo-1633367583895-08545d733dfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc3MTMyNzQ1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "student-3",
+      "description": "Portrait of a woman.",
+      "imageUrl": "https://images.unsplash.com/photo-1598625873873-52f9aefd7d9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzcxMjgzMDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "certificate-1",
+      "description": "A professional certificate template.",
+      "imageUrl": "https://images.unsplash.com/photo-1697086279220-bcaea17a8734?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjZXJ0aWZpY2F0ZSUyMHRlbXBsYXRlfGVufDB8fHx8MTc3MTMzODI5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate template"
+    }
+  ]
 }
