@@ -16,7 +16,7 @@ import {
   ChevronRight,
   ShieldCheck,
   CreditCard,
-  Hands,
+  Hand,
 } from 'lucide-react';
 
 export default function AsaanNamazCoursePage() {
@@ -115,7 +115,7 @@ export default function AsaanNamazCoursePage() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white aspect-[4/3] bg-[#0a2a2a] flex flex-col justify-center items-center p-8 text-center">
                  <div className="w-full h-full border-2 border-accent/20 rounded-lg flex flex-col items-center justify-center relative">
-                    <Hands size={80} className="text-accent mb-4" />
+                    <Hand size={80} className="text-accent mb-4" />
                     <h3 className="text-2xl font-serif text-amber-100 italic">Perfecting Your Salah</h3>
                     <div className="w-24 h-1 bg-accent/80 my-4"></div>
                     <p className="text-amber-200/70 text-sm">A Step-by-Step Guide to Prayer</p>
