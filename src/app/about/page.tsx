@@ -1,89 +1,235 @@
-import Image from 'next/image';
-import { Globe, GraduationCap, Heart, Users } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const aboutImage = PlaceHolderImages.find(img => img.id === "hero-1");
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import {
+  Home,
+  ChevronRight,
+  CheckCircle2,
+  HeartHandshake,
+  UserPlus,
+  CalendarCheck,
+  GraduationCap,
+  ArrowRight,
+  BookOpen,
+  Quote,
+} from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+
+const aboutImage1 = PlaceHolderImages.find(img => img.id === 'new-course-3');
+const aboutImage2 = PlaceHolderImages.find(img => img.id === 'new-course-1');
 
 export default function AboutPage() {
+  const [activeVision, setActiveVision] = useState('Our Motivation');
+  const visionItems = ['Our Motivation', 'Global Reach', 'Curriculum Focus', 'Future Goals'];
+
   return (
-    <div className="bg-background">
-      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
-            About Quran-e-institute
+    <div className="bg-white text-slate-800 overflow-x-hidden">
+      {/* Page Header / Breadcrumbs */}
+      <section className="breadcrumb-banner py-20 text-white">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
+            About <span className="text-accent">Our Institute</span>
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
-            Bringing authentic Quranic education to every corner of the globe since 2009.
-          </p>
+          <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
+            <Link href="/" className="hover:text-accent flex items-center gap-1">
+              <Home className="w-3 h-3" /> Home
+            </Link>
+            <ChevronRight className="w-4 h-4 text-accent" />
+            <span className="text-accent">Who We Are</span>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <h2 className="font-headline text-3xl text-primary font-bold">Our Mission</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Our mission is to help students of all ages and backgrounds learn to read, understand, recite, memorize, and truly connect with the Holy Quran. We believe that technology can bridge distances, making quality Islamic education accessible to everyone, regardless of their location.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Since 2009, we have been dedicated to providing a flexible, personalized, and supportive learning environment. Our one-on-one classes ensure that each student receives the focused attention they need to thrive.
-            </p>
-            <h2 className="font-headline text-3xl text-primary font-bold">Our Vision</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              We envision a world where every Muslim has the opportunity to develop a deep and personal relationship with the Quran. Quran-e-institute aims to be the most trusted and effective online platform for Quranic studies, fostering a global community of learners united by their love for the divine word.
-            </p>
+      {/* Who We Are Section */}
+      <section className="py-24 container mx-auto px-4 islamic-pattern">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-5 relative">
+            <div className="absolute -inset-4 border-2 border-accent/20 rounded-[40px] translate-x-4 translate-y-4"></div>
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+              {aboutImage1 && (
+                <Image
+                  src={aboutImage1.imageUrl}
+                  alt="Student Reading Quran"
+                  width={800}
+                  height={500}
+                  className="w-full h-[500px] object-cover"
+                  data-ai-hint={aboutImage1.imageHint}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+            </div>
+            <div className="absolute -bottom-8 -left-8 bg-accent p-8 rounded-3xl shadow-2xl text-accent-foreground border-4 border-white hidden md:block">
+              <p className="text-5xl font-black leading-none">15+</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-2">Years of Excellence</p>
+            </div>
           </div>
-          <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
-             {aboutImage && <Image
-              src={aboutImage.imageUrl}
-              alt="Quran education"
-              fill
-              className="object-cover"
-              data-ai-hint={aboutImage.imageHint}
-            />}
-          </div>
-        </div>
 
-        <div className="mt-24">
-          <h2 className="text-center font-headline text-3xl text-primary font-bold mb-12">Our Core Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-card rounded-lg shadow-sm">
-              <div className="flex justify-center items-center mb-4">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <GraduationCap className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-              <h3 className="font-headline text-xl font-semibold mb-2">Qualified Tutors</h3>
-              <p className="text-muted-foreground text-sm">We carefully select certified and experienced male and female tutors to provide the highest quality education.</p>
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <h4 className="text-accent font-black tracking-[0.3em] text-xs uppercase">Welcome to Rushd Ul Hidayah</h4>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                Pioneering <span className="text-primary">Online Quran</span> Education Since 2009
+              </h2>
+              <div className="w-24 h-2 bg-accent rounded-full"></div>
             </div>
-            <div className="text-center p-6 bg-card rounded-lg shadow-sm">
-              <div className="flex justify-center items-center mb-4">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <Heart className="h-8 w-8 text-primary" />
+
+            <div className="space-y-5 text-muted-foreground leading-relaxed text-sm md:text-base">
+              <p className="italic font-medium text-foreground border-l-4 border-accent pl-6 py-2">
+                &quot;Our mission is to bridge the gap between traditional Islamic knowledge and modern digital convenience, making the Holy Quran accessible to every household globally.&quot;
+              </p>
+              <p>
+                <strong className="text-primary">Rushd Ul Hidayah Institute</strong> was established as a comprehensive platform for premium online Quran classes. We specialize in providing carefully designed and effectively executed online Quran learning classes for Muslim men, women, and children of all ages.
+              </p>
+              <p>
+                Suitable for the entire family, we are affordable on your pocket and expert in what we do. Our highly qualified and professional team of Quran teachers is always ready to go the extra mile to help students master Tajweed and Hifz, regardless of their starting level.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <div className="bg-primary/5 border border-primary/10 px-5 py-3 rounded-2xl flex items-center gap-3">
+                  <CheckCircle2 className="text-accent w-5 h-5" />
+                  <span className="text-xs font-bold uppercase tracking-tight text-primary">Certified Methodology</span>
+                </div>
+                <div className="bg-primary/5 border border-primary/10 px-5 py-3 rounded-2xl flex items-center gap-3">
+                  <CheckCircle2 className="text-accent w-5 h-5" />
+                  <span className="text-xs font-bold uppercase tracking-tight text-primary">Global Reach</span>
                 </div>
               </div>
-              <h3 className="font-headline text-xl font-semibold mb-2">Personalized Learning</h3>
-              <p className="text-muted-foreground text-sm">Every student is unique. We tailor our teaching methods and pace to suit individual learning styles and goals.</p>
-            </div>
-            <div className="text-center p-6 bg-card rounded-lg shadow-sm">
-              <div className="flex justify-center items-center mb-4">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-              <h3 className="font-headline text-xl font-semibold mb-2">Student-Centric</h3>
-              <p className="text-muted-foreground text-sm">Your comfort and progress are our priority. Choose your preferred tutor (male or female) and class schedule.</p>
-            </div>
-            <div className="text-center p-6 bg-card rounded-lg shadow-sm">
-              <div className="flex justify-center items-center mb-4">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <Globe className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-              <h3 className="font-headline text-xl font-semibold mb-2">Global Accessibility</h3>
-              <p className="text-muted-foreground text-sm">We leverage technology to make Quranic learning accessible to students across the globe, from the US to the UAE.</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Support/Values Section */}
+      <section className="bg-slate-900 py-24 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M5 0 L10 5 L5 10 L0 5 Z" fill="white" />
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#pattern)" />
+          </svg>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">Why <span className="text-accent">Choose Our</span> Services</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-slate-400 max-w-2xl mx-auto">Providing a supportive environment for your spiritual growth.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-accent transition-all group">
+              <div className="w-14 h-14 bg-accent text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20 group-hover:-translate-y-1 transition-transform">
+                <HeartHandshake className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Affordable for All</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">We offer free registration and trial classes. Nominal fees ensure quality Islamic education remains accessible to every Muslim family.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-accent transition-all group">
+              <div className="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 group-hover:-translate-y-1 transition-transform">
+                <UserPlus className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">1-on-1 Attention</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">Dedicated personal tutors provide exclusive attention, ensuring your child focuses effectively on Tajweed and memorization.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-accent transition-all group">
+              <div className="w-14 h-14 bg-accent text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20 group-hover:-translate-y-1 transition-transform">
+                <CalendarCheck className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Flexible Schedule</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">On-demand classes scheduled according to your comfort. Learn from the convenience of your home at any time that suits you.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-accent transition-all group">
+              <div className="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 group-hover:-translate-y-1 transition-transform">
+                <GraduationCap className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Expert Tutors</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">Our team consists of internationally acclaimed, certified male and female tutors with extensive teaching experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-24 container mx-auto px-4 islamic-pattern">
+        <h2 className="text-3xl md:text-5xl font-black text-primary mb-16 uppercase text-center lg:text-left">
+          The Vision <span className="text-accent">Behind Our Academy</span>
+        </h2>
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-4 sticky top-28">
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
+              {visionItems.map((item) => (
+                <div
+                  key={item}
+                  onClick={() => setActiveVision(item)}
+                  className={`vision-sidebar-item ${activeVision === item ? 'active' : ''}`}
+                >
+                  {item}
+                  <ArrowRight className={`w-4 h-4 transition-colors ${activeVision === item ? 'text-accent' : ''}`} />
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 bg-accent p-6 rounded-3xl text-accent-foreground relative overflow-hidden group">
+              <BookOpen className="absolute -right-4 -bottom-4 w-24 h-24 opacity-20 group-hover:rotate-12 transition-transform" />
+              <p className="text-sm font-bold uppercase tracking-widest mb-2">Need Help?</p>
+              <p className="text-xs mb-4 opacity-90">Book your free 3-day trial classes today.</p>
+              <Button asChild variant="secondary" className="bg-white text-primary rounded-full font-bold text-xs uppercase hover:bg-primary hover:text-white transition-all">
+                <Link href="/register">Register Now</Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="lg:col-span-8 space-y-8">
+            <div className="relative rounded-[40px] overflow-hidden mb-8 shadow-xl h-64">
+              {aboutImage2 && (
+                  <Image
+                    src={aboutImage2.imageUrl}
+                    alt="Islamic Art"
+                    fill
+                    className="w-full h-full object-cover"
+                    data-ai-hint={aboutImage2.imageHint}
+                  />
+              )}
+              <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
+                <h3 className="text-white text-3xl font-black uppercase tracking-widest text-center px-4">Serving the Global Ummah</h3>
+              </div>
+            </div>
+            <div className="p-8 md:p-12 bg-white rounded-[40px] border border-slate-100 shadow-sm relative">
+              <div className="space-y-6">
+                <p className="text-xl font-extrabold text-primary flex items-center gap-3">
+                  <span className="w-8 h-8 bg-accent/10 text-accent rounded-full flex items-center justify-center text-xs">01</span>
+                  Empowering the Next Generation
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                  Muslims are present all across the globe. In western countries, it is often difficult to find reliable, effective, and trustworthy sources of Islamic teachings.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                  Realizing this profound need, we started offering online Quran teaching services for students living in all parts of the world. Our vision was to help parents and individuals find the best online Quran academy no matter which part of the world they reside in.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                  By bringing together a team of professional Quran teachers we help Muslims overcome the stresses of providing quality Islamic education to their children and family members.
+                </p>
+                <div className="pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white shadow-lg">
+                      <Quote />
+                    </div>
+                    <p className="text-xs font-bold text-slate-400 italic">&quot;Changing lives through the <br/>magnificent word of Allah.&quot;</p>
+                  </div>
+                  <Button asChild size="lg" className="px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-[0.2em] h-auto shadow-xl shadow-blue-900/20">
+                     <Link href="/register">JOIN OUR MISSION <ChevronRight className="w-4 h-4 ml-2" /></Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
+    
