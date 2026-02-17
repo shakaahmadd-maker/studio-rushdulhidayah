@@ -19,6 +19,8 @@ import {
   CreditCard,
   Languages,
 } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function QuranTranslationCoursePage() {
   const [activeTab, setActiveTab] = useState('USA');
@@ -88,6 +90,8 @@ export default function QuranTranslationCoursePage() {
     'Practical application of Quranic teachings',
     'Understanding the linguistic beauty of the Quran',
   ];
+  
+  const courseImage = PlaceHolderImages.find(img => img.id === 'new-course-4');
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
@@ -114,14 +118,17 @@ export default function QuranTranslationCoursePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="relative group order-2 lg:order-1">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white aspect-[4/3] bg-[#2a2a0a] flex flex-col justify-center items-center p-8 text-center">
-                <div className="w-full h-full border-2 border-accent/20 rounded-lg flex flex-col items-center justify-center relative">
-                    <div className="absolute top-4 right-4 opacity-20"><Languages size={48} className="text-amber-200" /></div>
-                    <BookOpen size={80} className="text-accent mb-4" />
-                    <h3 className="text-2xl font-serif text-amber-100 italic">Tarjuma-tul-Quran</h3>
-                    <div className="w-24 h-1 bg-accent/80 my-4"></div>
-                    <p className="text-amber-200/70 text-sm">Understanding the Divine Message</p>
-                 </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white aspect-[4/3]">
+                {courseImage && (
+                    <Image 
+                        src={courseImage.imageUrl}
+                        alt="Quran Translation"
+                        fill
+                        className="object-cover"
+                        data-ai-hint={courseImage.imageHint}
+                    />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
               </div>
             </div>
             <div className='order-1 lg:order-2'>

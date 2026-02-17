@@ -19,6 +19,8 @@ import {
   CreditCard,
   Heart,
 } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function IslamicStudiesForKidsPage() {
   const [activeTab, setActiveTab] = useState('USA');
@@ -89,6 +91,8 @@ export default function IslamicStudiesForKidsPage() {
     'Islamic Festivals and their significance',
   ];
 
+  const courseImage = PlaceHolderImages.find(img => img.id === 'new-course-5');
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       {/* Hero Section */}
@@ -114,15 +118,18 @@ export default function IslamicStudiesForKidsPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white aspect-[4/3] bg-[#0a2a2a] flex flex-col justify-center items-center p-8 text-center">
-                <div className="w-full h-full border-2 border-accent/20 rounded-lg flex flex-col items-center justify-center relative">
-                    <div className="absolute top-4 left-4 opacity-20"><Star size={48} className="text-amber-200" /></div>
-                    <Heart size={80} className="text-accent mb-4" />
-                    <h3 className="text-2xl font-serif text-amber-100 italic">Nurturing Young Hearts</h3>
-                    <div className="w-24 h-1 bg-accent/80 my-4"></div>
-                    <p className="text-amber-200/70 text-sm">Fun and Engaging Islamic Education</p>
-                 </div>
-              </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white aspect-[4/3]">
+                    {courseImage && (
+                        <Image 
+                            src={courseImage.imageUrl}
+                            alt="Islamic Studies for Kids"
+                            fill
+                            className="object-cover"
+                            data-ai-hint={courseImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+                </div>
             </div>
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
