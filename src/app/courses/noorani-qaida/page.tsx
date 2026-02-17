@@ -77,12 +77,12 @@ export default function NooraniQaidaCoursePage() {
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       
       {/* Hero Section */}
-      <section className="bg-accent/80 py-12 sm:py-16">
+      <section className="bg-accent py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
            <div className="bg-primary inline-block px-4 py-1 rounded text-white font-bold text-lg mb-4">
             Basic Noorani Qaida Course
           </div>
-          <div className="flex items-center gap-2 text-primary/90 font-medium text-sm">
+          <div className="flex items-center gap-2 text-primary-foreground font-medium text-sm">
             <span>Home</span> <ChevronRight size={14} /> <span>Courses</span> <ChevronRight size={14} /> <span>Basic Noorani Qaida Course</span>
           </div>
         </div>
@@ -302,5 +302,3 @@ export default function NooraniQaidaCoursePage() {
     </div>
   );
 }
-
-    

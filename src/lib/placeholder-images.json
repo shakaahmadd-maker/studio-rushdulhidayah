@@ -21,13 +21,13 @@
     {
       "id": "new-course-3",
       "description": "A man deeply focused on reading the Quran.",
-      "imageUrl": "https://images.unsplash.com/photo-1608827986016-bdd314545366?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=600",
       "imageHint": "quran reading"
     },
     {
       "id": "new-course-4",
       "description": "Intricate Islamic calligraphy on a mosque wall.",
-      "imageUrl": "https://images.unsplash.com/photo-1554941013-0a7a35c609c1?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1594474038203-9118c7f9996d?auto=format&fit=crop&q=80&w=600",
       "imageHint": "islamic calligraphy"
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "new-course-9",
       "description": "An intricate blue and gold Islamic geometric pattern.",
-      "imageUrl": "https://images.unsplash.com/photo-1617361714324-9d3d37440131?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1555532538-dcd90a7e2329?auto=format&fit=crop&q=80&w=600",
       "imageHint": "islamic pattern"
     },
     {
@@ -111,7 +111,7 @@
     {
       "id": "hero-1",
       "description": "An open Quran on a book stand with intricate details.",
-      "imageUrl": "https://images.unsplash.com/photo-1530522129033-7265101034e3?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1620325866121-e94553633d2b?auto=format&fit=crop&q=80&w=600",
       "imageHint": "quran stand"
     }
   ]
