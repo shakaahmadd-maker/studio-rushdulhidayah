@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview An AI assistant for QuranEInstitute.com to answer questions about courses, Quranic verses, and Islamic concepts.
+ * @fileOverview An AI assistant for Quran-e-institute.com to answer questions about courses, Quranic verses, and Islamic concepts.
  *
  * - aiCourseAssistant - A function that provides AI assistance for user queries.
  * - AiCourseAssistantInput - The input type for the aiCourseAssistant function.
@@ -13,7 +13,7 @@ import {z} from 'genkit';
 const AiCourseAssistantInputSchema = z.object({
   question: z
     .string()
-    .describe('The user\'s question about QuranEInstitute.com, Quranic verses, or Islamic concepts.'),
+    .describe('The user\'s question about Quran-e-institute.com, Quranic verses, or Islamic concepts.'),
 });
 export type AiCourseAssistantInput = z.infer<typeof AiCourseAssistantInputSchema>;
 
@@ -32,11 +32,11 @@ const prompt = ai.definePrompt({
   name: 'aiCourseAssistantPrompt',
   input: {schema: AiCourseAssistantInputSchema},
   output: {schema: AiCourseAssistantOutputSchema},
-  prompt: `You are an AI assistant for QuranEInstitute.com, an online Quran academy. Your purpose is to provide immediate support and clarification to students or prospective students by answering common questions about Quranic verses, Islamic concepts, or course content.
+  prompt: `You are an AI assistant for Quran-e-institute.com, an online Quran academy. Your purpose is to provide immediate support and clarification to students or prospective students by answering common questions about Quranic verses, Islamic concepts, or course content.
 
-Here is comprehensive information about QuranEInstitute.com. Use this information to answer questions accurately and helpfully. If the question is about general Islamic concepts or Quranic verses, use your general knowledge, but always frame the answer as helpful information from the perspective of an assistant for QuranEInstitute.com.
+Here is comprehensive information about Quran-e-institute.com. Use this information to answer questions accurately and helpfully. If the question is about general Islamic concepts or Quranic verses, use your general knowledge, but always frame the answer as helpful information from the perspective of an assistant for Quran-e-institute.com.
 
---- QuranEInstitute.com Information ---
+--- Quran-e-institute.com Information ---
 
 **Brand & Mission:**
 - Leading online Quran academy offering Quran learning for students worldwide (USA, UK, Canada, Australia, UAE, etc.).

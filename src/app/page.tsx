@@ -16,18 +16,24 @@ export default function Home() {
         <section className="relative w-full py-20 md:py-32 lg:py-40 bg-secondary/50">
           <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-8 items-center">
             <div className="flex flex-col gap-4">
-              <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
-                Connect with the Quran, Anywhere, Anytime
+              <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary uppercase">
+                Online Quran Learning Institute
               </h1>
-              <p className="text-lg text-muted-foreground md:text-xl">
-                Join QuranConnect to learn, read, and memorize the Holy Quran with expert tutors through live, interactive classes.
+               <p className="text-3xl font-headline text-right text-muted-foreground" lang="ar">
+                خَيْرُكُمْ مَن تَعَلَّمَ القُرْآنَ وعَلَّمَهُ
+              </p>
+              <p className="text-lg text-muted-foreground md:text-xl italic">
+                &quot;The best of you are those who learn the Quran and teach it&quot;
+              </p>
+              <p className="text-muted-foreground">
+                With our Qualified teachers for 3 days of free trial classes, let&apos;s study how to understand the Holy Quran Online.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="/courses">Explore Courses</Link>
+                <Button asChild size="lg">
+                  <Link href="/courses">START A COURSE</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5 hover:text-primary">
-                  <Link href="/register">Start Free Trial <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Button asChild size="lg" variant="outline">
+                  <Link href="/register">FREE 3 DAYS TRIAL</Link>
                 </Button>
               </div>
             </div>
@@ -49,7 +55,7 @@ export default function Home() {
         <section id="features" className="w-full py-16 md:py-24 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Why Choose QuranConnect?</h2>
+              <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Why Choose Quran-e-institute?</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 We provide a flexible, personalized, and authentic learning experience for students of all ages and levels.
               </p>

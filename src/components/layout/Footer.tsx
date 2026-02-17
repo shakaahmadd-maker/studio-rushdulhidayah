@@ -81,7 +81,7 @@ export function Footer() {
         
         <div className="mt-12 border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} QuranConnect. All rights reserved.
+            © {new Date().getFullYear()} Quran-e-institute. All rights reserved.
           </p>
         </div>
       </div>

@@ -6,8 +6,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'QuranConnect - Learn Quran Online',
-  description: 'QuranConnect is a leading online Quran academy for kids and adults. Learn to read, understand, and memorize the Holy Quran with our qualified tutors.',
+  title: 'Quran-e-institute - Online Quran Learning Institute',
+  description: 'Quran-e-institute is a leading online Quran academy for kids and adults. Learn to read, understand, and memorize the Holy Quran with our qualified tutors.',
 };
 
 export default function RootLayout({
