@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -20,11 +19,61 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 
 const aboutImage1 = PlaceHolderImages.find(img => img.id === 'new-course-3');
-const aboutImage2 = PlaceHolderImages.find(img => img.id === 'new-course-1');
 
 export default function AboutPage() {
-  const [activeVision, setActiveVision] = useState('Our Motivation');
   const visionItems = ['Our Motivation', 'Global Reach', 'Curriculum Focus', 'Future Goals'];
+  const [activeVision, setActiveVision] = useState(visionItems[0]);
+
+  const visionDetails = {
+    'Our Motivation': {
+      title: 'Empowering the Next Generation',
+      number: '01',
+      content: [
+        'Muslims are present all across the globe. In western countries, it is often difficult to find reliable, effective, and trustworthy sources of Islamic teachings.',
+        'Realizing this profound need, we started offering online Quran teaching services for students living in all parts of the world. Our vision was to help parents and individuals find the best online Quran academy no matter which part of the world they reside in.',
+        'By bringing together a team of professional Quran teachers we help Muslims overcome the stresses of providing quality Islamic education to their children and family members.',
+      ],
+      imageId: 'new-course-1',
+      imageTitle: 'Serving the Global Ummah',
+    },
+    'Global Reach': {
+      title: 'Connecting Muslims Worldwide',
+      number: '02',
+      content: [
+        'Our digital platform transcends geographical boundaries, allowing us to connect with students from the USA, UK, Canada, Australia, UAE, and beyond.',
+        'We believe that knowledge should be accessible to everyone, regardless of their location. Our flexible scheduling and diverse team of tutors from various backgrounds ensure that we can cater to a global audience.',
+        'Through technology, we are building a global community of learners united by their love for the Quran and Islamic knowledge.',
+      ],
+      imageId: 'new-course-9',
+      imageTitle: 'A Global Classroom',
+    },
+    'Curriculum Focus': {
+      title: 'Comprehensive and Tailored Learning',
+      number: '03',
+      content: [
+        'Our curriculum is designed to be comprehensive, covering everything from the basic Noorani Qaida for beginners to advanced courses in Tajweed, Memorization, and Translation.',
+        'We understand that each student learns differently. That\'s why we offer personalized one-on-one sessions, allowing our tutors to tailor their teaching methods to the individual needs and pace of the student.',
+        'Our goal is not just to teach recitation, but to foster a deep understanding and love for the Quranic message through courses like Tafseer and Islamic Studies.',
+      ],
+      imageId: 'new-course-4',
+      imageTitle: 'Structured Knowledge',
+    },
+    'Future Goals': {
+      title: 'Innovating for Islamic Education',
+      number: '04',
+      content: [
+        'We are constantly looking for ways to innovate and improve the online learning experience. Our future goals include developing an interactive mobile app for learning on the go.',
+        'We also plan to expand our course offerings to include more specialized subjects in Islamic sciences, and to create a resource hub with articles, videos, and lectures from renowned scholars.',
+        'Our ultimate aim is to be a beacon of authentic Islamic knowledge in the digital age, continuously adapting to meet the evolving needs of the Ummah.',
+      ],
+      imageId: 'hero-1',
+      imageTitle: 'The Path Forward',
+    },
+  };
+  
+  const currentVision = visionDetails[activeVision as keyof typeof visionDetails];
+  const visionImage = PlaceHolderImages.find(img => img.id === currentVision.imageId);
+
 
   return (
     <div className="bg-white text-slate-800 overflow-x-hidden">
@@ -184,34 +233,31 @@ export default function AboutPage() {
 
           <div className="lg:col-span-8 space-y-8">
             <div className="relative rounded-[40px] overflow-hidden mb-8 shadow-xl h-64">
-              {aboutImage2 && (
+              {visionImage && (
                   <Image
-                    src={aboutImage2.imageUrl}
-                    alt="Islamic Art"
+                    key={visionImage.id}
+                    src={visionImage.imageUrl}
+                    alt={currentVision.imageTitle}
                     fill
-                    className="w-full h-full object-cover"
-                    data-ai-hint={aboutImage2.imageHint}
+                    className="w-full h-full object-cover animate-fade-in"
+                    data-ai-hint={visionImage.imageHint}
                   />
               )}
               <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
-                <h3 className="text-white text-3xl font-black uppercase tracking-widest text-center px-4">Serving the Global Ummah</h3>
+                <h3 key={activeVision + '-title'} className="text-white text-3xl font-black uppercase tracking-widest text-center px-4 animate-fade-in">{currentVision.imageTitle}</h3>
               </div>
             </div>
-            <div className="p-8 md:p-12 bg-white rounded-[40px] border border-slate-100 shadow-sm relative">
+            <div key={activeVision} className="p-8 md:p-12 bg-white rounded-[40px] border border-slate-100 shadow-sm relative animate-fade-in">
               <div className="space-y-6">
                 <p className="text-xl font-extrabold text-primary flex items-center gap-3">
-                  <span className="w-8 h-8 bg-accent/10 text-accent rounded-full flex items-center justify-center text-xs">01</span>
-                  Empowering the Next Generation
+                  <span className="w-8 h-8 bg-accent/10 text-accent rounded-full flex items-center justify-center text-xs">{currentVision.number}</span>
+                  {currentVision.title}
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                  Muslims are present all across the globe. In western countries, it is often difficult to find reliable, effective, and trustworthy sources of Islamic teachings.
-                </p>
-                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                  Realizing this profound need, we started offering online Quran teaching services for students living in all parts of the world. Our vision was to help parents and individuals find the best online Quran academy no matter which part of the world they reside in.
-                </p>
-                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                  By bringing together a team of professional Quran teachers we help Muslims overcome the stresses of providing quality Islamic education to their children and family members.
-                </p>
+                {currentVision.content.map((p, i) => (
+                    <p key={i} className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                        {p}
+                    </p>
+                ))}
                 <div className="pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white shadow-lg">
@@ -231,5 +277,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-    
