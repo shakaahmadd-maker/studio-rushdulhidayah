@@ -86,7 +86,7 @@ export default function Home() {
                 {newCourses.map(course => {
                     const courseImage = PlaceHolderImages.find(img => img.id === course.imageId);
                     return (
-                        <div key={course.id} className="bg-card rounded-3xl border border-slate-100 shadow-lg overflow-hidden flex flex-col group transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:-translate-y-3 hover:shadow-2xl">
+                        <div key={course.id} className="bg-card rounded-3xl border border-slate-100 shadow-lg overflow-hidden flex flex-col group transition-all duration-400 ease-in-out hover:-translate-y-3 hover:shadow-2xl">
                             <div className="h-56 relative overflow-hidden">
                                 {courseImage && (
                                     <Image src={courseImage.imageUrl} alt={course.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" data-ai-hint={courseImage.imageHint} />
