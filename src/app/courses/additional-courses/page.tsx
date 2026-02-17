@@ -8,7 +8,8 @@ import {
   MessageSquare,
   Users,
   PenSquare,
-  Sparkles
+  Sparkles,
+  ArrowRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
