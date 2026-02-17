@@ -15,9 +15,9 @@ type CoursePageProps = {
 };
 
 export async function generateStaticParams() {
-  return courses.map((course) => ({
-    slug: course.slug,
-  }));
+  // This is intentionally left empty to prevent this dynamic route from
+  // overriding the static pages created for each course.
+  return [];
 }
 
 export default function CoursePage({ params }: CoursePageProps) {
