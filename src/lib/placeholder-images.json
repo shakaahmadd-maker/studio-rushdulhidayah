@@ -1,46 +1,64 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-1",
-      "description": "A person reading the Quran in a peaceful, well-lit room.",
-      "imageUrl": "https://images.unsplash.com/photo-1618190405497-00f284b5dda5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZWFkaW5nJTIwcXVyYW58ZW58MHx8fHwxNzcxMzM4MjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "reading quran"
+      "id": "hero-new",
+      "description": "A mosque at sunset with a beautiful sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1564121211835-e88c852648ab?auto=format&fit=crop&q=80&w=1920",
+      "imageHint": "mosque sunset"
     },
     {
-      "id": "course-1",
-      "description": "Arabic calligraphy of the first letters of the alphabet.",
-      "imageUrl": "https://images.unsplash.com/photo-1629212094410-e5bd12fe49c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcmFiaWMlMjBjYWxsaWdyYXBoeXxlbnwwfHx8fDE3NzEyNjIyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "arabic calligraphy"
+      "id": "new-course-1",
+      "description": "A child learning the Arabic alphabet.",
+      "imageUrl": "https://images.unsplash.com/photo-1594474038203-9118c7f9996d?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "arabic alphabet"
     },
     {
-      "id": "course-2",
-      "description": "An open Quran with a beautiful bookmarker.",
-      "imageUrl": "https://images.unsplash.com/photo-1609665662034-39a381ce402a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvcGVuJTIwcXVyYW58ZW58MHx8fHwxNzcxMjQzODkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "open quran"
+      "id": "new-course-2",
+      "description": "An open Quran on a stand.",
+      "imageUrl": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "quran reading"
     },
     {
-      "id": "course-3",
-      "description": "A person in deep concentration, symbolizing memorization.",
-      "imageUrl": "https://images.unsplash.com/photo-1518644730709-0835105d9daa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjB0aGlua2luZ3xlbnwwfHx8fDE3NzEyODkxNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person thinking"
+      "id": "new-course-3",
+      "description": "Hands holding prayer beads over a Quran.",
+      "imageUrl": "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "quran memorization"
     },
     {
-      "id": "course-4",
-      "description": "An old manuscript with translations, signifying knowledge and wisdom.",
-      "imageUrl": "https://images.unsplash.com/photo-1764509195129-1ea255a907b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbmNpZW50JTIwbWFudXNjcmlwdHxlbnwwfHx8fDE3NzEzMzgyOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ancient manuscript"
+      "id": "new-course-4",
+      "description": "An old open book with Arabic script.",
+      "imageUrl": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "quran translation"
     },
     {
-      "id": "course-5",
-      "description": "A child happily learning, with colorful books.",
-      "imageUrl": "https://images.unsplash.com/photo-1529390079861-591de354faf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGlsZCUyMGxlYXJuaW5nfGVufDB8fHx8MTc3MTIzMjkyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "child learning"
+      "id": "new-course-5",
+      "description": "A young boy smiling and looking up.",
+      "imageUrl": "https://images.unsplash.com/photo-1574246604907-db8c7555df9a?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "islamic studies kids"
     },
     {
-      "id": "course-6",
-      "description": "A prayer rug inside a mosque.",
-      "imageUrl": "https://images.unsplash.com/photo-1589725617150-0ef95799033f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcmF5ZXIlMjBydWd8ZW58MHx8fHwxNzcxMjUyOTYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "prayer rug"
+      "id": "new-course-6",
+      "description": "A person making dua (supplication).",
+      "imageUrl": "https://images.unsplash.com/photo-1507671151610-85f09627797c?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "namaz course"
+    },
+    {
+      "id": "new-course-7",
+      "description": "A person reading a book in a mosque.",
+      "imageUrl": "https://images.unsplash.com/photo-1564121211835-e88c852648ab?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "hadees course"
+    },
+    {
+      "id": "new-course-8",
+      "description": "Hands raised in prayer.",
+      "imageUrl": "https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "dua course"
+    },
+    {
+      "id": "new-course-9",
+      "description": "A compass pointing towards Kaaba.",
+      "imageUrl": "https://images.unsplash.com/photo-1610413336601-3817f76632c0?auto=format&fit=crop&q=80&w=600",
+      "imageHint": "additional courses"
     },
     {
       "id": "tutor-1",

@@ -1,105 +1,246 @@
-import { GraduationCap, Clock, Users, Video, Globe, BookOpen, CheckCircle, Heart, LifeBuoy } from 'lucide-react';
+import { GraduationCap, Users, Monitor, ThumbsUp } from 'lucide-react';
 
 export const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/tutors", label: "Tutors" },
   { href: "/courses", label: "Courses" },
   { href: "/read-quran", label: "Read Quran" },
-  { href: "/tutors", label: "Tutors" },
-  { href: "/certificates", label: "Certificates" },
-  { href: "/dashboard", label: "Dashboard" },
-  { href: "/contact", label: "Contact" },
+  { href: "/register", label: "Register" },
+  { href: "/certificates", label: "Certificate" },
 ];
 
-export const features = [
-  {
-    icon: GraduationCap,
-    title: 'Expert Tutors',
-    description: 'Learn from qualified male and female tutors with years of experience in Quranic education.',
-  },
-  {
-    icon: Clock,
-    title: 'Flexible Schedule',
-    description: 'Choose class timings that fit your schedule, available 24/7 for students worldwide.',
-  },
-  {
-    icon: Users,
-    title: 'One-on-One Classes',
-    description: 'Get personalized attention and tailored lessons in our interactive one-on-one sessions.',
-  },
-  {
-    icon: Globe,
-    title: 'Global Community',
-    description: 'Join thousands of students from the USA, UK, Canada, Australia, and more.',
-  },
+export const newCourses = [
+    { 
+        id: 1,
+        slug: 'noorani-qaida',
+        title: "Basic Noorani Qaida Course", 
+        imageId: "new-course-1",
+        shortDescription: "Suitable for beginners of all ages, both male and female students can join this course. It is the start of your beautiful learning journey." 
+    },
+    { 
+        id: 2,
+        slug: 'quran-reading',
+        title: "Quran Reading Course", 
+        imageId: "new-course-2",
+        shortDescription: "This course is designed for both adults and children, to learn and improve your Quran recitation with Tajweed." 
+    },
+    { 
+        id: 3,
+        slug: 'quran-memorization',
+        title: "Quran Memorization Course", 
+        imageId: "new-course-3",
+        shortDescription: "Our expert Quran teachers will help you memorize the surah and verses of this Holy book in the most effective manner." 
+    },
+    { 
+        id: 4,
+        slug: 'quran-translation',
+        title: "Quran Translation Course", 
+        imageId: "new-course-4",
+        shortDescription: "We help students learn and understand the teachings of the Quran through verse by verse translation." 
+    },
+    { 
+        id: 5,
+        slug: 'islamic-studies-for-kids',
+        title: "Islamic Studies For Kids", 
+        imageId: "new-course-5",
+        shortDescription: "Designed for kids of all ages, our course helps your children's hearts shine with the brightness of Islamic teachings." 
+    },
+    { 
+        id: 6,
+        slug: 'asaan-namaz-course',
+        title: "Asaan Namaz Course", 
+        imageId: "new-course-6",
+        shortDescription: "We enable you to learn the right way of offering Salah through specialized online step-by-step guidance." 
+    },
+    { 
+        id: 7,
+        slug: '40-hadees-course',
+        title: "40 Hadees Course", 
+        imageId: "new-course-7",
+        shortDescription: "Learn 40 of the most powerful Hadith and use them to inculcate a true Muslim character in yourself." 
+    },
+    { 
+        id: 8,
+        slug: '40-basic-duain-course',
+        title: "40 Basic Dua'in Course", 
+        imageId: "new-course-8",
+        shortDescription: "Learn the best duas and small prayers for your daily routine and enrich your every act with Allah's blessings." 
+    },
+    { 
+        id: 9,
+        slug: 'additional-courses',
+        title: "Additional Courses", 
+        imageId: "new-course-9",
+        shortDescription: "We also offer customized courses to suit your unique Quran learning needs. Get in touch with us for a detailed overview." 
+    }
 ];
 
 export const courses = [
-  {
-    id: 1,
-    slug: 'noorani-qaida',
-    title: 'Basic Noorani Qaida',
-    shortDescription: 'The first step towards learning the Quran.',
-    description: 'This foundational course is designed for absolute beginners, both kids and adults. Students will learn the basic Arabic alphabet, pronunciation (Makharij), and the essential rules of Tajweed, paving the way for fluent Quran reading.',
-    targetAudience: 'Kids & Adults (Beginners)',
-    duration: 'Self-paced',
-    features: ['Arabic alphabet mastery', 'Correct pronunciation', 'Basic Tajweed rules', 'Live tutor guidance'],
-    imageId: 'course-1',
-  },
-  {
-    id: 2,
-    slug: 'quran-reading',
-    title: 'Quran Reading Course',
-    shortDescription: 'Read the Quran with fluency and proper Tajweed.',
-    description: 'This course is for students who have completed the Noorani Qaida and wish to improve their recitation. Our tutors focus on applying Tajweed rules, improving fluency, and building confidence in reading the Holy Quran.',
-    targetAudience: 'Kids & Adults (Intermediate)',
-    duration: 'Self-paced',
-    features: ['Advanced Tajweed application', 'Recitation fluency practice', 'One-on-one sessions', 'Personalized feedback'],
-    imageId: 'course-2',
-  },
-  {
-    id: 3,
-    slug: 'quran-memorization',
-    title: 'Quran Memorization (Hifz)',
-    shortDescription: 'Memorize the Holy Quran with a proven strategy.',
-    description: 'Our Hifz course helps students memorize the Quran through a structured and personalized plan. Tutors provide techniques for memorization and a schedule for revision to ensure long-term retention.',
-    targetAudience: 'Kids & Adults (All Levels)',
-    duration: 'Personalized Plan',
-    features: ['Structured memorization plan', 'Revision and retention techniques', 'Flexible scheduling', 'Certified Hifz tutors'],
-    imageId: 'course-3',
-  },
-  {
-    id: 4,
-    slug: 'quran-translation',
-    title: 'Quran Translation Course',
-    shortDescription: 'Understand the meaning of the Quranic verses.',
-    description: 'Dive deeper into the message of the Quran. This course provides a word-to-word translation and explanation (Tafseer) of the Quranic verses, helping students connect with the divine message on a spiritual level.',
-    targetAudience: 'Adults (Intermediate/Advanced)',
-    duration: 'Self-paced',
-    features: ['Word-to-word translation', 'Basic Tafseer and context', 'One-on-one interactive sessions', 'Focus on meaning and interpretation'],
-    imageId: 'course-4',
-  },
-  {
-    id: 5,
-    slug: 'islamic-studies',
-    title: 'Islamic Studies for Kids',
-    shortDescription: 'Basic Islamic teachings and faith education.',
-    description: 'A fun and engaging course for children to learn the fundamentals of Islam, including basic beliefs, pillars of Islam, stories of the prophets, and Islamic manners (Akhlaq).',
-    targetAudience: 'Kids',
-    duration: 'Self-paced',
-    features: ['Core Islamic beliefs', 'Pillars of Islam & Iman', 'Stories of the Prophets', 'Islamic manners and Duas'],
-    imageId: 'course-5',
-  },
-  {
-    id: 6,
-    slug: 'asaan-namaz',
-    title: 'Asaan Namaz Course',
-    shortDescription: 'Learn the proper steps of Salah (prayer).',
-    description: 'This course provides step-by-step guidance on how to perform Salah (Namaz) correctly according to the Sunnah, including ablution (Wudu), positions, and the meanings of what is recited.',
-    targetAudience: 'Kids & New Muslims',
-    duration: 'Self-paced',
-    features: ['Method of Wudu and Salah', 'Memorization of short Surahs', 'Understanding prayer recitations', 'Practical guidance'],
-    imageId: 'course-6',
-  },
+    { 
+        id: 1,
+        slug: 'noorani-qaida',
+        title: "Basic Noorani Qaida Course", 
+        imageId: "new-course-1",
+        shortDescription: "Suitable for beginners of all ages, both male and female students can join this course. It is the start of your beautiful learning journey.",
+        description: "This foundational course is designed for absolute beginners, both kids and adults. Students will learn the basic Arabic alphabet, pronunciation (Makharij), and the essential rules of Tajweed, paving the way for fluent Quran reading.",
+        targetAudience: 'All ages',
+        duration: 'Self-paced',
+        features: ['Arabic Alphabet', 'Pronunciation', 'Basic Tajweed'],
+    },
+    { 
+        id: 2,
+        slug: 'quran-reading',
+        title: "Quran Reading Course", 
+        imageId: "new-course-2",
+        shortDescription: "This course is designed for both adults and children, to learn and improve your Quran recitation with Tajweed.",
+        description: "This course is for students who have completed the Noorani Qaida and wish to improve their recitation. Our tutors focus on applying Tajweed rules, improving fluency, and building confidence in reading the Holy Quran.",
+        targetAudience: 'Adults & Children',
+        duration: 'Self-paced',
+        features: ['Recitation Practice', 'Tajweed Rules', 'Fluency Improvement'],
+    },
+    { 
+        id: 3,
+        slug: 'quran-memorization',
+        title: "Quran Memorization Course", 
+        imageId: "new-course-3",
+        shortDescription: "Our expert Quran teachers will help you memorize the surah and verses of this Holy book in the most effective manner.",
+        description: "Our Hifz course helps students memorize the Quran through a structured and personalized plan. Tutors provide techniques for memorization and a schedule for revision to ensure long-term retention.",
+        targetAudience: 'All levels',
+        duration: 'Personalized',
+        features: ['Memorization Techniques', 'Revision schedule', 'Expert Tutors'],
+    },
+    { 
+        id: 4,
+        slug: 'quran-translation',
+        title: "Quran Translation Course", 
+        imageId: "new-course-4",
+        shortDescription: "We help students learn and understand the teachings of the Quran through verse by verse translation.",
+        description: "Dive deeper into the message of the Quran. This course provides a word-to-word translation and explanation (Tafseer) of the Quranic verses, helping students connect with the divine message on a spiritual level.",
+        targetAudience: 'Intermediate',
+        duration: 'Self-paced',
+        features: ['Verse-by-verse translation', 'Tafsir', 'Deeper understanding'],
+    },
+    { 
+        id: 5,
+        slug: 'islamic-studies-for-kids',
+        title: "Islamic Studies For Kids", 
+        imageId: "new-course-5",
+        shortDescription: "Designed for kids of all ages, our course helps your children's hearts shine with the brightness of Islamic teachings.",
+        description: "A fun and engaging course for children to learn the fundamentals of Islam, including basic beliefs, pillars of Islam, stories of the prophets, and Islamic manners (Akhlaq).",
+        targetAudience: 'Kids',
+        duration: 'Self-paced',
+        features: ['Pillars of Islam', 'Stories of Prophets', 'Islamic Manners'],
+    },
+    { 
+        id: 6,
+        slug: 'asaan-namaz-course',
+        title: "Asaan Namaz Course", 
+        imageId: "new-course-6",
+        shortDescription: "We enable you to learn the right way of offering Salah through specialized online step-by-step guidance.",
+        description: "This course provides step-by-step guidance on how to perform Salah (Namaz) correctly according to the Sunnah, including ablution (Wudu), positions, and the meanings of what is recited.",
+        targetAudience: 'Beginners',
+        duration: 'Self-paced',
+        features: ['Wudu Steps', 'Salah Positions', 'Recitation meanings'],
+    },
+    { 
+        id: 7,
+        slug: '40-hadees-course',
+        title: "40 Hadees Course", 
+        imageId: "new-course-7",
+        shortDescription: "Learn 40 of the most powerful Hadith and use them to inculcate a true Muslim character in yourself.",
+        description: "This course covers the famous collection of Imam Nawawi's 40 Hadith, explaining their meanings and practical applications in daily life.",
+        targetAudience: 'All levels',
+        duration: 'Self-paced',
+        features: ['Imam Nawawi\'s 40 Hadith', 'Practical Application', 'Character Building'],
+    },
+    { 
+        id: 8,
+        slug: '40-basic-duain-course',
+        title: "40 Basic Dua'in Course", 
+        imageId: "new-course-8",
+        shortDescription: "Learn the best duas and small prayers for your daily routine and enrich your every act with Allah's blessings.",
+        description: "Memorize and understand the meanings of essential daily supplications (Duas) for various occasions, from waking up to going to sleep.",
+        targetAudience: 'All levels',
+        duration: 'Self-paced',
+        features: ['Daily Duas', 'Prayers for occasions', 'Memorization'],
+    },
+    { 
+        id: 9,
+        slug: 'additional-courses',
+        title: "Additional Courses", 
+        imageId: "new-course-9",
+        shortDescription: "We also offer customized courses to suit your unique Quran learning needs. Get in touch with us for a detailed overview.",
+        description: "Have a specific learning goal? We can create a customized curriculum tailored to your needs, whether it's for a specific Surah, advanced Tajweed, or Islamic history.",
+        targetAudience: 'Custom',
+        duration: 'Personalized',
+        features: ['Custom Curriculum', 'Flexible Timing', 'Specialized Topics'],
+    }
+];
+
+export const features = [
+    {
+        icon: GraduationCap,
+        title: "Online Quran Classes",
+        description: "Designed several different online courses to help kids and adults learn to read, memorize and understand."
+    },
+    {
+        icon: Users,
+        title: "Tailor-Made Courses",
+        description: "Realizing the uniqueness of your individual needs, we cater to small groups and families requiring specific learning."
+    },
+    {
+        icon: Monitor,
+        title: "Remote Learning",
+        description: "With our online platform, you can opt for a variety of Quran classes no matter where you live in the world."
+    },
+    {
+        icon: ThumbsUp,
+        title: "Flexible and Convenient",
+        description: "Our classes are flexible and convenient, allowing you to learn from home according to your preferred schedule."
+    }
+];
+
+export const classTypes = [
+    {
+        title: "Noorani Qaida Classes",
+        content: "Master the foundations of Quranic reading with our specialized instructors. This session covers phonetics, pronunciation, and basic grammar rules required for fluent recitation."
+    },
+    {
+        title: "Convenient Quran Classes",
+        content: "Learn at your own pace from anywhere in the world. Our flexible scheduling allows you to fit Quranic education into your busy life."
+    },
+    {
+        title: "Online Quran Classes",
+        content: "Interactive, one-on-one sessions with our qualified tutors using state-of-the-art video conferencing tools."
+    },
+    {
+        title: "Quran Classes Via Skype & Zoom",
+        content: "We use popular and easy-to-use platforms like Skype and Zoom for our live classes, ensuring a smooth learning experience."
+    },
+    {
+        title: "Home Based Quran Classes",
+        content: "Enjoy the comfort and convenience of learning from your own home. No need to travel, saving you time and effort."
+    },
+    {
+        title: "Islamic Studies For Kids Classes",
+        content: "Engaging and fun classes designed to teach children the fundamentals of Islam in an enjoyable way."
+    },
+    {
+        title: "Self-paced Quran Classes",
+        content: "Progress at a speed that suits you. Our tutors adapt their teaching methods to your individual learning style."
+    },
+    {
+        title: "Benefits Of Online Quran Classes",
+        content: "Access to the best tutors globally, flexible scheduling, personalized attention, and a safe learning environment."
+    }
+];
+
+export const sidebarItems = [
+    "Leading Online Quran Academy",
+    "Effective Quran Teaching Methodology",
+    "Trustworthy and Reliable Quran Academy",
+    "Internationally Acclaimed Quran Academy"
 ];
 
 export const tutors = [

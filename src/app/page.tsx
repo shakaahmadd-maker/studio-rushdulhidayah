@@ -1,183 +1,183 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, CheckCircle, GraduationCap, Users, Star, Quote } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, ChevronRight, GraduationCap, Monitor, Plus, ThumbsUp, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { courses, testimonials, features } from '@/lib/data';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { newCourses, features as whyChooseUsFeatures, classTypes, sidebarItems } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const heroImage = PlaceHolderImages.find(img => img.id === "hero-1");
+const heroImage = PlaceHolderImages.find(img => img.id === "hero-new");
 
 export default function Home() {
+  const [activeSidebarItem, setActiveSidebarItem] = useState(sidebarItems[0]);
+
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative w-full py-20 md:py-32 lg:py-40 bg-secondary/50">
-          <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-8 items-center">
-            <div className="flex flex-col gap-4">
-              <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary uppercase">
-                Online Quran Learning Institute
-              </h1>
-               <p className="text-3xl font-headline text-right text-muted-foreground" lang="ar">
-                خَيْرُكُمْ مَن تَعَلَّمَ القُرْآنَ وعَلَّمَهُ
-              </p>
-              <p className="text-lg text-muted-foreground md:text-xl italic">
-                &quot;The best of you are those who learn the Quran and teach it&quot;
-              </p>
-              <p className="text-muted-foreground">
-                With our Qualified teachers for 3 days of free trial classes, let&apos;s study how to understand the Holy Quran Online.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                <Button asChild size="lg">
-                  <Link href="/courses">START A COURSE</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href="/register">FREE 3 DAYS TRIAL</Link>
-                </Button>
-              </div>
+        <header className="relative min-h-[85vh] flex items-center justify-center text-center text-white px-4">
+            <div className="absolute inset-0">
+                {heroImage && (
+                    <Image 
+                        src={heroImage.imageUrl} 
+                        alt="Quran learning"
+                        fill
+                        className="object-cover"
+                        priority
+                        data-ai-hint={heroImage.imageHint}
+                    />
+                )}
+                <div className="absolute inset-0 bg-slate-900/70"></div>
             </div>
-            <div className="relative h-64 md:h-auto md:w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
-              {heroImage && (
-                <Image
-                  src={heroImage.imageUrl}
-                  alt={heroImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={heroImage.imageHint}
-                />
-              )}
+            <div className="relative max-w-4xl space-y-8">
+                <h1 className="text-3xl md:text-6xl font-black tracking-tight leading-tight uppercase">
+                    ONLINE QURAN <span className="text-accent">LEARNING</span> INSTITUTE
+                </h1>
+                
+                <div className="space-y-4">
+                    <p className="arabic text-4xl md:text-6xl text-white/95 font-medium drop-shadow-xl">
+                        خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
+                    </p>
+                    <p className="text-lg md:text-xl italic font-light text-slate-100">
+                        “The best of you are those who learn the Quran and teach it”
+                    </p>
+                </div>
+
+                <p className="text-sm md:text-md max-w-xl mx-auto text-slate-200 font-medium">
+                    With our Qualified teachers for 3 days of free trial classes, let&apos;s study how to understand the Holy Quran Online.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <Button asChild size="lg" className="px-8 py-4 rounded-xl font-bold transition-all shadow-xl uppercase text-sm tracking-wider h-auto bg-primary hover:bg-primary/90">
+                        <Link href="/courses">START A COURSE</Link>
+                    </Button>
+                    <Button asChild size="lg" className="px-8 py-4 rounded-xl font-bold transition-all shadow-xl uppercase text-sm tracking-wider h-auto bg-accent hover:bg-accent/90 text-black">
+                        <Link href="/register">FREE 3 DAYS TRIAL</Link>
+                    </Button>
+                </div>
             </div>
-          </div>
+        </header>
+        
+        {/* Enlightenment Banner */}
+        <section className="bg-accent py-10">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-white text-center md:text-left">
+                <div className="flex-1">
+                    <h3 className="text-2xl md:text-3xl font-black uppercase mb-2 text-primary-foreground">Learn the Quran and Enlighten Your World</h3>
+                    <p className="text-accent-foreground/90 font-medium">Join our online classes and change your way of thinking and living life to the righteous Islamic way.</p>
+                </div>
+                <Button asChild className="bg-primary hover:bg-primary/90 px-8 py-4 rounded-full font-bold transition-all shadow-lg text-sm shrink-0 uppercase tracking-widest h-auto">
+                    <Link href="/register">Enroll Now</Link>
+                </Button>
+            </div>
         </section>
 
-        {/* Features Section */}
-        <section id="features" className="w-full py-16 md:py-24 bg-background">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Why Choose Quran-e-institute?</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                We provide a flexible, personalized, and authentic learning experience for students of all ages and levels.
-              </p>
+        {/* Courses Grid */}
+        <section className="py-24 container mx-auto px-4">
+            <div className="text-center mb-16 space-y-4">
+                <h2 className="text-3xl md:text-5xl font-black text-primary uppercase">Explore Our <span className="text-accent">Courses</span></h2>
+                <div className="w-24 h-1.5 bg-accent mx-auto rounded-full"></div>
+                <p className="text-slate-500 max-w-xl mx-auto font-medium">Offering Wide Range of Online Quran Courses Since 2009 Highly Trained and Qualified Male and Female Quran Tutors.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature) => (
-                <Card key={feature.title} className="bg-card border-border hover:shadow-lg transition-shadow">
-                  <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                    <div className="bg-primary/10 p-3 rounded-full">
-                      <feature.icon className="h-6 w-6 text-primary" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {newCourses.map(course => {
+                    const courseImage = PlaceHolderImages.find(img => img.id === course.imageId);
+                    return (
+                        <div key={course.id} className="bg-card rounded-3xl border border-slate-100 shadow-lg overflow-hidden flex flex-col group transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:-translate-y-3 hover:shadow-2xl">
+                            <div className="h-56 relative overflow-hidden">
+                                {courseImage && (
+                                    <Image src={courseImage.imageUrl} alt={course.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" data-ai-hint={courseImage.imageHint} />
+                                )}
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+                                    <span className="bg-accent text-accent-foreground text-[10px] font-black uppercase px-3 py-1 rounded-full">New Batch Available</span>
+                                </div>
+                            </div>
+                            <div className="p-8 flex flex-col flex-1">
+                                <h3 className="text-xl font-black text-primary mb-4 leading-tight">{course.title}</h3>
+                                <p className="text-slate-500 text-[13px] leading-relaxed mb-8 flex-1">{course.shortDescription}</p>
+                                <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-50">
+                                    <Link href={`/courses/${course.slug}`} className="text-accent font-black text-[11px] uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+                                        Course Details <ArrowRight className="w-4 h-4" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </section>
+
+        {/* Classes and Why Choose Us Section */}
+        <section className="bg-secondary py-24 px-4 overflow-hidden">
+            <div className="container mx-auto grid lg:grid-cols-2 gap-16">
+                
+                {/* Start Your Classes Now (Accordion) */}
+                <div>
+                    <h2 className="text-3xl font-black text-primary mb-8 uppercase tracking-tight">Start <span className="text-accent">Your Classes</span> Now</h2>
+                    <Accordion type="single" collapsible className="w-full space-y-3">
+                      {classTypes.map((item, index) => (
+                        <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-2xl border border-border hover:border-primary transition-colors">
+                          <AccordionTrigger className="w-full p-5 text-left flex justify-between items-center group font-bold text-slate-700 hover:text-primary transition-colors uppercase text-sm hover:no-underline">
+                              <span>{item.title}</span>
+                              <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all ml-4">
+                                  <Plus className="w-4 h-4 transition-transform duration-300 group-data-[state=open]:rotate-45" />
+                              </div>
+                          </AccordionTrigger>
+                          <AccordionContent className="p-5 pt-0 text-slate-500 text-sm leading-relaxed">
+                            {item.content}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                </div>
+
+                {/* Best Choice Sidebar/List */}
+                <div>
+                    <h2 className="text-3xl font-black text-primary mb-8 uppercase tracking-tight">Why <span className="text-accent">The Best Choice</span> For You?</h2>
+                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+                      {sidebarItems.map(item => (
+                        <div 
+                          key={item} 
+                          onClick={() => setActiveSidebarItem(item)}
+                          className={`p-4 border-b border-secondary flex items-center justify-between cursor-pointer transition-colors ${activeSidebarItem === item ? 'bg-primary text-white' : 'hover:bg-secondary'}`}
+                        >
+                            <div className="flex items-center gap-4">
+                                <span className="font-bold">{item}</span>
+                            </div>
+                            <ChevronRight className={`w-5 h-5 transition-colors ${activeSidebarItem === item ? 'text-accent' : ''}`} />
+                        </div>
+                      ))}
+                        
+                        <div className="p-8">
+                            <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                                Offering our expertise and services for more than a decade, we take pride in being one of the pioneers in establishing an online Quran learning academy in the world. With extensive experience in the Quran teaching services, we offer specialized courses designed to meet the specific learning needs of beginners, children, male and female adults.
+                            </p>
+                            <p className="text-slate-600 text-sm leading-relaxed">
+                                We are among the top 10 best online Quran academies of the world and have been offering our services to students in the USA, UK, Australia, Canada, and the Middle East for almost 12 years.
+                            </p>
+                        </div>
                     </div>
-                    <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+                </div>
             </div>
-          </div>
         </section>
 
-        {/* Courses Section */}
-        <section id="courses" className="w-full py-16 md:py-24 bg-secondary/50">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Our Courses</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                From foundational basics to advanced studies, we have a course for you.
-              </p>
+        {/* Why Choose Us Grid (Icons) */}
+        <section className="py-24 container mx-auto px-4">
+            <h2 className="text-3xl font-black text-center text-primary mb-16 uppercase">Why <span className="text-accent">Choose Us</span></h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {whyChooseUsFeatures.map(feature => (
+                    <div key={feature.title} className="bg-white p-8 rounded-2xl text-center shadow-md border border-slate-100 hover:border-accent transition-all">
+                        <div className="w-16 h-16 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                            <feature.icon className="w-8 h-8" />
+                        </div>
+                        <h4 className="font-bold text-lg mb-3">{feature.title}</h4>
+                        <p className="text-xs text-slate-500 leading-relaxed">{feature.description}</p>
+                    </div>
+                ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {courses.slice(0, 3).map((course) => {
-                 const courseImage = PlaceHolderImages.find(img => img.id === course.imageId);
-                 return (
-                  <Card key={course.id} className="overflow-hidden flex flex-col">
-                    {courseImage && (
-                      <div className="relative h-48 w-full">
-                        <Image
-                          src={courseImage.imageUrl}
-                          alt={course.title}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={courseImage.imageHint}
-                        />
-                      </div>
-                    )}
-                    <CardHeader>
-                      <CardTitle className="font-headline">{course.title}</CardTitle>
-                      <CardDescription>{course.shortDescription}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-primary" />For {course.targetAudience}</li>
-                      </ul>
-                    </CardContent>
-                    <CardFooter>
-                      <Button asChild variant="link" className="text-primary p-0">
-                        <Link href={`/courses/${course.slug}`}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                 );
-              })}
-            </div>
-            <div className="text-center mt-12">
-              <Button asChild size="lg" variant="outline" className="border-accent text-accent-foreground hover:bg-accent/10">
-                <Link href="/courses">View All Courses</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section id="testimonials" className="w-full py-16 md:py-24 bg-background">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">What Our Students Say</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => {
-                const studentImage = PlaceHolderImages.find(img => img.id === testimonial.imageId);
-                return (
-                  <Card key={index} className="bg-card flex flex-col justify-between">
-                    <CardContent className="pt-6">
-                      <Quote className="w-8 h-8 text-accent mb-4" />
-                      <p className="text-muted-foreground italic">&quot;{testimonial.quote}&quot;</p>
-                    </CardContent>
-                    <CardFooter className="flex items-center gap-4">
-                      {studentImage && (
-                         <Image
-                          src={studentImage.imageUrl}
-                          alt={testimonial.name}
-                          width={48}
-                          height={48}
-                          className="rounded-full object-cover"
-                          data-ai-hint={studentImage.imageHint}
-                        />
-                      )}
-                      <div>
-                        <p className="font-semibold">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                      </div>
-                    </CardFooter>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="w-full py-16 md:py-24 bg-secondary/50">
-          <div className="container flex flex-col items-center gap-4 px-4 text-center md:px-6">
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Begin Your Journey Today</h2>
-            <p className="max-w-2xl text-muted-foreground md:text-xl">
-              Take the first step towards a deeper connection with the Quran. Register for a free trial class and experience our teaching firsthand.
-            </p>
-            <Button asChild size="lg" className="mt-4">
-              <Link href="/register">Sign Up for a Free Trial <ArrowRight className="ml-2 h-5 w-5" /></Link>
-            </Button>
-          </div>
         </section>
       </main>
     </div>

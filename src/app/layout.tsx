@@ -6,8 +6,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Quran-e-institute - Online Quran Learning Institute',
-  description: 'Quran-e-institute is a leading online Quran academy for kids and adults. Learn to read, understand, and memorize the Holy Quran with our qualified tutors.',
+  title: 'Rushd Ul Hidayah Institute | Online Quran & Islamic Learning',
+  description: 'Rushd-e-Institute help you to read, understand, recite and memorize Quran online with excellence and Tajweed.',
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Amiri&display=swap"
           rel="stylesheet"
         />
       </head>
