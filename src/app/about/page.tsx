@@ -208,7 +208,7 @@ export default function AboutPage() {
           The Vision <span className="text-accent">Behind Our Academy</span>
         </h2>
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-4 sticky top-28">
+          <div className="lg:col-span-4">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
               {visionItems.map((item) => (
                 <div
