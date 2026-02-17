@@ -1,0 +1,70 @@
+{
+  "entities": {
+    "registration": {
+      "title": "Course Registration",
+      "description": "A student's registration for a course trial.",
+      "type": "object",
+      "properties": {
+        "studentName": {
+          "type": "string"
+        },
+        "studentAge": {
+          "type": "number"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "course": {
+          "type": "string"
+        },
+        "classDays": {
+          "type": "string"
+        },
+        "tutorPreference": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "studentName",
+        "studentAge",
+        "gender",
+        "country",
+        "email",
+        "phone",
+        "course",
+        "classDays",
+        "tutorPreference"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "email_password"
+    ]
+  },
+  "firestore": {
+    "/registrations/{registrationId}": {
+      "schema": {
+        "$ref": "#/backend/entities/registration"
+      },
+      "description": "Collection of course registrations."
+    }
+  }
+}

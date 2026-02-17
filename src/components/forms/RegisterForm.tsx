@@ -26,6 +26,11 @@ import {
 } from '@/components/ui/select';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
+import { useFirestore } from '@/firebase';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { useState } from 'react';
+import { Loader2 } from 'lucide-react';
+
 
 const formSchema = z.object({
   studentName: z.string().min(2, { message: 'Student name is required.' }),
@@ -45,6 +50,8 @@ const formSchema = z.object({
 
 export function RegisterForm() {
   const { toast } = useToast();
+  const firestore = useFirestore();
+  const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -59,13 +66,38 @@ export function RegisterForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: 'Registration Successful!',
-      description: "We've received your request for a trial class and will be in touch shortly.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!firestore) {
+        toast({
+            variant: "destructive",
+            title: "Error",
+            description: "An unexpected error occurred. Please try again later.",
+        });
+        return;
+    }
+    setLoading(true);
+    try {
+        const registrationsCol = collection(firestore, 'registrations');
+        await addDoc(registrationsCol, {
+            ...values,
+            createdAt: serverTimestamp(),
+        });
+
+        toast({
+            title: 'Registration Successful!',
+            description: "We've received your request for a trial class and will be in touch shortly.",
+        });
+        form.reset();
+    } catch (error) {
+        console.error("Error adding document: ", error);
+        toast({
+            variant: "destructive",
+            title: 'Registration Failed',
+            description: 'There was a problem submitting your registration. Please try again.',
+        });
+    } finally {
+        setLoading(false);
+    }
   }
 
   return (
@@ -256,7 +288,16 @@ export function RegisterForm() {
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full">Book My Free Trial</Button>
+        <Button type="submit" size="lg" className="w-full" disabled={loading}>
+            {loading ? (
+                <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Submitting...
+                </>
+            ) : (
+                'Book My Free Trial'
+            )}
+        </Button>
       </form>
     </Form>
   );

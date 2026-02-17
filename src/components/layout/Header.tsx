@@ -8,9 +8,11 @@ import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/data';
 import { MobileNav } from './MobileNav';
 import { Mail, Phone, Video } from 'lucide-react';
+import { useUser } from '@/firebase/auth/use-user';
 
 export function Header() {
   const pathname = usePathname();
+  const { user, loading } = useUser();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background shadow-sm border-b border-gray-100">
@@ -33,6 +35,9 @@ export function Header() {
                     Skype
                   </a>
                   <Link href="/contact" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">Contact</Link>
+                  {user && (
+                     <Link href="/admin" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">Admin</Link>
+                  )}
               </div>
           </div>
       </div>
