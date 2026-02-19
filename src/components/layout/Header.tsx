@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import * as React from 'react';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -19,6 +20,7 @@ import {
 export function Header() {
   const pathname = usePathname();
   const { user, loading } = useUser();
+  const [coursesMenuOpen, setCoursesMenuOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background shadow-sm border-b border-gray-100">
@@ -57,17 +59,25 @@ export function Header() {
             {navLinks.map(link => {
                 if (link.href === "/courses") {
                   return (
-                    <DropdownMenu key={link.href}>
-                      <DropdownMenuTrigger asChild>
-                        <button className={cn(
+                    <DropdownMenu key={link.href} open={coursesMenuOpen} onOpenChange={setCoursesMenuOpen}>
+                      <DropdownMenuTrigger
+                        asChild
+                        onMouseEnter={() => setCoursesMenuOpen(true)}
+                        onMouseLeave={() => setCoursesMenuOpen(false)}
+                      >
+                        <Link href="/courses" className={cn(
                           "nav-link hover:text-primary flex items-center gap-1",
                           pathname.startsWith('/courses') ? "text-primary" : "text-slate-600"
                         )}>
                           {link.label}
-                          <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                        </button>
+                          <ChevronDown className={cn("w-4 h-4 transition-transform duration-200", coursesMenuOpen && "rotate-180")} />
+                        </Link>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent className="w-56">
+                      <DropdownMenuContent 
+                        className="w-56"
+                        onMouseEnter={() => setCoursesMenuOpen(true)}
+                        onMouseLeave={() => setCoursesMenuOpen(false)}
+                      >
                         <DropdownMenuItem asChild>
                           <Link href="/courses">All Courses</Link>
                         </DropdownMenuItem>
