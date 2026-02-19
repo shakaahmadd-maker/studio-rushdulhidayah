@@ -16,17 +16,11 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
-        <header className="relative min-h-[85vh] flex items-center justify-center text-center text-white px-4">
-            <div className="absolute inset-0">
-                <Image 
-                    src="/hero.png" 
-                    alt="Quran learning"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-slate-900/70"></div>
-            </div>
+        <header 
+          className="relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero.png')" }}
+        >
+            <div className="absolute inset-0 bg-slate-900/70"></div>
             <div className="relative max-w-4xl space-y-8">
                 <h1 className="text-3xl md:text-6xl font-black tracking-tight leading-tight uppercase">
                     ONLINE QURAN <span className="text-accent">LEARNING</span> INSTITUTE
