@@ -9,8 +9,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { newCourses, features as whyChooseUsFeatures, classTypes, sidebarItems } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const heroImage = PlaceHolderImages.find(img => img.id === "hero-new");
-
 export default function Home() {
   const [activeSidebarItem, setActiveSidebarItem] = useState(sidebarItems[0]);
 
@@ -20,16 +18,13 @@ export default function Home() {
         {/* Hero Section */}
         <header className="relative min-h-[85vh] flex items-center justify-center text-center text-white px-4">
             <div className="absolute inset-0">
-                {heroImage && (
-                    <Image 
-                        src={heroImage.imageUrl} 
-                        alt="Quran learning"
-                        fill
-                        className="object-cover"
-                        priority
-                        data-ai-hint={heroImage.imageHint}
-                    />
-                )}
+                <Image 
+                    src="/hero.png" 
+                    alt="Quran learning"
+                    fill
+                    className="object-cover"
+                    priority
+                />
                 <div className="absolute inset-0 bg-slate-900/70"></div>
             </div>
             <div className="relative max-w-4xl space-y-8">
