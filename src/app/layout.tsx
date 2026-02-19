@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import FirebaseClientProvider from '@/firebase/client-provider';
+import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: 'Rushd Ul Hidayah Institute | Online Quran & Islamic Learning',
@@ -39,6 +40,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <Toaster />
+          <WhatsAppButton />
         </FirebaseClientProvider>
       </body>
     </html>

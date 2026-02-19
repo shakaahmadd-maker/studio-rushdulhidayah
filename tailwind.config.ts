@@ -54,6 +54,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        whatsapp: "hsl(var(--whatsapp))",
       },
       borderRadius: {
         lg: 'var(--radius)',
