@@ -34,13 +34,18 @@ export function FirebaseProvider({
   storage,
 }: {
   children: React.ReactNode;
-  firebaseApp: FirebaseApp;
-  auth: Auth;
-  firestore: Firestore;
-  storage: FirebaseStorage;
+  firebaseApp?: FirebaseApp | null;
+  auth?: Auth | null;
+  firestore?: Firestore | null;
+  storage?: FirebaseStorage | null;
 }) {
   return (
-    <FirebaseContext.Provider value={{ firebaseApp, auth, firestore, storage }}>
+    <FirebaseContext.Provider value={{ 
+      firebaseApp: firebaseApp || null, 
+      auth: auth || null, 
+      firestore: firestore || null, 
+      storage: storage || null 
+    }}>
       {children}
     </FirebaseContext.Provider>
   );
