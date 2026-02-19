@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-new",
-      "description": "An open Quran on a book stand with prayer beads.",
-      "imageUrl": "https://images.unsplash.com/photo-1604272186548-403370b4a1a3?auto=format&fit=crop&q=80&w=1920",
-      "imageHint": "quran prayer"
+      "description": "A dark green background with an intricate gold mandala pattern, evoking a sense of Islamic art and spirituality.",
+      "imageUrl": "https://images.unsplash.com/photo-1600185935384-954932454553?auto=format&fit=crop&q=80&w=1920",
+      "imageHint": "islamic pattern"
     },
     {
       "id": "new-course-1",
@@ -27,7 +27,7 @@
     {
       "id": "new-course-4",
       "description": "Intricate Islamic calligraphy on a mosque wall.",
-      "imageUrl": "https://images.unsplash.com/photo-1594474038203-9118c7f9996d?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1615370248083-262b957530dd?auto=format&fit=crop&q=80&w=600",
       "imageHint": "islamic calligraphy"
     },
     {
@@ -45,7 +45,7 @@
     {
       "id": "new-course-7",
       "description": "A stack of old Islamic books.",
-      "imageUrl": "https://images.unsplash.com/photo-1524584247702-8a9c976b5860?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1595188099470-cf47c3a44399?auto=format&fit=crop&q=80&w=600",
       "imageHint": "islamic books"
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "new-course-9",
       "description": "An intricate blue and gold Islamic geometric pattern.",
-      "imageUrl": "https://images.unsplash.com/photo-1555532538-dcd90a7e2329?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1643653621454-03a08f28c668?auto=format&fit=crop&q=80&w=600",
       "imageHint": "islamic pattern"
     },
     {
@@ -111,7 +111,7 @@
     {
       "id": "hero-1",
       "description": "An open Quran on a book stand with intricate details.",
-      "imageUrl": "https://images.unsplash.com/photo-1620325866121-e94553633d2b?auto=format&fit=crop&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1600345931213-16a3e5d93333?auto=format&fit=crop&q=80&w=600",
       "imageHint": "quran stand"
     }
   ]
