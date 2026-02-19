@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { navLinks, courses } from '@/lib/data';
 import { MobileNav } from './MobileNav';
-import { Mail, Phone, Video, ChevronDown } from 'lucide-react';
+import { Mail, Phone, Video, ChevronDown, MessageSquare } from 'lucide-react';
 import { useUser } from '@/firebase/auth/use-user';
 import {
   DropdownMenu,
@@ -28,16 +28,20 @@ export function Header() {
       <div className="bg-primary text-primary-foreground text-[11px] md:text-xs py-2 px-4">
           <div className="container mx-auto w-full flex justify-between items-center">
               <div className="flex items-center gap-4 md:gap-8">
-                  <a href="mailto:rushdulhidayah@gmail.com" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
+                  <a href="mailto:rushdulhidayahquranacademy@gmail.com" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
                     <Mail className="w-3.5 h-3.5 text-accent" /> 
-                    rushdulhidayah@gmail.com
+                    rushdulhidayahquranacademy@gmail.com
                   </a>
-                  <a href="tel:+923392008404" className="hidden sm:flex items-center gap-2 font-medium hover:text-accent transition-colors">
+                  <a href="tel:+923319937355" className="hidden sm:flex items-center gap-2 font-medium hover:text-accent transition-colors">
                     <Phone className="w-3.5 h-3.5 text-accent" /> 
-                    +92 339 2008404
+                    +92 331 9937355
                   </a>
               </div>
               <div className="flex items-center gap-4">
+                  <a href="https://wa.me/923319937355" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    WhatsApp
+                  </a>
                   <a href="skype:quran.e.institute?chat" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">
                     <Video className="w-3.5 h-3.5" /> 
                     Skype

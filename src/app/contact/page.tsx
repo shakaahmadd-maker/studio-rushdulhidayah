@@ -29,8 +29,8 @@ export default function ContactPage() {
                 </div>
               </CardHeader>
               <CardContent>
-                <a href="mailto:quraneinstitute@gmail.com" className="text-primary hover:underline">
-                  quraneinstitute@gmail.com
+                <a href="mailto:rushdulhidayahquranacademy@gmail.com" className="text-primary hover:underline">
+                  rushdulhidayahquranacademy@gmail.com
                 </a>
               </CardContent>
             </Card>
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+92 339 2008404</p>
+                <p className="text-muted-foreground">+92 331 9937355</p>
               </CardContent>
             </Card>
 

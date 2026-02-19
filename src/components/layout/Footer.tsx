@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Facebook, Twitter, Instagram, Globe, Linkedin, Mail, Phone, Clock } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, Clock, MessageSquare } from 'lucide-react';
 import { navLinks, courses } from '@/lib/data';
 
 export function Footer() {
@@ -15,13 +15,13 @@ export function Footer() {
                 </p>
                 <div className="flex gap-4">
                     <Button asChild variant="ghost" size="icon" className="bg-slate-800 rounded-lg hover:bg-accent text-white">
-                        <Link href="#"><Facebook className="w-5 h-5" /></Link>
+                        <Link href="https://www.facebook.com/rushdulhidayahquranacademy" target="_blank" rel="noopener noreferrer"><Facebook className="w-5 h-5" /></Link>
                     </Button>
                      <Button asChild variant="ghost" size="icon" className="bg-slate-800 rounded-lg hover:bg-accent text-white">
-                        <Link href="#"><Globe className="w-5 h-5" /></Link>
+                        <Link href="https://wa.me/923319937355" target="_blank" rel="noopener noreferrer"><MessageSquare className="w-5 h-5" /></Link>
                     </Button>
                      <Button asChild variant="ghost" size="icon" className="bg-slate-800 rounded-lg hover:bg-accent text-white">
-                        <Link href="#"><Instagram className="w-5 h-5" /></Link>
+                        <Link href="https://www.instagram.com/rushdulhidayah/" target="_blank" rel="noopener noreferrer"><Instagram className="w-5 h-5" /></Link>
                     </Button>
                 </div>
             </div>
@@ -58,13 +58,13 @@ export function Footer() {
                         <div className="w-8 h-8 bg-accent/20 text-accent rounded flex items-center justify-center shrink-0">
                             <Mail className="w-4 h-4" />
                         </div>
-                        <span>rushdulhidayah@gmail.com</span>
+                        <span>rushdulhidayahquranacademy@gmail.com</span>
                     </li>
                     <li className="flex items-center gap-4">
                         <div className="w-8 h-8 bg-accent/20 text-accent rounded flex items-center justify-center shrink-0">
                             <Phone className="w-4 h-4" />
                         </div>
-                        <span>+92 339 2008404</span>
+                        <span>+92 331 9937355</span>
                     </li>
                     <li className="flex items-center gap-4">
                         <div className="w-8 h-8 bg-accent/20 text-accent rounded flex items-center justify-center shrink-0">
