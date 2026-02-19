@@ -5,10 +5,16 @@ import { usePathname } from 'next/navigation';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { navLinks } from '@/lib/data';
+import { navLinks, courses } from '@/lib/data';
 import { MobileNav } from './MobileNav';
-import { Mail, Phone, Video } from 'lucide-react';
+import { Mail, Phone, Video, ChevronDown } from 'lucide-react';
 import { useUser } from '@/firebase/auth/use-user';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Header() {
   const pathname = usePathname();
@@ -48,11 +54,38 @@ export function Header() {
         
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map(link => (
-                 <Link key={link.href} href={link.href} className={cn("nav-link hover:text-primary", pathname === link.href ? "text-primary" : "text-slate-600")}>
-                    {link.label}
-                 </Link>
-            ))}
+            {navLinks.map(link => {
+                if (link.href === "/courses") {
+                  return (
+                    <DropdownMenu key={link.href}>
+                      <DropdownMenuTrigger asChild>
+                        <button className={cn(
+                          "nav-link hover:text-primary flex items-center gap-1",
+                          pathname.startsWith('/courses') ? "text-primary" : "text-slate-600"
+                        )}>
+                          {link.label}
+                          <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                        </button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-56">
+                        <DropdownMenuItem asChild>
+                          <Link href="/courses">All Courses</Link>
+                        </DropdownMenuItem>
+                        {courses.map(course => (
+                          <DropdownMenuItem key={course.id} asChild>
+                            <Link href={`/courses/${course.slug}`}>{course.title}</Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  );
+                }
+                return (
+                  <Link key={link.href} href={link.href} className={cn("nav-link hover:text-primary", pathname === link.href ? "text-primary" : "text-slate-600")}>
+                      {link.label}
+                  </Link>
+                )
+            })}
              <Button asChild className="bg-accent text-accent-foreground px-5 py-2.5 rounded-full hover:bg-accent/90 transition-all shadow-md ml-2 h-auto">
                 <Link href="/register">Book Trial</Link>
              </Button>

@@ -3,18 +3,28 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/components/Logo';
-import { navLinks } from '@/lib/data';
+import { navLinks, courses } from '@/lib/data';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { cn } from '@/lib/utils';
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
   const pathname = usePathname();
 
   React.useEffect(() => {
-    setOpen(false);
+    if (open) {
+      setOpen(false);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (
@@ -32,19 +42,49 @@ export function MobileNav() {
         <div className="flex items-center justify-between pl-6 pr-4">
            <Logo />
         </div>
-        <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-4">
-            {navLinks.map((link) => (
+        <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6 overflow-y-auto">
+          <div className="flex flex-col space-y-2 pr-4">
+            {navLinks.map((link) => {
+              if (link.href === '/courses') {
+                return (
+                  <Accordion type="single" collapsible key={link.href} className="w-full">
+                    <AccordionItem value="courses" className="border-b-0">
+                      <AccordionTrigger className={cn("py-2 text-base font-medium text-muted-foreground hover:text-primary hover:no-underline [&[data-state=open]]:text-primary", {
+                        'text-primary': pathname.startsWith('/courses')
+                      })}>
+                        {link.label}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex flex-col space-y-3 pl-7 pt-2 border-l border-border ml-2">
+                          <Link href="/courses" className={cn("text-muted-foreground hover:text-primary", { 'text-primary font-medium': pathname === '/courses'})}>All Courses</Link>
+                          {courses.map((course) => (
+                            <Link
+                              key={course.id}
+                              href={`/courses/${course.slug}`}
+                              className={cn("text-muted-foreground hover:text-primary", { 'text-primary font-medium': pathname === `/courses/${course.slug}`})}
+                            >
+                              {course.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                )
+              }
+              return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary"
+                className={cn("py-2 text-base font-medium text-muted-foreground hover:text-primary", {
+                  "text-primary": pathname === link.href
+                })}
               >
                 {link.label}
               </Link>
-            ))}
+            )})}
           </div>
-          <div className="mt-8">
+          <div className="mt-8 pr-4">
             <Button asChild className="w-full bg-accent text-accent-foreground">
               <Link href="/register">Book Trial</Link>
             </Button>
