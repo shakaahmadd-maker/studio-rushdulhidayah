@@ -3,17 +3,38 @@
 import { useUser } from '@/firebase/auth/use-user';
 import { useCollection } from '@/firebase/firestore/use-collection';
 import { collection, orderBy, query } from 'firebase/firestore';
-import { useFirestore } from '@/firebase';
+import { useAuth, useFirestore } from '@/firebase';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react';
-import { useMemo } from 'react';
+import { Loader2, LogOut, Settings } from 'lucide-react';
+import { useMemo, useState } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { courses } from '@/lib/data';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
+import { signOut } from 'firebase/auth';
+import { useToast } from '@/hooks/use-toast';
 
 export default function AdminPage() {
   const { user, loading: userLoading } = useUser();
   const firestore = useFirestore();
+  const auth = useAuth();
+  const router = useRouter();
+  const { toast } = useToast();
+  const [loggingOut, setLoggingOut] = useState(false);
+
+  const handleLogout = async () => {
+    if (!auth) return;
+    setLoggingOut(true);
+    try {
+      await signOut(auth);
+      toast({ title: 'Logged Out', description: 'You have been successfully logged out.' });
+      router.push('/login');
+    } catch (error) {
+      toast({ variant: 'destructive', title: 'Logout Failed', description: 'An error occurred while logging out.' });
+      setLoggingOut(false);
+    }
+  };
 
   const registrationsQuery = useMemo(
     () =>
@@ -48,13 +69,29 @@ export default function AdminPage() {
 
   return (
     <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
-          Admin Dashboard
-        </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
-          View trial class registrations and contact messages submitted through the website.
-        </p>
+      <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-12">
+        <div>
+          <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl">
+            Admin Dashboard
+          </h1>
+          <p className="mt-2 max-w-2xl text-lg text-muted-foreground">
+            {user ? `Welcome, ${user.email}.` : 'Manage registrations and messages.'}
+          </p>
+        </div>
+        <div className="flex gap-2 self-start md:self-center">
+          <Button variant="outline">
+            <Settings className="mr-2 h-4 w-4" />
+            Settings
+          </Button>
+          <Button variant="destructive" onClick={handleLogout} disabled={loggingOut}>
+            {loggingOut ? (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            ) : (
+                <LogOut className="mr-2 h-4 w-4" />
+            )}
+            Logout
+          </Button>
+        </div>
       </div>
 
       <div className="space-y-8">
