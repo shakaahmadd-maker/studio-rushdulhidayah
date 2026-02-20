@@ -10,12 +10,19 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react';
+import { useMemo } from 'react';
 
 export default function AdminPage() {
   const { user, loading: userLoading } = useUser();
   const firestore = useFirestore();
 
-  const registrationsQuery = firestore ? query(collection(firestore, 'registrations'), orderBy('createdAt', 'desc')) : null;
+  const registrationsQuery = useMemo(
+    () =>
+      firestore
+        ? query(collection(firestore, 'registrations'), orderBy('createdAt', 'desc'))
+        : null,
+    [firestore]
+  );
   const { data: registrations, loading: registrationsLoading } = useCollection(registrationsQuery);
 
   if (userLoading || registrationsLoading) {
