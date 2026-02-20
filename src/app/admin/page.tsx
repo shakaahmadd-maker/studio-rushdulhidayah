@@ -38,19 +38,19 @@ export default function AdminPage() {
 
   const registrationsQuery = useMemo(
     () =>
-      firestore
+      firestore && user
         ? query(collection(firestore, 'registrations'), orderBy('createdAt', 'desc'))
         : null,
-    [firestore]
+    [firestore, user]
   );
   const { data: registrations, loading: registrationsLoading } = useCollection(registrationsQuery);
 
   const contactsQuery = useMemo(
     () =>
-      firestore
+      firestore && user
         ? query(collection(firestore, 'contacts'), orderBy('createdAt', 'desc'))
         : null,
-    [firestore]
+    [firestore, user]
   );
   const { data: contacts, loading: contactsLoading } = useCollection(contactsQuery);
 
