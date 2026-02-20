@@ -14,9 +14,9 @@ export function useUser() {
 
   useEffect(() => {
     if (!auth) {
-      if (pathname !== '/login') {
-        // router.push('/login');
-      }
+      // If Firebase auth is not available, we are not loading a user.
+      setLoading(false);
+      setUser(null);
       return;
     }
 
