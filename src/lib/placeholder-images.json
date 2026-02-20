@@ -104,9 +104,9 @@
     },
     {
       "id": "certificate-1",
-      "description": "A professional certificate template.",
+      "description": "A sample certificate of completion for Quranic studies.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-6106608140-351dd.firebasestorage.app/o/Certificates.jpeg?alt=media&token=65385029-190f-4ec3-861a-24a0fa3e4e60",
-      "imageHint": "certificate template"
+      "imageHint": "quran certificate"
     },
     {
       "id": "hero-1",
