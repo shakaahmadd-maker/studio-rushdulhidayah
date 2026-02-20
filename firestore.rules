@@ -10,5 +10,14 @@ service cloud.firestore {
       // Disallow updates and deletes for now.
       allow update, delete: if false;
     }
+
+    match /contacts/{contactId} {
+      // Allow authenticated users (admins) to read messages.
+      allow read: if request.auth != null;
+      // Allow anyone to create a new message (for the public form).
+      allow create: if true;
+      // Disallow updates and deletes for now.
+      allow update, delete: if false;
+    }
   }
 }
