@@ -1,0 +1,14 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /registrations/{registrationId} {
+      // Allow authenticated users (admins) to read the list of registrations.
+      allow read: if request.auth != null;
+      // Allow anyone to create a new registration (for the public form).
+      allow create: if true;
+      // Disallow updates and deletes for now.
+      allow update, delete: if false;
+    }
+  }
+}
