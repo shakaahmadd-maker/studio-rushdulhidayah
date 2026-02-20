@@ -363,7 +363,7 @@ export const tutors = [
   },
   {
     id: 14,
-    name: 'Qari Sarah Jameela',
+    name: 'Qaria Sarah Jameela',
     specialty: 'Quran for Sisters',
     bio: 'A dedicated female teacher providing a comfortable learning environment for sisters to study the Quran.',
     country: 'Pakistan',
@@ -372,7 +372,7 @@ export const tutors = [
   },
   {
     id: 15,
-    name: 'Hafiz Fatima Areeba',
+    name: 'Hafiza Fatima Areeba',
     specialty: 'Tajweed & Hifz for Women',
     bio: 'Hafiza Fatima offers specialized instruction in Tajweed and Hifz for female students of all ages.',
     country: 'Pakistan',
@@ -381,7 +381,7 @@ export const tutors = [
   },
   {
     id: 16,
-    name: 'Amina Bilqis Shahid',
+    name: 'Qaria Amina Bilqis Shahid',
     specialty: 'Islamic Studies for Girls',
     bio: 'Amina provides engaging lessons on Islamic beliefs, history, and manners for young female students.',
     country: 'Pakistan',
@@ -390,7 +390,7 @@ export const tutors = [
   },
   {
     id: 17,
-    name: 'Hafiz Sumaira Nazeer',
+    name: 'Hafiza Sumaira Nazeer',
     specialty: 'Quran Reading for Women',
     bio: 'Hafiza Sumaira focuses on helping female students improve their Quran reading fluency with proper Tajweed.',
     country: 'Pakistan',
@@ -399,7 +399,7 @@ export const tutors = [
   },
   {
     id: 18,
-    name: 'Hafiz Maryam Ashraf',
+    name: 'Hafiza Maryam Ashraf',
     specialty: 'Hifz for Sisters',
     bio: 'Providing a supportive environment, Hafiza Maryam guides female students on their journey of memorizing the Quran.',
     country: 'Pakistan',
@@ -408,7 +408,7 @@ export const tutors = [
   },
   {
     id: 19,
-    name: 'Hafiz Naima Zahid',
+    name: 'Hafiza Naima Zahid',
     specialty: 'Tafseer for Women',
     bio: 'Hafiza Naima helps female students understand the meaning and context of the Quran through Tafseer.',
     country: 'Pakistan',
