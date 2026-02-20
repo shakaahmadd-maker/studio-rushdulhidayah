@@ -13,7 +13,7 @@ export function Logo() {
           alt="Rushd Ul Hidayah Institute"
           width={384}
           height={175}
-          className="h-10 w-auto"
+          className="h-28 w-auto"
           priority
           data-ai-hint={logoImage.imageHint}
         />
