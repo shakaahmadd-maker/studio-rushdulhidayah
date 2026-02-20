@@ -203,6 +203,12 @@
       "description": "Icon for Hafiz Naima Zahid",
       "imageUrl": "https://placehold.co/300x300/f1f5f9/1e3a8a?text=N",
       "imageHint": "female icon"
+    },
+    {
+      "id": "logo-main",
+      "description": "Main brand logo for Rushd Ul Hidayah Institute.",
+      "imageUrl": "/logo.png",
+      "imageHint": "brand logo"
     }
   ]
 }
