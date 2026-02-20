@@ -7,7 +7,7 @@ export function Logo() {
 
   return (
     <Link href="/" className="flex items-center">
-      {logoImage ? (
+      {logoImage && (
         <Image
           src={logoImage.imageUrl}
           alt="Rushd Ul Hidayah Institute"
@@ -17,14 +17,9 @@ export function Logo() {
           priority
           data-ai-hint={logoImage.imageHint}
         />
-      ) : (
-        <div>
-            <div className="text-lg font-bold tracking-tighter flex flex-col leading-none">
-              <span className="text-primary">RUSHD UL HIDAYAH</span>
-              <span className="text-accent text-[10px] tracking-[0.25em] mt-0.5">INSTITUTE</span>
-            </div>
-        </div>
       )}
     </Link>
   );
 }
+
+    
