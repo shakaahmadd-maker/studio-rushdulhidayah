@@ -57,7 +57,7 @@ export function RegisterForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       studentName: '',
-      studentAge: undefined,
+      studentAge: '' as any,
       email: '',
       phone: '',
       country: '',
