@@ -12,15 +12,14 @@ import {
   Award,
   Calendar,
   MessageCircle,
-  Star,
-  Book,
   ChevronRight,
   ShieldCheck,
   CreditCard,
-  Heart,
 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function IslamicStudiesForKidsPage() {
   const [activeTab, setActiveTab] = useState('USA');
@@ -346,15 +345,16 @@ export default function IslamicStudiesForKidsPage() {
                 </div>
 
                 <div className="p-6 pt-0">
-                  <button
-                    className={`w-full py-4 rounded-xl font-bold transition-all ${
+                  <Button
+                    asChild
+                    className={`w-full py-4 rounded-xl font-bold transition-all h-auto ${
                       index === 1
                         ? 'bg-primary text-white hover:bg-primary/90'
                         : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
                     }`}
                   >
-                    Enroll Your Child
-                  </button>
+                    <Link href="/register">Enroll Your Child</Link>
+                  </Button>
                 </div>
               </div>
             ))}
@@ -372,9 +372,9 @@ export default function IslamicStudiesForKidsPage() {
           <p className="text-slate-200 text-xl mb-10 max-w-xl mx-auto">
             Book a <span className="text-accent font-bold">Free 3 Days Trial</span> for our Islamic Studies course and see how much your child enjoys learning.
           </p>
-          <button className="bg-accent hover:bg-accent/90 text-primary-foreground font-black px-12 py-5 rounded-2xl text-xl shadow-xl transition-transform hover:scale-105 active:scale-95">
-            Register for Free Trial
-          </button>
+          <Button asChild className="bg-accent hover:bg-accent/90 text-primary-foreground font-black px-12 py-5 rounded-2xl text-xl shadow-xl transition-transform hover:scale-105 active:scale-95 h-auto">
+            <Link href="/register">Register for Free Trial</Link>
+          </Button>
         </div>
       </section>
     </div>
