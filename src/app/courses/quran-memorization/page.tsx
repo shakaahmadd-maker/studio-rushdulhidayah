@@ -27,11 +27,11 @@ export default function QuranMemorizationCoursePage() {
   const regions = ['USA', 'UK', 'CANADA', 'AUSTRALIA', 'UAE'];
 
   const pricingData: { [key: string]: { symbol: string; tiers: number[] } } = {
-    'USA': { symbol: '$', tiers: [42, 51, 60] },
-    'UK': { symbol: '£', tiers: [35, 42, 50] },
-    'CANADA': { symbol: 'C$', tiers: [55, 68, 80] },
-    'AUSTRALIA': { symbol: 'A$', tiers: [60, 75, 90] },
-    'UAE': { symbol: 'AED', tiers: [150, 185, 220] },
+    'USA': { symbol: '$', tiers: [90, 100, 110] },
+    'UK': { symbol: '£', tiers: [66, 74, 80] },
+    'CANADA': { symbol: 'C$', tiers: [122, 136, 150] },
+    'AUSTRALIA': { symbol: 'A$', tiers: [126, 140, 155] },
+    'UAE': { symbol: 'AED', tiers: [330, 360, 400] },
   };
 
   const courseStructure = [
@@ -132,23 +132,38 @@ export default function QuranMemorizationCoursePage() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                Introduction
+                Introduction to Quran Memorization Course
               </h3>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  Embark on the noble journey of Hifz-ul-Quran with our dedicated memorization course. This program is tailored for students who wish to commit the words of Allah to their hearts. Our expert tutors provide a structured, supportive, and motivational environment to make this sacred goal achievable.
+                  Begin your sacred journey of memorizing the Quran with our dedicated Hifz-ul-Quran course. This program is specially designed for those who are committed to memorizing the words of Allah (SWT) and embedding them in their hearts. Our expert tutors offer personalized guidance in a supportive and motivating environment to help you achieve this noble goal.
                 </p>
+                <h4 className="text-xl font-bold text-primary pt-4">Our Memorization Approach</h4>
                 <p>
-                  We focus on strong memorization with correct Tajweed, along with a revision schedule that ensures long-term retention. Whether you aim to memorize a few Surahs or the entire Quran, our personalized approach will guide you every step of the way.
+                  We focus on building strong memorization habits with correct Tajweed and a reliable revision schedule that promotes long-term retention. Whether your goal is to memorize a few Surahs or the entire Quran, our tailored approach ensures you stay on track throughout the process, making memorization achievable at your own pace.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Hadith Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+            <h3 className="text-2xl font-bold text-primary mb-4">Prophet Muhammad's (PBUH) Words of Encouragement</h3>
+            <blockquote className="border-l-4 border-accent pl-6 italic text-slate-700 my-6 text-lg text-left">
+              "On the Day of Judgment, the one who has memorized the Quran will be told: 'Recite and rise and recite as you did in the world, for your position will be at the last verse you recite.'"
+              <footer className="text-sm not-italic mt-2 text-slate-500">(Sunan al-Tirmidhi)</footer>
+            </blockquote>
+            <p className="text-slate-600 leading-relaxed text-left">
+              This Hadith emphasizes the incredible honor and reward for those who commit themselves to Hifz-ul-Quran. Join us today and take the first step toward earning the highest rank in Jannah.
+            </p>
+        </div>
+      </section>
       
        {/* Learning Outcomes & Outline */}
-       <section className="py-20 bg-slate-50">
+       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16">
                 <div>
@@ -180,14 +195,14 @@ export default function QuranMemorizationCoursePage() {
       </section>
 
       {/* Course Structure */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-extrabold text-slate-800 mb-16">
             Course <span className="text-primary">Structure</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {courseStructure.map((item, index) => (
-              <div key={index} className="bg-slate-50 border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
+              <div key={index} className="bg-white border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-accent">
                   {item.icon}
                 </div>
@@ -202,7 +217,7 @@ export default function QuranMemorizationCoursePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
