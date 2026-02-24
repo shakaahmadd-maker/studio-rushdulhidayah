@@ -63,13 +63,13 @@
     {
       "id": "tutor-1",
       "description": "Image of a male tutor.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-6106608140-351dd.firebasestorage.app/o/male%20tutor.jpg?alt=media&token=61ff9c1d-12ba-4035-a6b1-9fc0f0a3586e",
+      "imageUrl": "/male-tutor.png",
       "imageHint": "male tutor"
     },
     {
       "id": "tutor-2",
       "description": "Image of a female tutor.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-6106608140-351dd.firebasestorage.app/o/female%20tutor.jpg?alt=media&token=6e0ddfae-244b-4a2d-b531-fea25e7566e0",
+      "imageUrl": "/female-tutor.png",
       "imageHint": "female tutor"
     },
     {
