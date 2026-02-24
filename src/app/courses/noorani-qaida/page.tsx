@@ -114,10 +114,10 @@ export default function NooraniQaidaCoursePage() {
               </h3>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  Noorani Qaida Course is a fundamental course that is taught by our tutors using Noorani Qaida syllabus. We have designed comprehensive Online Noorani Qaida Course for kids and adults (male and females) with the help of experienced online Noorani Qaida Tutors.
+                  Our Noorani Qaida Course is the perfect starting point for anyone eager to read and understand the Quran. Whether you're a beginner or looking to improve your Quranic pronunciation, this course will guide you step by step. With personalized, one-on-one lessons tailored to your pace, we ensure that you build a solid foundation in Quranic reading and recitation.
                 </p>
                 <p>
-                  It is the first step for beginners to learn Quran. You cannot recite the Holy Quran properly without learning basic rules first. This course starts from learning basic Arabic alphabets. It is recommended for those who do not know Arabic and would like to read the Arabic language and Quran with rules of tajweed.
+                  Designed for both kids and adults, our comprehensive Online Noorani Qaida Course teaches the essential rules of Quranic recitation using the Noorani Qaida syllabus. Starting from basic Arabic alphabets, this course is the first step for beginners to learn the Quran. Perfect for those who are new to Arabic, it helps you read the Quran with correct pronunciation and Tajweed, setting the foundation for proper Quranic recitation.
                 </p>
               </div>
             </div>
