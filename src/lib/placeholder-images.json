@@ -63,13 +63,13 @@
     {
       "id": "tutor-1",
       "description": "Icon for a male tutor.",
-      "imageUrl": "https://placehold.co/300x300/e0e7ff/1e3a8a?text=M",
+      "imageUrl": "https://placehold.co/300x300/ffffff/000000?text=👨",
       "imageHint": "male icon"
     },
     {
       "id": "tutor-2",
       "description": "Icon for a female tutor.",
-      "imageUrl": "https://placehold.co/300x300/fffbeb/b45309?text=F",
+      "imageUrl": "https://placehold.co/300x300/ffffff/000000?text=👩",
       "imageHint": "female icon"
     },
     {

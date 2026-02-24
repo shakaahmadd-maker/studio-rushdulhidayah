@@ -316,6 +316,30 @@ export const tutors = [
     bio: 'B.A in Islamiat & Hifz with 10 years of experience. Interactive and personalized methodology. Speaks English, Urdu, and Arabic.',
     gender: 'Male',
     imageId: 'tutor-1'
+  },
+  {
+    id: 10,
+    name: 'Fatima Ahmed',
+    specialty: 'Noorani Qaida & Tajweed',
+    bio: 'Expert in teaching children and beginners with a patient and engaging style. Hafiza with 5 years experience. Speaks English and Urdu.',
+    gender: 'Female',
+    imageId: 'tutor-2'
+  },
+  {
+    id: 11,
+    name: 'Aisha Khan',
+    specialty: 'Islamic Studies for Kids',
+    bio: 'Makes learning Islam fun and interactive for young minds. Holds a degree in Islamic Studies. 4 years experience. Speaks English and Arabic.',
+    gender: 'Female',
+    imageId: 'tutor-2'
+  },
+  {
+    id: 12,
+    name: 'Zainab Ali',
+    specialty: 'Quran Reading & Translation',
+    bio: 'Passionate about helping students understand the Quran. Dars-e-Nizami graduate with 6 years experience. Speaks English, Urdu, and Arabic.',
+    gender: 'Female',
+    imageId: 'tutor-2'
   }
 ];
 
