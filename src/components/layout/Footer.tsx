@@ -9,7 +9,6 @@ export function Footer() {
 
   return (
     <footer className="artistic-footer" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      <div className="glow"></div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-16 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
@@ -138,15 +137,15 @@ export function Footer() {
       </div>
 
       {/* Bottom Copyright */}
-      <div className="border-t border-white/5 bg-black/40 py-10 relative z-10">
+      <div className="border-t border-white/5 bg-black/20 py-10 relative z-10">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
               <div className="text-center md:text-left">
-                  <p className="text-[10px] tracking-[0.3em] text-slate-500 uppercase font-bold">
+                  <p className="text-[10px] tracking-[0.3em] text-slate-400 uppercase font-bold">
                       © {new Date().getFullYear()} RUSHD UL HIDAYAH INSTITUTE.
                   </p>
-                  <p className="text-[9px] text-slate-600 mt-1 uppercase tracking-widest">Global Islamic Education Platform</p>
+                  <p className="text-[9px] text-slate-500 mt-1 uppercase tracking-widest">Global Islamic Education Platform</p>
               </div>
-              <div className="flex space-x-8 text-[11px] text-slate-400 uppercase tracking-widest font-medium">
+              <div className="flex space-x-8 text-[11px] text-slate-300 uppercase tracking-widest font-medium">
                   <Link href="#" className="hover:text-amber-500 transition-colors">Privacy</Link>
                   <Link href="#" className="hover:text-amber-500 transition-colors">Terms</Link>
                   <Link href="#" className="hover:text-amber-500 transition-colors">Sitemap</Link>
