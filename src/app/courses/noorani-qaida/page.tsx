@@ -42,7 +42,7 @@ export default function NooraniQaidaCoursePage() {
     { icon: <Calendar size={22} />, label: "Course Period", value: "Student Dependent" },
     { icon: <MessageCircle size={22} />, label: "Tutor", value: "Live Private Tutor" },
     { icon: <Users size={22} />, label: "Gender", value: "Male / Female" },
-    { icon: <Globe size={22} />, label: "Languages", value: "Urdu / English" },
+    { icon: <Globe size={22} />, label: "Languages", value: "Urdu / English / Arabic" },
     { icon: <CreditCard size={22} />, label: "Fee/Month", value: "See Pricing Below" },
   ];
 
@@ -265,7 +265,7 @@ export default function NooraniQaidaCoursePage() {
                                     { label: "Course Period", val: "Depends upon student's ability" },
                                     { label: "Tutor", val: "Live Private tutor" },
                                     { label: "Gender", val: "Both Male/Female" },
-                                    { label: "Languages", val: "Urdu / English" },
+                                    { label: "Languages", val: "Urdu / English / Arabic" },
                                 ].map((row, i) => (
                                     <li key={i} className="flex justify-between text-sm py-2 border-b border-slate-50 last:border-0">
                                         <span className="text-slate-900 font-bold">{row.label}:</span>

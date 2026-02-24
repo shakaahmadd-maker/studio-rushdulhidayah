@@ -63,7 +63,7 @@ export default function IslamicStudiesForKidsPage() {
     {
       icon: <Globe size={22} />,
       label: 'Languages',
-      value: 'Urdu / English',
+      value: 'Urdu / English / Arabic',
     },
     {
       icon: <CreditCard size={22} />,
@@ -307,7 +307,7 @@ export default function IslamicStudiesForKidsPage() {
                       },
                       { label: 'Tutor', val: 'Live Private tutor' },
                       { label: 'Gender', val: 'Both Male/Female' },
-                      { label: 'Languages', val: 'Urdu / English' },
+                      { label: 'Languages', val: 'Urdu / English / Arabic' },
                     ].map((row, i) => (
                       <li
                         key={i}
