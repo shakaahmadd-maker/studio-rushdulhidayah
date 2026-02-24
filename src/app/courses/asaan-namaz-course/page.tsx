@@ -146,9 +146,37 @@ export default function AsaanNamazCoursePage() {
           </div>
         </div>
       </section>
+
+      {/* Importance Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h3 className="text-2xl font-bold text-primary mb-4">Hadith for importance of Namaz (Salah)</h3>
+                    <blockquote className="border-l-4 border-accent pl-6 italic text-slate-700 my-6 text-lg">
+                      "The first thing that the servant will be asked about on the Day of Judgment is his prayer. If it is good, then he will be successful, but if it is bad, then he will be a loser."
+                      <footer className="text-sm not-italic mt-2 text-slate-500">(Sunan al-Tirmidhi)</footer>
+                    </blockquote>
+                    <p className="text-slate-600 leading-relaxed">
+                      This Hadith emphasizes that Salah (Namaz) is the most important act of worship and the first thing that will be judged on the Day of Judgment. Learning how to pray correctly and performing it with sincerity is not only a vital act of faith but also crucial for success in the Hereafter.
+                    </p>
+                </div>
+                <div>
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quranic Verse for the Importance of Prayer:</h3>
+                     <blockquote className="border-l-4 border-accent pl-6 italic text-slate-700 my-6 text-lg">
+                      "Indeed, prayer has been decreed upon the believers by a decree of specified times."
+                      <footer className="text-sm not-italic mt-2 text-slate-500">(Surah An-Nisa, 4:103)</footer>
+                    </blockquote>
+                    <p className="text-slate-600 leading-relaxed">
+                      This verse from the Quran highlights that Salah is an obligatory act for every believer and is prescribed at specific times throughout the day. It is an essential part of a Muslim's daily routine and a direct means of connection with Allah.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
       
        {/* Learning Outcomes & Outline */}
-       <section className="py-20 bg-slate-50">
+       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16">
                 <div>
@@ -180,14 +208,14 @@ export default function AsaanNamazCoursePage() {
       </section>
 
       {/* Course Structure */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-extrabold text-slate-800 mb-16">
             Course <span className="text-primary">Structure</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {courseStructure.map((item, index) => (
-              <div key={index} className="bg-slate-50 border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
+              <div key={index} className="bg-white border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-accent">
                   {item.icon}
                 </div>
@@ -202,7 +230,7 @@ export default function AsaanNamazCoursePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
