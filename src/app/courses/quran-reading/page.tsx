@@ -128,18 +128,19 @@ export default function QuranReadingCoursePage() {
               </h3>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  It is duty of every Muslim to read the Holy Quran with Tajweed
-                  rules. We have designed comprehensive online Quran Reading
-                  Course for kids and adults of all ages and genders.
+                    It is the duty of every Muslim to read the Holy Quran with Tajweed rules. We have designed a comprehensive online Quran Reading Course for kids and adults of all ages and genders, ensuring that the Quran is read correctly, with proper pronunciation and Tajweed.
                 </p>
                 <p>
-                  This course is designed for students who have just completed
-                  Noorani Qaida course and can read Quran but are not fluent in
-                  reading and want to improve their reading skills. Quran
-                  Reading course will provide practice in order to enhance
-                  student's confidence while applying methods which were taught
-                  in Qaida course. Our teacher will ensure that student
-                  finishes the full Quran reading course on time.
+                    This course is ideal for students who have just completed the Noorani Qaida course and can read the Quran, but are not fluent in reading and want to improve their skills. Our Quran Reading Course will provide focused practice to enhance the student's confidence while applying the techniques taught in the Qaida course. We focus on correct pronunciation and Tajweed to avoid any major mistakes that could alter the meaning of the Quran.
+                </p>
+                <blockquote className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg italic text-slate-700">
+                    <p className="font-bold not-italic text-primary">For example, when reading Surah Al-Fatiha:</p>
+                    <p className="mt-2">The phrase <span className="font-bold arabic text-xl">اللَّهُ الصَّمَدُ</span> ("Allah-us-Samad") should be pronounced with ص (Sad). If ص (Sad) is mispronounced as س (Seen), it changes the meaning of the verse.</p>
+                    <p className="mt-2"><span className="font-bold arabic text-xl text-primary">اللَّهُ الصَّمَدُ</span> means "Allah, the Eternal and Absolute," but if pronounced incorrectly as <span className="font-bold arabic text-xl">اللَّهُ السَّمَدُ</span>, it could imply a different meaning, potentially changing the interpretation of the verse.</p>
+                    <p className="mt-2 text-sm">This shows how a simple mispronunciation can lead to a misunderstanding of the Quranic message.</p>
+                </blockquote>
+                <p>
+                    Our course emphasizes the importance of proper Tajweed and pronunciation to preserve the sacred meaning of every word. Our qualified teachers ensure that students finish the full Quran reading course on time while mastering the essential rules of Tajweed and pronunciation for accurate Quranic recitation.
                 </p>
               </div>
             </div>
