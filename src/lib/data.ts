@@ -8,6 +8,7 @@ export const navLinks = [
   { href: "/read-quran", label: "Read Quran" },
   { href: "/register", label: "Register" },
   { href: "/certificates", label: "Certificate" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export const newCourses = [
