@@ -112,7 +112,7 @@ export default function HadeesCoursePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-800 mb-12">
-            About <span className="text-primary">40 Hadees Course</span>
+            About <span className="text-primary">40 Hadees Course: Dive into the Teachings of Prophet Muhammad (PBUH)</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div className="relative group">
@@ -132,15 +132,42 @@ export default function HadeesCoursePage() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                Introduction
+                Introduction to the 40 Hadees Course
               </h3>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  Delve into the wisdom of Prophet Muhammad (PBUH) with our course on Imam Nawawi's 40 Hadith. This collection is one of the most famous and important compilations of prophetic sayings, covering the core tenets of Islam, morality, and ethics.
+                  Step into the wisdom of Prophet Muhammad (PBUH) with our 40 Hadees Course, a comprehensive guide to one of the most significant compilations of prophetic sayings by Imam Nawawi. These 40 Hadiths cover essential aspects of Islamic morality, ethics and the core values that every Muslim should embody.
                 </p>
                 <p>
-                  This course is designed to provide students with not just the memorization of these essential Hadiths, but also a clear understanding of their meanings and practical applications. It is a journey to internalize the teachings of the Prophet and beautify one's character.
+                  This course isn&apos;t just about memorizing words—it&apos;s about transforming your life. You’ll learn not only the meanings of these Hadiths but also how to apply them in your daily life. Each Hadith provides valuable lessons on how to lead a righteous life, build better character and strengthen your connection with Allah.
                 </p>
+                <p>
+                  Designed for both beginners and those looking to deepen their understanding of Islam, this course will help you internalize the noble teachings of the Prophet Muhammad (PBUH) and bring those teachings into your own life, every day.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-8 items-start">
+            <div className="hidden sm:block w-1.5 h-48 bg-primary rounded-full relative">
+              <div className="absolute -top-1 -left-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
+              <div className="absolute -bottom-1 -left-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-800 mb-2">The Reward of Seeking Knowledge</h2>
+              <div className="w-16 h-1 bg-accent mb-6"></div>
+              <div className="space-y-4 text-slate-600 text-lg leading-relaxed max-w-4xl">
+                  <blockquote className="border-l-4 border-accent pl-4 italic text-slate-700">
+                      “Whoever seeks knowledge and acts upon it, Allah will guide him to the path of goodness.” (Sunan Ibn Majah)
+                  </blockquote>
+                  <p>
+                      This Hadith highlights the importance of not only seeking knowledge but also putting it into practice. By learning and applying the 40 Hadiths, you’re not only enriching your mind, but you&apos;re also walking on the path of righteousness as taught by Prophet Muhammad (PBUH).
+                  </p>
               </div>
             </div>
           </div>
@@ -148,7 +175,7 @@ export default function HadeesCoursePage() {
       </section>
       
        {/* Learning Outcomes & Outline */}
-       <section className="py-20 bg-slate-50">
+       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16">
                 <div>
@@ -180,7 +207,7 @@ export default function HadeesCoursePage() {
       </section>
 
       {/* Course Structure */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-extrabold text-slate-800 mb-16">
             Course <span className="text-primary">Structure</span>
@@ -209,7 +236,7 @@ export default function HadeesCoursePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
