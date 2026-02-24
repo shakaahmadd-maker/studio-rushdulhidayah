@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { ArrowRight, ChevronRight, GraduationCap, Monitor, Plus, ThumbsUp, Users } from 'lucide-react';
+import { ArrowRight, ChevronRight, GraduationCap, Monitor, Plus, ThumbsUp, Users, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -11,6 +11,47 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
   const [activeSidebarItem, setActiveSidebarItem] = useState(sidebarItems[0]);
+
+  const sidebarContent = {
+    "Leading Online Quran Academy": {
+      description: "Rushd Ul Hidayah brings the Quran to your fingertips, connecting students from every corner of the world. From Basic Noorani Qaida to Quran Reading and Memorization, our expert teachers guide every student with personalized care and attention.",
+      subheading: "Why choose us?",
+      points: [
+        "Experienced, passionate teachers",
+        "Students from across the globe",
+        "Complete courses for beginners to advanced learners"
+      ]
+    },
+    "Effective Quran Teaching Methodology": {
+      description: "We blend traditional Quranic teachings with modern online learning to make learning meaningful and fun. Courses like Quran Translation, Asaan Namaz and Islamic Studies for Kids help students understand, memorize and apply the Quran in daily life.",
+      subheading: "Why it works:",
+      points: [
+        "Step-by-step learning for every level",
+        "Focus on Tajweed, memorization and comprehension",
+        "Interactive, engaging online classes"
+      ]
+    },
+    "Trustworthy and Reliable Quran Academy": {
+      description: "At Rushd Ul Hidayah, trust is our foundation. With courses like 40 Hadees and 40 Basic Du’a’in, parents can track progress transparently while knowing their children are learning in a safe, supportive environment.",
+      subheading: "Our promise:",
+      points: [
+        "Verified student progress",
+        "Secure, reliable online platform",
+        "Transparent teaching & feedback"
+      ]
+    },
+    "Internationally Acclaimed Quran Academy": {
+      description: "Our academy is recognized worldwide, welcoming students from Pakistan, USA, UK, UAE and beyond. With certificate-based courses and specialized programs, students gain Quranic knowledge that is respected internationally.",
+      subheading: "Global edge:",
+      points: [
+        "Students from multiple countries",
+        "Courses designed to international standards",
+        "Certificates for all major courses"
+      ]
+    }
+  };
+
+  const currentContent = sidebarContent[activeSidebarItem as keyof typeof sidebarContent];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -140,13 +181,19 @@ export default function Home() {
                         </div>
                       ))}
                         
-                        <div className="p-8">
+                        <div key={activeSidebarItem} className="p-8 animate-fade-in">
                             <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                                Offering our expertise and services for more than a decade, we take pride in being one of the pioneers in establishing an online Quran learning academy in the world. With extensive experience in the Quran teaching services, we offer specialized courses designed to meet the specific learning needs of beginners, children, male and female adults.
+                                {currentContent.description}
                             </p>
-                            <p className="text-slate-600 text-sm leading-relaxed">
-                                We are among the top 10 best online Quran academies of the world and have been offering our services to students in the USA, UK, Australia, Canada, and the Middle East for almost 12 years.
-                            </p>
+                            <h4 className="font-bold text-primary mb-3">{currentContent.subheading}</h4>
+                            <ul className="space-y-2">
+                                {currentContent.points.map((point, index) => (
+                                    <li key={index} className="flex items-center gap-2 text-sm text-slate-500">
+                                        <CheckCircle className="w-4 h-4 text-accent" />
+                                        <span>{point}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
