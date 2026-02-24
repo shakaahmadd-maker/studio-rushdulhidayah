@@ -59,6 +59,9 @@
     @apply bg-background text-foreground;
     overflow-x: hidden;
   }
+  p {
+    @apply text-justify;
+  }
   .arabic { 
     font-family: 'Amiri', serif;
   }

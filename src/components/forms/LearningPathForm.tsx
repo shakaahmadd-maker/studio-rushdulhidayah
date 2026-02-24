@@ -194,7 +194,7 @@ export function LearningPathForm() {
           <Separator />
           <div className="my-8 text-center">
             <h2 className="font-headline text-3xl font-bold text-primary">Your Personalized Path</h2>
-            <p className="text-muted-foreground mt-2">Here are the next steps recommended by your AI assistant.</p>
+            <p className="text-muted-foreground mt-2 text-center">Here are the next steps recommended by your AI assistant.</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -210,7 +210,7 @@ export function LearningPathForm() {
                     {result.suggestedNextSteps.map((step, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <BookCheck className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
-                        <span>{step}</span>
+                        <span className="text-left">{step}</span>
                       </li>
                     ))}
                   </ul>
@@ -227,14 +227,14 @@ export function LearningPathForm() {
                 <CardContent>
                   <div className="space-y-6">
                     {result.practiceQuestions.map((q, index) => (
-                      <div key={index}>
-                        <p className="font-semibold">{index + 1}. {q.question}</p>
+                      <div key={index} className="text-left">
+                        <p className="font-semibold text-left">{index + 1}. {q.question}</p>
                         {q.options && (
                           <ul className="mt-2 space-y-1 text-sm text-muted-foreground pl-5 list-disc">
                             {q.options.map((opt, i) => <li key={i}>{opt}</li>)}
                           </ul>
                         )}
-                        <p className="mt-2 text-sm">
+                        <p className="mt-2 text-sm text-left">
                           <span className="font-semibold text-primary">Answer: </span> 
                           <span className="text-muted-foreground">{q.correctAnswer}</span>
                         </p>

@@ -111,9 +111,9 @@ export default function AboutPage() {
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
             </div>
-            <div className="absolute -bottom-8 -left-8 bg-accent p-8 rounded-3xl shadow-2xl text-accent-foreground border-4 border-white hidden md:block">
-              <p className="text-5xl font-black leading-none">15+</p>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-2">Years of Excellence</p>
+            <div className="absolute -bottom-8 -left-8 bg-accent p-8 rounded-3xl shadow-2xl text-accent-foreground border-4 border-white hidden md:block text-center">
+              <p className="text-5xl font-black leading-none text-left">15+</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-2 text-left">Years of Excellence</p>
             </div>
           </div>
 
@@ -249,7 +249,7 @@ export default function AboutPage() {
             </div>
             <div key={activeVision} className="p-8 md:p-12 bg-white rounded-[40px] border border-slate-100 shadow-sm relative animate-fade-in">
               <div className="space-y-6">
-                <p className="text-xl font-extrabold text-primary flex items-center gap-3">
+                <p className="text-xl font-extrabold text-primary flex items-center gap-3 text-left">
                   <span className="w-8 h-8 bg-accent/10 text-accent rounded-full flex items-center justify-center text-xs">{currentVision.number}</span>
                   {currentVision.title}
                 </p>
@@ -263,7 +263,7 @@ export default function AboutPage() {
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white shadow-lg">
                       <Quote />
                     </div>
-                    <p className="text-xs font-bold text-slate-400 italic">&quot;Changing lives through the <br/>magnificent word of Allah.&quot;</p>
+                    <p className="text-xs font-bold text-slate-400 italic text-left">&quot;Changing lives through the <br/>magnificent word of Allah.&quot;</p>
                   </div>
                   <Button asChild size="lg" className="px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-[0.2em] h-auto shadow-xl shadow-blue-900/20">
                      <Link href="/register">JOIN OUR MISSION <ChevronRight className="w-4 h-4 ml-2" /></Link>
