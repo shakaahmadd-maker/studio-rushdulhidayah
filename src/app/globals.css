@@ -126,7 +126,7 @@
     }
 
     .artistic-footer {
-        background: #020617;
+        background: #000000;
         position: relative;
         overflow: hidden;
         color: #d1d5db;
@@ -193,6 +193,10 @@
 
     .logo-glow {
         filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.4));
+    }
+
+    .hero-section p {
+        @apply text-center;
     }
 
     .chat-bubble {

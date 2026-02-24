@@ -58,7 +58,7 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <header 
-          className="relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 bg-cover bg-center"
+          className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero.png')" }}
         >
             <div className="absolute inset-0 bg-slate-900/70"></div>
