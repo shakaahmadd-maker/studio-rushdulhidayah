@@ -64,7 +64,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-slate-900/70"></div>
             <div className="relative max-w-4xl space-y-8">
                 <h1 className="text-3xl md:text-6xl font-black tracking-tight leading-tight uppercase">
-                    ONLINE QURAN <span className="text-accent">LEARNING</span> INSTITUTE
+                    ONLINE QURAN <span className="text-accent">LEARNING</span><br />INSTITUTE
                 </h1>
                 
                 <div className="space-y-4">
