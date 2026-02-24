@@ -35,7 +35,7 @@ export default function NooraniQaidaCoursePage() {
 
   const courseStructure = [
     { icon: <Users size={22} />, label: "Class Type", value: "One-on-One" },
-    { icon: <Clock size={22} />, label: "Class Duration", value: "30 minutes" },
+    { icon: <Clock size={22} />, label: "Class Duration", value: "1 hour 30 minutes" },
     { icon: <User size={22} />, label: "Age Level", value: "At least 5 Years" },
     { icon: <ShieldCheck size={22} />, label: "Requirements", value: "None" },
     { icon: <Award size={22} />, label: "Course Level", value: "Beginner" },
@@ -250,7 +250,7 @@ export default function NooraniQaidaCoursePage() {
                                     <span className="text-slate-500 font-medium">{days} days/Week</span>
                                 </li>
                                 {[
-                                    { label: "Class Time", val: "30 Minutes/Class" },
+                                    { label: "Class Time", val: "1 hour 30 minutes" },
                                     { label: "Class Type", val: "One-on-One" },
                                     { label: "Age Level", val: "Atleast 7 Years" },
                                     { label: "Requirements", val: "None" },

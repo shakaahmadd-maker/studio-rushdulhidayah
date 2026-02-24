@@ -36,7 +36,7 @@ export default function DuainCoursePage() {
 
   const courseStructure = [
     { icon: <Users size={22} />, label: 'Class Type', value: 'One-on-One' },
-    { icon: <Clock size={22} />, label: 'Class Duration', value: '30 minutes' },
+    { icon: <Clock size={22} />, label: 'Class Duration', value: '1 hour 30 minutes' },
     { icon: <User size={22} />, label: 'Age Level', value: 'All Ages' },
     {
       icon: <ShieldCheck size={22} />,
@@ -314,7 +314,7 @@ export default function DuainCoursePage() {
                       </span>
                     </li>
                     {[
-                      { label: 'Class Time', val: '30 Minutes/Class' },
+                      { label: 'Class Time', val: '1 hour 30 minutes' },
                       { label: 'Class Type', val: 'One-on-One' },
                       { label: 'Age Level', val: 'All Ages' },
                       { label: 'Requirements', val: 'None' },
