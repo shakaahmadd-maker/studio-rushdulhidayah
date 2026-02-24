@@ -148,8 +148,36 @@ export default function IslamicStudiesForKidsPage() {
         </div>
       </section>
       
+      {/* Importance Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h3 className="text-2xl font-bold text-primary mb-4">Hadith on Education</h3>
+                    <blockquote className="border-l-4 border-accent pl-6 italic text-slate-700 my-6 text-lg">
+                      "The best gift a father can give to his child is a good education."
+                      <footer className="text-sm not-italic mt-2 text-slate-500">(Al-Tirmidhi)</footer>
+                    </blockquote>
+                    <p className="text-slate-600 leading-relaxed">
+                      This Hadith emphasizes the importance of investing in the Islamic education of children, guiding them to become wise, compassionate individuals who contribute positively to society. It encourages parents to ensure that their children receive the right knowledge and moral foundation.
+                    </p>
+                </div>
+                <div>
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quranic Verse on Knowledge</h3>
+                     <blockquote className="border-l-4 border-accent pl-6 italic text-slate-700 my-6 text-lg">
+                      "And He (Allah) will teach him the book and the wisdom."
+                      <footer className="text-sm not-italic mt-2 text-slate-500">(Surah Al-Imran, 3:164)</footer>
+                    </blockquote>
+                    <p className="text-slate-600 leading-relaxed">
+                      This verse emphasizes the divine importance of seeking knowledge—both worldly and religious. It reminds us that Islamic education is a source of wisdom and that children should be taught to gain knowledge to shape a strong foundation of faith and action.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+
        {/* Learning Outcomes & Outline */}
-       <section className="py-20 bg-slate-50">
+       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16">
                 <div>
@@ -181,14 +209,14 @@ export default function IslamicStudiesForKidsPage() {
       </section>
 
       {/* Course Structure */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-extrabold text-slate-800 mb-16">
             Course <span className="text-primary">Structure</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {courseStructure.map((item, index) => (
-              <div key={index} className="bg-slate-50 border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
+              <div key={index} className="bg-white border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-accent">
                   {item.icon}
                 </div>
@@ -203,7 +231,7 @@ export default function IslamicStudiesForKidsPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
