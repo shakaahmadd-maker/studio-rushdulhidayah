@@ -37,7 +37,7 @@ export default function QuranMemorizationCoursePage() {
 
   const courseStructure = [
     { icon: <Users size={22} />, label: 'Class Type', value: 'One-on-One' },
-    { icon: <Clock size={22} />, label: 'Class Duration', value: '1 hour 30 minutes' },
+    { icon: <Clock size={22} />, label: 'Class Duration', value: 'Student Dependent' },
     { icon: <User size={22} />, label: 'Age Level', value: 'Atleast 7 Years' },
     {
       icon: <ShieldCheck size={22} />,
@@ -294,7 +294,7 @@ export default function QuranMemorizationCoursePage() {
                       </span>
                     </li>
                     {[
-                      { label: 'Class Time', val: '1 hour 30 minutes' },
+                      { label: 'Class Time', val: 'Student Dependent' },
                       { label: 'Class Type', val: 'One-on-One' },
                       { label: 'Age Level', val: 'Atleast 7 Years' },
                       {
