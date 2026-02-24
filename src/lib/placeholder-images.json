@@ -62,45 +62,15 @@
     },
     {
       "id": "tutor-1",
-      "description": "Portrait of a friendly and knowledgeable male tutor.",
-      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzEyNjI5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
+      "description": "Icon for a male tutor.",
+      "imageUrl": "https://placehold.co/300x300/e0e7ff/1e3a8a?text=M",
+      "imageHint": "male icon"
     },
     {
       "id": "tutor-2",
-      "description": "Portrait of a warm and professional female tutor.",
-      "imageUrl": "https://images.unsplash.com/photo-1610655507808-a59293f4e332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MTIyMDQ1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
-    },
-    {
-      "id": "tutor-3",
-      "description": "Portrait of an engaging and patient male tutor.",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwdGVhY2hlcnxlbnwwfHx8fDE3NzEyNzE4MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male teacher"
-    },
-    {
-      "id": "tutor-4",
-      "description": "Portrait of a kind and smiling female tutor.",
-      "imageUrl": "https://images.unsplash.com/photo-1615538785945-6625ccdb4b25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjB0ZWFjaGVyfGVufDB8fHx8MTc3MTI3MTgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "female teacher"
-    },
-    {
-      "id": "student-1",
-      "description": "Portrait of a mother.",
-      "imageUrl": "https://images.unsplash.com/photo-1570888510609-56a3c0562fa0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3RoZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzEyODgwNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mother portrait"
-    },
-    {
-      "id": "student-2",
-      "description": "Portrait of a man in his 30s.",
-      "imageUrl": "https://images.unsplash.com/photo-1633367583895-08545d733dfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc3MTMyNzQ1MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man smiling"
-    },
-    {
-      "id": "student-3",
-      "description": "Portrait of a woman.",
-      "imageUrl": "https://images.unsplash.com/photo-1598625873873-52f9aefd7d9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzcxMjgzMDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman smiling"
+      "description": "Icon for a female tutor.",
+      "imageUrl": "https://placehold.co/300x300/fffbeb/b45309?text=F",
+      "imageHint": "female icon"
     },
     {
       "id": "certificate-1",
@@ -113,96 +83,6 @@
       "description": "An open Quran on a book stand with intricate details.",
       "imageUrl": "https://images.unsplash.com/photo-1591879322339-16a4b5262788?auto=format&fit=crop&q=80&w=600",
       "imageHint": "quran stand"
-    },
-    {
-      "id": "tutor-5",
-      "description": "Portrait of Hafiz Zaidullah Qureshi",
-      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-6",
-      "description": "Portrait of Qari Noman Javed",
-      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-7",
-      "description": "Portrait of Hafiz Tariq Anwar",
-      "imageUrl": "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-8",
-      "description": "Portrait of Qari Khalid Imran",
-      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-9",
-      "description": "Portrait of Hafiz Yasir Mubarak",
-      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-10",
-      "description": "Portrait of Qari Farhan Shams",
-      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-11",
-      "description": "Portrait of Hafiz Usman Shafqat",
-      "imageUrl": "https://images.unsplash.com/photo-1715412507413-c7416b47cacb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-12",
-      "description": "Portrait of Qari Zubair Shah",
-      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-13",
-      "description": "Portrait of Hafiz Bilal Rahman",
-      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNDU3MTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male portrait"
-    },
-    {
-      "id": "tutor-14",
-      "description": "Icon for Qari Sarah Jameela",
-      "imageUrl": "https://placehold.co/300x300/f1f5f9/1e3a8a?text=S",
-      "imageHint": "female icon"
-    },
-    {
-      "id": "tutor-15",
-      "description": "Icon for Hafiz Fatima Areeba",
-      "imageUrl": "https://placehold.co/300x300/f1f5f9/1e3a8a?text=F",
-      "imageHint": "female icon"
-    },
-    {
-      "id": "tutor-16",
-      "description": "Icon for Amina Bilqis Shahid",
-      "imageUrl": "https://placehold.co/300x300/f1f5f9/1e3a8a?text=A",
-      "imageHint": "female icon"
-    },
-    {
-      "id": "tutor-17",
-      "description": "Icon for Hafiz Sumaira Nazeer",
-      "imageUrl": "https://placehold.co/300x300/f1f5f9/1e3a8a?text=S",
-      "imageHint": "female icon"
-    },
-    {
-      "id": "tutor-18",
-      "description": "Icon for Hafiz Maryam Ashraf",
-      "imageUrl": "https://placehold.co/300x300/f1f5f9/1e3a8a?text=M",
-      "imageHint": "female icon"
-    },
-    {
-      "id": "tutor-19",
-      "description": "Icon for Hafiz Naima Zahid",
-      "imageUrl": "https://placehold.co/300x300/f1f5f9/1e3a8a?text=N",
-      "imageHint": "female icon"
     },
     {
       "id": "logo-main",

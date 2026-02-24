@@ -247,175 +247,76 @@ export const sidebarItems = [
 export const tutors = [
   {
     id: 1,
-    name: 'Hafiz Ahmed Raza',
-    specialty: 'Quran Memorization & Tajweed',
-    bio: 'A certified Hafiz with over 10 years of teaching experience. Ahmed specializes in helping students of all ages memorize the Quran with perfect Tajweed.',
-    country: 'Pakistan',
+    name: 'Hafiz Anas Yousuf',
+    specialty: 'Admin & General Tutoring',
+    bio: 'Admin with Hifz & Dars-e-Nizami qualifications and 5 years of experience. Offers a beginner-friendly approach. Speaks English and Urdu.',
     gender: 'Male',
     imageId: 'tutor-1'
   },
   {
     id: 2,
-    name: 'Aalima Fatima Zahra',
-    specialty: 'Quran Translation & Tafseer',
-    bio: 'An Aalima with a degree in Islamic Studies. Fatima is passionate about helping students understand the deeper meaning of the Quran.',
-    country: 'Egypt',
+    name: 'Qari Umair',
+    specialty: 'Norani Qaida & Memorization',
+    bio: 'Hifz & Dars-e-Nizami qualified with 3 years of experience. Provides personalized teaching. Speaks English and Urdu.',
+    gender: 'Male',
+    imageId: 'tutor-1'
+  },
+  {
+    id: 3,
+    name: 'Hafiz Zaid Ahmed',
+    specialty: 'Quran Memorization & Reading',
+    bio: 'DPT, Hifz qualified with 2 years of experience. Uses an interactive and beginner-friendly approach. Speaks English and Urdu.',
+    gender: 'Male',
+    imageId: 'tutor-1'
+  },
+  {
+    id: 4,
+    name: 'Asad Ullah Mubashir',
+    specialty: 'Norani Qaida & Quran Reading',
+    bio: 'Hifz qualified with 5 years of experience. Employs an interactive & personalized style. Speaks English, Urdu, and Punjabi.',
+    gender: 'Male',
+    imageId: 'tutor-1'
+  },
+  {
+    id: 5,
+    name: 'Hafiz Musab',
+    specialty: 'Quranic & Islamic Studies',
+    bio: 'Hifz & Islamic Studies qualified with 1 year of experience. Beginner-friendly teaching approach. Speaks Urdu.',
+    gender: 'Male',
+    imageId: 'tutor-1'
+  },
+  {
+    id: 6,
+    name: 'Umair Imtyaz',
+    specialty: 'Norani Qaida & Quran Memorization',
+    bio: 'Hifz & Dars-e-Nizami qualified with 4 years of online teaching experience. Beginner-friendly approach. Speaks English and Urdu.',
+    gender: 'Male',
+    imageId: 'tutor-1'
+  },
+  {
+    id: 7,
+    name: 'Hafiz Muhammad Ibrahim',
+    specialty: 'Quran Translation & Memorization',
+    bio: 'Double M.A in Islamiat, Hifz & Dars-e-Nizami. 15 years of experience with a beginner-friendly style. Speaks English, Urdu, and Arabic.',
+    gender: 'Male',
+    imageId: 'tutor-1'
+  },
+  {
+    id: 8,
+    name: 'Mrs.Hafiz Muhammad Ibrahim',
+    specialty: 'Quran Translation & Reading',
+    bio: 'B.A in Islamiat & Dars-e-Nizami with 10 years of experience. Beginner-friendly & interactive style. Speaks English, Urdu, and Arabic.',
     gender: 'Female',
     imageId: 'tutor-2'
   },
   {
-    id: 3,
-    name: 'Qari Omar Abdullah',
-    specialty: 'Noorani Qaida & Basic Reading',
-    bio: 'An expert in teaching beginners, Omar has a unique ability to make learning Arabic and Quran reading simple and engaging for children.',
-    country: 'USA',
-    gender: 'Male',
-    imageId: 'tutor-3'
-  },
-  {
-    id: 4,
-    name: 'Ustadha Ayesha Khan',
-    specialty: 'Islamic Studies for Kids & Women',
-    bio: 'Ayesha has a gentle and friendly teaching style, making her a favorite among kids and female students for Islamic Studies and Quran reading.',
-    country: 'UK',
-    gender: 'Female',
-    imageId: 'tutor-4'
-  },
-  {
-    id: 5,
-    name: 'Hafiz Zaidullah Qureshi',
-    specialty: 'Quranic Studies',
-    bio: 'A dedicated and passionate teacher specializing in Quranic studies, committed to helping students achieve their learning goals.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-5'
-  },
-  {
-    id: 6,
-    name: 'Qari Noman Javed',
-    specialty: 'Tajweed & Recitation',
-    bio: 'An expert in Tajweed, Qari Noman helps students perfect their recitation with precise pronunciation and rules.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-6'
-  },
-  {
-    id: 7,
-    name: 'Hafiz Tariq Anwar',
-    specialty: 'Quran Memorization',
-    bio: 'With a focus on Hifz, Hafiz Tariq provides students with effective techniques for memorizing the Holy Quran.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-7'
-  },
-  {
-    id: 8,
-    name: 'Qari Khalid Imran',
-    specialty: 'Quranic Arabic',
-    bio: 'Specializing in Quranic Arabic, Qari Khalid makes understanding the language of the Quran accessible to all.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-8'
-  },
-  {
     id: 9,
-    name: 'Hafiz Yasir Mubarak',
-    specialty: 'Advanced Tajweed',
-    bio: 'For students looking to master advanced Tajweed, Hafiz Yasir offers expert guidance and detailed feedback.',
-    country: 'Pakistan',
+    name: 'Hafiz Abdul Qudoos',
+    specialty: 'Quran Reading & Islamic Studies',
+    bio: 'B.A in Islamiat & Hifz with 10 years of experience. Interactive and personalized methodology. Speaks English, Urdu, and Arabic.',
     gender: 'Male',
-    imageId: 'tutor-9'
-  },
-  {
-    id: 10,
-    name: 'Qari Farhan Shams',
-    specialty: 'Noorani Qaida',
-    bio: 'Qari Farhan is an expert in teaching the fundamentals of Quranic reading to beginners using the Noorani Qaida.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-10'
-  },
-  {
-    id: 11,
-    name: 'Hafiz Usman Shafqat',
-    specialty: 'Hifz Revision',
-    bio: 'Hafiz Usman helps students retain their memorization of the Quran through structured revision sessions.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-11'
-  },
-  {
-    id: 12,
-    name: 'Qari Zubair Shah',
-    specialty: 'Recitation (Qirat)',
-    bio: 'An expert in various styles of Qirat, Qari Zubair helps students beautify their recitation of the Quran.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-12'
-  },
-  {
-    id: 13,
-    name: 'Hafiz Bilal Rahman',
-    specialty: 'Quranic Studies for Youth',
-    bio: 'Hafiz Bilal specializes in making Quranic education engaging and relevant for young students.',
-    country: 'Pakistan',
-    gender: 'Male',
-    imageId: 'tutor-13'
-  },
-  {
-    id: 14,
-    name: 'Qaria Sarah Jameela',
-    specialty: 'Quran for Sisters',
-    bio: 'A dedicated female teacher providing a comfortable learning environment for sisters to study the Quran.',
-    country: 'Pakistan',
-    gender: 'Female',
-    imageId: 'tutor-14'
-  },
-  {
-    id: 15,
-    name: 'Hafiza Fatima Areeba',
-    specialty: 'Tajweed & Hifz for Women',
-    bio: 'Hafiza Fatima offers specialized instruction in Tajweed and Hifz for female students of all ages.',
-    country: 'Pakistan',
-    gender: 'Female',
-    imageId: 'tutor-15'
-  },
-  {
-    id: 16,
-    name: 'Qaria Amina Bilqis Shahid',
-    specialty: 'Islamic Studies for Girls',
-    bio: 'Amina provides engaging lessons on Islamic beliefs, history, and manners for young female students.',
-    country: 'Pakistan',
-    gender: 'Female',
-    imageId: 'tutor-16'
-  },
-  {
-    id: 17,
-    name: 'Hafiza Sumaira Nazeer',
-    specialty: 'Quran Reading for Women',
-    bio: 'Hafiza Sumaira focuses on helping female students improve their Quran reading fluency with proper Tajweed.',
-    country: 'Pakistan',
-    gender: 'Female',
-    imageId: 'tutor-17'
-  },
-  {
-    id: 18,
-    name: 'Hafiza Maryam Ashraf',
-    specialty: 'Hifz for Sisters',
-    bio: 'Providing a supportive environment, Hafiza Maryam guides female students on their journey of memorizing the Quran.',
-    country: 'Pakistan',
-    gender: 'Female',
-    imageId: 'tutor-18'
-  },
-  {
-    id: 19,
-    name: 'Hafiza Naima Zahid',
-    specialty: 'Tafseer for Women',
-    bio: 'Hafiza Naima helps female students understand the meaning and context of the Quran through Tafseer.',
-    country: 'Pakistan',
-    gender: 'Female',
-    imageId: 'tutor-19'
-  },
+    imageId: 'tutor-1'
+  }
 ];
 
 export const testimonials = [

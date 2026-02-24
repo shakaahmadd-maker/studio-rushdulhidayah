@@ -50,9 +50,6 @@ export default function TutorsPage() {
                     <Badge variant="secondary" className="flex items-center gap-1">
                       <User className="h-3 w-3" /> {tutor.gender}
                     </Badge>
-                     <Badge variant="secondary" className="flex items-center gap-1">
-                      <Globe className="h-3 w-3" /> {tutor.country}
-                    </Badge>
                   </div>
                 </CardContent>
                 <div className="p-6 pt-0">
