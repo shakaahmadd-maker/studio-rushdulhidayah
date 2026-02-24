@@ -62,15 +62,15 @@
     },
     {
       "id": "tutor-1",
-      "description": "Icon for a male tutor.",
-      "imageUrl": "https://placehold.co/300x300/ffffff/000000?text=👨",
-      "imageHint": "male icon"
+      "description": "Image of a male tutor.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-6106608140-351dd.firebasestorage.app/o/male%20tutor.jpg?alt=media&token=61ff9c1d-12ba-4035-a6b1-9fc0f0a3586e",
+      "imageHint": "male tutor"
     },
     {
       "id": "tutor-2",
-      "description": "Icon for a female tutor.",
-      "imageUrl": "https://placehold.co/300x300/ffffff/000000?text=👩",
-      "imageHint": "female icon"
+      "description": "Image of a female tutor.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-6106608140-351dd.firebasestorage.app/o/female%20tutor.jpg?alt=media&token=6e0ddfae-244b-4a2d-b531-fea25e7566e0",
+      "imageHint": "female tutor"
     },
     {
       "id": "certificate-1",
