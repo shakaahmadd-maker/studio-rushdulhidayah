@@ -134,15 +134,45 @@ export default function DuainCoursePage() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                Introduction
+                Introduction to 40 Basic Dua'in Course
               </h3>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  Enrich your daily life with the remembrance of Allah through our 40 Basic Dua'in Course. Dua (supplication) is a profound act of worship that connects us to our Creator. This course is designed to help students of all ages memorize and understand essential Duas from the Quran and Sunnah.
+                  Enrich your daily life with the remembrance of Allah through our 40 Basic Dua'in Course. Dua (supplication) is a powerful form of worship that directly connects us to Allah (SWT). This course is designed to help students of all ages memorize and understand essential Duas from the Quran and Sunnah, making it an essential tool for daily Islamic practice.
                 </p>
                 <p>
-                  Learn the supplications for various daily activities, from waking up in the morning to going to sleep at night. Understanding these Duas will not only bring blessings into your actions but also increase your awareness of Allah throughout the day.
+                  Learn the supplications for various activities, from waking up in the morning to going to sleep at night. Understanding and reciting these Duas not only bring blessings into your actions but also enhance your mindfulness of Allah throughout the day. By making Dua a regular part of your routine, you’ll experience a closer connection to Allah, seeking His mercy, guidance, and blessings in all aspects of your life.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Dua Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-8 items-start">
+            <div className="hidden sm:block w-1.5 h-48 bg-primary rounded-full relative">
+              <div className="absolute -top-1 -left-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
+              <div className="absolute -bottom-1 -left-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-800 mb-2">Dua: Changing Fate and Seeking Allah’s Mercy</h2>
+              <div className="w-16 h-1 bg-accent mb-6"></div>
+              <div className="space-y-4 text-slate-600 text-lg leading-relaxed max-w-4xl">
+                  <p>
+                      In Islam, Dua is a means of changing your destiny and seeking Allah’s mercy and help. As Allah says in the Quran:
+                  </p>
+                  <blockquote className="border-l-4 border-accent pl-4 italic text-slate-700">
+                      “And your Lord says, 'Call upon Me; I will respond to you.’” (Surah Ghafir, 40:60)
+                  </blockquote>
+                  <p>
+                      Through Dua, we submit our needs to Allah, showing our reliance on Him alone. Asking Allah for guidance, mercy, and support through Dua enables us to experience His wisdom in shaping our destiny. When we make Dua, we acknowledge that Allah's plan is always the best, and through supplication, we seek His help to change our fate and overcome obstacles.
+                  </p>
+                  <p>
+                      By regularly reciting these 40 essential Duas, you invite Allah’s mercy into your daily life, trusting that Allah’s decrees are always in your best interest.
+                  </p>
               </div>
             </div>
           </div>
@@ -150,7 +180,7 @@ export default function DuainCoursePage() {
       </section>
       
        {/* Learning Outcomes & Outline */}
-       <section className="py-20 bg-slate-50">
+       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16">
                 <div>
@@ -182,7 +212,7 @@ export default function DuainCoursePage() {
       </section>
 
       {/* Course Structure */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-extrabold text-slate-800 mb-16">
             Course <span className="text-primary">Structure</span>
@@ -211,7 +241,7 @@ export default function DuainCoursePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
