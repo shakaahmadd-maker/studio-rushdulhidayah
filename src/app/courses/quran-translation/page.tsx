@@ -113,7 +113,7 @@ export default function QuranTranslationCoursePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-800 mb-12">
-            About <span className="text-primary">Quran Translation Course</span>
+            Quran Translation Course - <span className="text-primary">Unlock the Deep Meaning of the Quran</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="relative group order-2 lg:order-1">
@@ -137,10 +137,10 @@ export default function QuranTranslationCoursePage() {
               </h3>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  Go beyond just reading and connect with the Quran on a deeper level. Our Quran Translation course is designed to help you understand the words of Allah directly in Arabic. We provide a step-by-step guide to word-for-word translation, basic Quranic grammar, and the context of the verses.
+                  Go beyond just reading and connect with the Quran on a deeper level. Our Quran Translation Course is specifically designed to help you understand the words of Allah directly in Arabic. Through a step-by-step guide, we offer word-for-word translation, basic Quranic grammar and the context of each verse to ensure that you gain a deep understanding of the Quran's message.
                 </p>
                 <p>
-                  This course is perfect for those who can read the Quran fluently and now wish to understand its meanings. Our qualified tutors will help you unravel the linguistic beauty and profound wisdom of the Holy Book, transforming your relationship with the Quran.
+                  This course is ideal for those who can already read the Quran fluently but want to unlock its deeper meanings. With qualified tutors, we will guide you through the linguistic beauty and profound wisdom of the Holy Quran, transforming your relationship with the Quran and bringing it to life.
                 </p>
               </div>
             </div>
@@ -148,8 +148,36 @@ export default function QuranTranslationCoursePage() {
         </div>
       </section>
       
+      {/* Importance Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h3 className="text-2xl font-bold text-primary mb-4">Prophet Muhammad’s (PBUH) Guidance on Seeking Knowledge</h3>
+                    <blockquote className="border-l-4 border-accent pl-6 italic text-slate-700 my-6 text-lg">
+                      “Seeking knowledge is an obligation upon every Muslim.”
+                      <footer className="text-sm not-italic mt-2 text-slate-500">(Sunan Ibn Majah)</footer>
+                    </blockquote>
+                    <p className="text-slate-600 leading-relaxed">
+                      This Hadith highlights the importance of seeking knowledge in Islam. Studying the Quran’s translation is a form of knowledge that allows you to connect deeply with Allah's words. It helps strengthen your faith and transforms your understanding of the Holy Quran.
+                    </p>
+                </div>
+                <div>
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quranic Wisdom and Motivation</h3>
+                     <blockquote className="border-l-4 border-accent pl-6 italic text-slate-700 my-6 text-lg">
+                      “This is the Book about which there is no doubt, a guidance for those conscious of Allah.”
+                      <footer className="text-sm not-italic mt-2 text-slate-500">(Surah Al-Baqarah, 2:2)</footer>
+                    </blockquote>
+                    <p className="text-slate-600 leading-relaxed">
+                      The Quran is a source of guidance for all believers. By learning the translation of the Quran, you not only understand the divine message but also build a stronger connection with Allah's will, helping you apply these teachings in your daily life.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+
        {/* Learning Outcomes & Outline */}
-       <section className="py-20 bg-slate-50">
+       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16">
                 <div>
@@ -181,14 +209,14 @@ export default function QuranTranslationCoursePage() {
       </section>
 
       {/* Course Structure */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-extrabold text-slate-800 mb-16">
             Course <span className="text-primary">Structure</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {courseStructure.map((item, index) => (
-              <div key={index} className="bg-slate-50 border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
+              <div key={index} className="bg-white border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-accent">
                   {item.icon}
                 </div>
@@ -203,7 +231,7 @@ export default function QuranTranslationCoursePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
