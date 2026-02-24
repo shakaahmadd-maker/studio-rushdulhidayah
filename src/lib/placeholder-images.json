@@ -87,7 +87,7 @@
     {
       "id": "logo-main",
       "description": "Main brand logo for Rushd Ul Hidayah Institute.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-6106608140-351dd.firebasestorage.app/o/logo%20.png?alt=media&token=b7c07c19-9891-473f-912b-53555a29bad0",
+      "imageUrl": "/logo.png",
       "imageHint": "brand logo"
     }
   ]
