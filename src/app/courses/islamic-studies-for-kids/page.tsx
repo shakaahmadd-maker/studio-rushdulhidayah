@@ -15,6 +15,7 @@ import {
   ChevronRight,
   ShieldCheck,
   CreditCard,
+  Home,
 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -95,15 +96,31 @@ export default function IslamicStudiesForKidsPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       {/* Hero Section */}
-      <section className="bg-accent py-12 sm:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary inline-block px-4 py-1 rounded text-white font-bold text-lg mb-4 shadow-sm">
+       <section
+        className="relative bg-cover bg-center py-20 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.7)), url(${
+            courseImage?.imageUrl || ''
+          })`,
+        }}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
             Islamic Studies For Kids
-          </div>
-          <div className="flex items-center gap-2 text-primary-foreground font-medium text-sm">
-            <span>Home</span> <ChevronRight size={14} />{' '}
-            <span>Courses</span> <ChevronRight size={14} />{' '}
-            <span>Islamic Studies For Kids</span>
+          </h1>
+          <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
+            <Link
+              href="/"
+              className="hover:text-accent flex items-center gap-1"
+            >
+              <Home className="w-3 h-3" /> Home
+            </Link>
+            <ChevronRight className="w-4 h-4 text-accent" />
+            <Link href="/courses" className="hover:text-accent">
+              Courses
+            </Link>
+            <ChevronRight className="w-4 h-4 text-accent" />
+            <span className="text-accent">Islamic Studies For Kids</span>
           </div>
         </div>
       </section>
@@ -111,30 +128,11 @@ export default function IslamicStudiesForKidsPage() {
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12">
-            About <span className="text-primary">Islamic Studies For Kids</span>
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white aspect-[4/3]">
-                    {courseImage && (
-                        <Image 
-                            src={courseImage.imageUrl}
-                            alt="Islamic Studies for Kids"
-                            fill
-                            className="object-cover"
-                            data-ai-hint={courseImage.imageHint}
-                        />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
-                </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
-                Introduction
-              </h3>
-              <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
+           <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-slate-800 mb-6">
+              About <span className="text-primary">Islamic Studies For Kids</span>
+            </h2>
+            <div className="space-y-6 text-slate-600 leading-relaxed text-lg text-justify">
                 <p>
                   Instill the love of Islam in your children from a young age with our fun, interactive, and engaging Islamic Studies course. Designed specifically for kids, this program covers the fundamentals of Islamic beliefs, practices, and history in a way that is easy to understand and enjoyable.
                 </p>
@@ -142,7 +140,6 @@ export default function IslamicStudiesForKidsPage() {
                   Our experienced tutors use storytelling, quizzes, and activities to make learning about Islam an exciting adventure. We aim to build a strong Islamic foundation and nurture righteous character in the leaders of tomorrow.
                 </p>
               </div>
-            </div>
           </div>
         </div>
       </section>
