@@ -42,7 +42,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <CardTitle className="font-headline text-xl">Phone / WhatsApp</CardTitle>
-                  <CardDescription>Mon-Sun, 8am-10pm</CardDescription>
+                  <CardDescription>24/7 (All days of week)</CardDescription>
                 </div>
               </CardHeader>
               <CardContent>

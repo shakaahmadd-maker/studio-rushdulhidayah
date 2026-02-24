@@ -127,7 +127,7 @@ export function Footer() {
                           </div>
                           <div className="flex flex-col">
                               <span className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Availability</span>
-                              <span className="text-xs text-slate-200">Mon - Sun: 8am to 10pm</span>
+                              <span className="text-xs text-slate-200">24/7 (All days of week)</span>
                           </div>
                       </div>
                   </div>

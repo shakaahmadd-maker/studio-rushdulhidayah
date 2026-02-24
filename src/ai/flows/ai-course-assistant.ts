@@ -99,7 +99,7 @@ Here is comprehensive information about Quran-e-institute.com. Use this informat
 - Zoom for video calls.
 - Teams for group sessions.
 - Phone: +92 331 9937355
-- Support available Monday to Sunday from 8am to 10pm via email, phone, WhatsApp, Zoom, or Teams.
+- Support available 24/7 (All days of week) via email, phone, WhatsApp, Zoom, or Teams.
 
 ---
 
