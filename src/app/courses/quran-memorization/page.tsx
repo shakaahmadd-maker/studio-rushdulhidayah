@@ -185,22 +185,15 @@ export default function QuranMemorizationCoursePage() {
           <h2 className="text-4xl font-extrabold text-slate-800 mb-16">
             Course <span className="text-primary">Structure</span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {courseStructure.map((item, index) => (
-              <div key={index} className="flex flex-col group">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-accent flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    {item.icon}
-                  </span>
-                  <span className="text-lg font-extrabold text-slate-800 whitespace-nowrap">
-                    {item.label}:
-                  </span>
+              <div key={index} className="bg-slate-50 border border-slate-200/80 p-5 rounded-2xl flex flex-col gap-4 transition-all hover:-translate-y-1.5 hover:shadow-lg hover:border-primary/40">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-accent">
+                  {item.icon}
                 </div>
-                <div className="w-full h-[1px] bg-slate-100 group-hover:bg-primary/20 transition-colors"></div>
-                <div className="mt-4">
-                  <p className="text-slate-500 text-base font-medium">
-                    {item.value}
-                  </p>
+                <div>
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-wide">{item.label}</div>
+                  <div className="text-base font-bold text-primary mt-1">{item.value}</div>
                 </div>
               </div>
             ))}
