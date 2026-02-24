@@ -37,7 +37,7 @@ export default function HadeesCoursePage() {
 
   const courseStructure = [
     { icon: <Users size={22} />, label: 'Class Type', value: 'One-on-One' },
-    { icon: <Clock size={22} />, label: 'Class Duration', value: '1 hour 30 minutes' },
+    { icon: <Clock size={22} />, label: 'Class Duration', value: '30 minutes' },
     { icon: <User size={22} />, label: 'Age Level', value: 'Atleast 10 Years' },
     {
       icon: <ShieldCheck size={22} />,
@@ -137,7 +137,7 @@ export default function HadeesCoursePage() {
                   Step into the wisdom of Prophet Muhammad (PBUH) with our 40 Hadees Course, a comprehensive guide to one of the most significant compilations of prophetic sayings by Imam Nawawi. These 40 Hadiths cover essential aspects of Islamic morality, ethics and the core values that every Muslim should embody.
                 </p>
                 <p>
-                  This course isn&apos;t just about memorizing words—it&apos;s about transforming your life. You’ll learn not only the meanings of these Hadiths but also how to apply them in your daily life. Each Hadith provides valuable lessons on how to lead a righteous life, build better character and strengthen your connection with Allah.
+                  This course isn't just about memorizing words—it's about transforming your life. You’ll learn not only the meanings of these Hadiths but also how to apply them in your daily life. Each Hadith provides valuable lessons on how to lead a righteous life, build better character and strengthen your connection with Allah.
                 </p>
                 <p>
                   Designed for both beginners and those looking to deepen their understanding of Islam, this course will help you internalize the noble teachings of the Prophet Muhammad (PBUH) and bring those teachings into your own life, every day.
@@ -163,7 +163,7 @@ export default function HadeesCoursePage() {
                       “Whoever seeks knowledge and acts upon it, Allah will guide him to the path of goodness.” (Sunan Ibn Majah)
                   </blockquote>
                   <p>
-                      This Hadith highlights the importance of not only seeking knowledge but also putting it into practice. By learning and applying the 40 Hadiths, you’re not only enriching your mind, but you&apos;re also walking on the path of righteousness as taught by Prophet Muhammad (PBUH).
+                      This Hadith highlights the importance of not only seeking knowledge but also putting it into practice. By learning and applying the 40 Hadiths, you’re not only enriching your mind, but you're also walking on the path of righteousness as taught by Prophet Muhammad (PBUH).
                   </p>
               </div>
             </div>
@@ -306,7 +306,7 @@ export default function HadeesCoursePage() {
                       </span>
                     </li>
                     {[
-                      { label: 'Class Time', val: '1 hour 30 minutes' },
+                      { label: 'Class Time', val: '30 minutes' },
                       { label: 'Class Type', val: 'One-on-One' },
                       { label: 'Age Level', val: 'Atleast 10 Years' },
                       { label: 'Requirements', val: 'Basic Reading Ability' },

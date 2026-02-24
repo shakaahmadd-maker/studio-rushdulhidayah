@@ -37,7 +37,7 @@ export default function IslamicStudiesForKidsPage() {
 
   const courseStructure = [
     { icon: <Users size={22} />, label: 'Class Type', value: 'One-on-One' },
-    { icon: <Clock size={22} />, label: 'Class Duration', value: '1 hour 30 minutes' },
+    { icon: <Clock size={22} />, label: 'Class Duration', value: '30 minutes' },
     { icon: <User size={22} />, label: 'Age Level', value: '5-12 Years' },
     {
       icon: <ShieldCheck size={22} />,
@@ -307,7 +307,7 @@ export default function IslamicStudiesForKidsPage() {
                       </span>
                     </li>
                     {[
-                      { label: 'Class Time', val: '1 hour 30 minutes' },
+                      { label: 'Class Time', val: '30 minutes' },
                       { label: 'Class Type', val: 'One-on-One' },
                       { label: 'Age Level', val: '5-12 Years' },
                       {
