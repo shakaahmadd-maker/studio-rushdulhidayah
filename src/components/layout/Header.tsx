@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { navLinks, courses } from '@/lib/data';
 import { MobileNav } from './MobileNav';
-import { Mail, Phone, Video, ChevronDown, MessageSquare } from 'lucide-react';
+import { Mail, Phone, Video, ChevronDown, MessageSquare, Users } from 'lucide-react';
 import { useUser } from '@/firebase/auth/use-user';
 import {
   DropdownMenu,
@@ -28,9 +28,9 @@ export function Header() {
       <div className="bg-primary text-primary-foreground text-[11px] md:text-xs py-2 px-4">
           <div className="container mx-auto w-full flex justify-between items-center">
               <div className="flex items-center gap-4 md:gap-8">
-                  <a href="mailto:rushdulhidayahquranacademy@gmail.com" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
+                  <a href="mailto:quranacademy.rushd@gmail.com" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
                     <Mail className="w-3.5 h-3.5 text-accent" /> 
-                    rushdulhidayahquranacademy@gmail.com
+                    quranacademy.rushd@gmail.com
                   </a>
                   <a href="tel:+923319937355" className="hidden sm:flex items-center gap-2 font-medium hover:text-accent transition-colors">
                     <Phone className="w-3.5 h-3.5 text-accent" /> 
@@ -42,9 +42,13 @@ export function Header() {
                     <MessageSquare className="w-3.5 h-3.5" />
                     WhatsApp
                   </a>
-                  <a href="skype:quran.e.institute?chat" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">
+                  <a href="https://us05web.zoom.us/chat/invite/0c2aY4nBB7gpYp82Y_GKA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">
                     <Video className="w-3.5 h-3.5" /> 
-                    Skype
+                    Zoom
+                  </a>
+                  <a href="https://teams.live.com/l/invite/FEAbutBuRQ0iihAVAE?v=g1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">
+                    <Users className="w-3.5 h-3.5" />
+                    Teams
                   </a>
                   <Link href="/contact" className="flex items-center gap-1.5 cursor-pointer hover:text-accent transition-colors uppercase font-bold tracking-tighter">Contact</Link>
                   {user && (

@@ -95,10 +95,11 @@ Here is comprehensive information about Quran-e-institute.com. Use this informat
 - Examples: Noorani Qaida certificate, Quran Reading certificate, Memorization certificate, Translation & other course certificates.
 
 **Contact Information:**
-- Email: rushdulhidayahquranacademy@gmail.com
-- Skype for live conversations.
+- Email: quranacademy.rushd@gmail.com
+- Zoom for video calls.
+- Teams for group sessions.
 - Phone: +92 331 9937355
-- Support available Monday to Sunday from 8am to 10pm via email, phone, WhatsApp, or Skype.
+- Support available Monday to Sunday from 8am to 10pm via email, phone, WhatsApp, Zoom, or Teams.
 
 ---
 

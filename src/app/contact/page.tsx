@@ -1,6 +1,6 @@
 import { ContactForm } from '@/components/forms/ContactForm';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Phone, MessageSquare } from 'lucide-react';
+import { Mail, Phone, Video, Users } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -29,8 +29,8 @@ export default function ContactPage() {
                 </div>
               </CardHeader>
               <CardContent>
-                <a href="mailto:rushdulhidayahquranacademy@gmail.com" className="text-primary hover:underline">
-                  rushdulhidayahquranacademy@gmail.com
+                <a href="mailto:quranacademy.rushd@gmail.com" className="text-primary hover:underline">
+                  quranacademy.rushd@gmail.com
                 </a>
               </CardContent>
             </Card>
@@ -50,18 +50,37 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-card">
+             <Card className="bg-card">
               <CardHeader className="flex flex-row items-center gap-4">
                  <div className="bg-primary/10 p-3 rounded-full">
-                  <MessageSquare className="h-6 w-6 text-primary" />
+                  <Video className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <CardTitle className="font-headline text-xl">Skype</CardTitle>
-                  <CardDescription>For live conversations</CardDescription>
+                  <CardTitle className="font-headline text-xl">Zoom</CardTitle>
+                  <CardDescription>For video calls</CardDescription>
                 </div>
               </CardHeader>
               <CardContent>
-                 <p className="text-muted-foreground">quran.e.institute</p>
+                <a href="https://us05web.zoom.us/chat/invite/0c2aY4nBB7gpYp82Y_GKA" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Join Zoom Chat
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card">
+              <CardHeader className="flex flex-row items-center gap-4">
+                 <div className="bg-primary/10 p-3 rounded-full">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <CardTitle className="font-headline text-xl">Teams</CardTitle>
+                  <CardDescription>For group sessions</CardDescription>
+                </div>
+              </CardHeader>
+              <CardContent>
+                 <a href="https://teams.live.com/l/invite/FEAbutBuRQ0iihAVAE?v=g1" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                   Join Teams Chat
+                 </a>
               </CardContent>
             </Card>
           </div>
