@@ -86,28 +86,9 @@
     }
 
     .breadcrumb-banner {
-        background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.7)), 
-                    url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=1920');
-        background-size: cover;
-        background-position: center;
+        background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
         position: relative;
         overflow: hidden;
-    }
-    .breadcrumb-banner::after {
-        content: '';
-        position: absolute;
-        right: -5%;
-        top: 0;
-        width: 35%;
-        height: 100%;
-        background: hsl(var(--accent));
-        opacity: 0.9;
-        transform: skewX(-15deg);
-        z-index: 1;
-        display: none; /* Hidden on mobile */
-    }
-    @media (min-width: 1024px) {
-        .breadcrumb-banner::after { display: block; }
     }
 
     .vision-sidebar-item {

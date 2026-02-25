@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import {
-  BookOpen,
   Clock,
   User,
   Users,
@@ -97,18 +96,11 @@ export default function DuainCoursePage() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center py-20 text-white"
-        style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.7)), url(${
-            courseImage?.imageUrl || ''
-          })`,
-        }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
-            40 Basic Dua'in Course
+      {/* Page Header */}
+      <section className="breadcrumb-banner py-20 text-white">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
+            40 Basic Dua'in <span className="text-accent">Course</span>
           </h1>
           <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
             <Link
@@ -128,19 +120,38 @@ export default function DuainCoursePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">
-              About <span className="text-primary">40 Basic Dua'in Course</span>
-            </h2>
+      <section className="py-24 container mx-auto px-4 islamic-pattern">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-5 relative">
+            <div className="absolute -inset-4 border-2 border-accent/20 rounded-[40px] translate-x-4 translate-y-4"></div>
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+              {courseImage && (
+                <Image
+                  src={courseImage.imageUrl}
+                  alt="Hands raised in prayer"
+                  width={800}
+                  height={500}
+                  className="w-full h-[500px] object-cover"
+                  data-ai-hint={courseImage.imageHint}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+            </div>
+          </div>
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                About <span className="text-primary">40 Basic Dua'in Course</span>
+              </h2>
+              <div className="w-24 h-2 bg-accent rounded-full"></div>
+            </div>
             <div className="space-y-6 text-slate-600 leading-relaxed text-lg text-justify">
-                <p>
-                  Enrich your daily life with the remembrance of Allah through our 40 Basic Dua'in Course. Dua (supplication) is a powerful form of worship that directly connects us to Allah (SWT). This course is designed to help students of all ages memorize and understand essential Duas from the Quran and Sunnah, making it an essential tool for daily Islamic practice.
-                </p>
-                <p>
-                  Learn the supplications for various activities, from waking up in the morning to going to sleep at night. Understanding and reciting these Duas not only bring blessings into your actions but also enhance your mindfulness of Allah throughout the day. By making Dua a regular part of your routine, you’ll experience a closer connection to Allah, seeking His mercy, guidance, and blessings in all aspects of your life.
-                </p>
+              <p>
+                Enrich your daily life with the remembrance of Allah through our 40 Basic Dua'in Course. Dua (supplication) is a powerful form of worship that directly connects us to Allah (SWT). This course is designed to help students of all ages memorize and understand essential Duas from the Quran and Sunnah, making it an essential tool for daily Islamic practice.
+              </p>
+              <p>
+                Learn the supplications for various activities, from waking up in the morning to going to sleep at night. Understanding and reciting these Duas not only bring blessings into your actions but also enhance your mindfulness of Allah throughout the day. By making Dua a regular part of your routine, you’ll experience a closer connection to Allah, seeking His mercy, guidance, and blessings in all aspects of your life.
+              </p>
             </div>
           </div>
         </div>

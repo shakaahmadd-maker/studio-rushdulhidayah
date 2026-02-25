@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import {
-  BookOpen,
   Clock,
   User,
   Users,
@@ -95,18 +94,11 @@ export default function QuranTranslationCoursePage() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center py-20 text-white"
-        style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.7)), url(${
-            courseImage?.imageUrl || ''
-          })`,
-        }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Page Header */}
+      <section className="breadcrumb-banner py-20 text-white">
+        <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
-            Quran Translation Course
+            Quran Translation <span className="text-accent">Course</span>
           </h1>
           <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
             <Link
@@ -126,20 +118,39 @@ export default function QuranTranslationCoursePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="max-w-4xl mx-auto text-center">
-             <h2 className="text-3xl font-bold text-slate-800 mb-6">
-                Quran Translation Course - <span className="text-primary">Unlock the Deep Meaning of the Quran</span>
+      <section className="py-24 container mx-auto px-4 islamic-pattern">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-5 relative">
+            <div className="absolute -inset-4 border-2 border-accent/20 rounded-[40px] translate-x-4 translate-y-4"></div>
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+              {courseImage && (
+                <Image
+                  src={courseImage.imageUrl}
+                  alt="Islamic calligraphy"
+                  width={800}
+                  height={500}
+                  className="w-full h-[500px] object-cover"
+                  data-ai-hint={courseImage.imageHint}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+            </div>
+          </div>
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                About <span className="text-primary">Quran Translation Course</span>
               </h2>
-              <div className="space-y-6 text-slate-600 leading-relaxed text-lg text-justify">
-                <p>
-                  Go beyond just reading and connect with the Quran on a deeper level. Our Quran Translation Course is specifically designed to help you understand the words of Allah directly in Arabic. Through a step-by-step guide, we offer word-for-word translation, basic Quranic grammar and the context of each verse to ensure that you gain a deep understanding of the Quran's message.
-                </p>
-                <p>
-                  This course is ideal for those who can already read the Quran fluently but want to unlock its deeper meanings. With qualified tutors, we will guide you through the linguistic beauty and profound wisdom of the Holy Quran, transforming your relationship with the Quran and bringing it to life.
-                </p>
-              </div>
+              <div className="w-24 h-2 bg-accent rounded-full"></div>
+            </div>
+            <div className="space-y-6 text-slate-600 leading-relaxed text-lg text-justify">
+              <p>
+                Go beyond just reading and connect with the Quran on a deeper level. Our Quran Translation Course is specifically designed to help you understand the words of Allah directly in Arabic. Through a step-by-step guide, we offer word-for-word translation, basic Quranic grammar and the context of each verse to ensure that you gain a deep understanding of the Quran's message.
+              </p>
+              <p>
+                This course is ideal for those who can already read the Quran fluently but want to unlock its deeper meanings. With qualified tutors, we will guide you through the linguistic beauty and profound wisdom of the Holy Quran, transforming your relationship with the Quran and bringing it to life.
+              </p>
+            </div>
           </div>
         </div>
       </section>

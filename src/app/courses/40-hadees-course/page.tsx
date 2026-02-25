@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import {
-  BookOpen,
   Clock,
   User,
   Users,
@@ -95,18 +94,11 @@ export default function HadeesCoursePage() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center py-20 text-white"
-        style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.7)), url(${
-            courseImage?.imageUrl || ''
-          })`,
-        }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Page Header */}
+      <section className="breadcrumb-banner py-20 text-white">
+        <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
-            40 Hadees Course
+            40 Hadees <span className="text-accent">Course</span>
           </h1>
           <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
             <Link
@@ -126,23 +118,42 @@ export default function HadeesCoursePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-slate-800 mb-6">
-              About <span className="text-primary">40 Hadees Course: Dive into the Teachings of Prophet Muhammad (PBUH)</span>
-            </h2>
+      <section className="py-24 container mx-auto px-4 islamic-pattern">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-5 relative">
+            <div className="absolute -inset-4 border-2 border-accent/20 rounded-[40px] translate-x-4 translate-y-4"></div>
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+              {courseImage && (
+                <Image
+                  src={courseImage.imageUrl}
+                  alt="Stack of old islamic books"
+                  width={800}
+                  height={500}
+                  className="w-full h-[500px] object-cover"
+                  data-ai-hint={courseImage.imageHint}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+            </div>
+          </div>
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                About <span className="text-primary">40 Hadees Course</span>
+              </h2>
+              <div className="w-24 h-2 bg-accent rounded-full"></div>
+            </div>
             <div className="space-y-6 text-slate-600 leading-relaxed text-lg text-justify">
-                <p>
-                  Step into the wisdom of Prophet Muhammad (PBUH) with our 40 Hadees Course, a comprehensive guide to one of the most significant compilations of prophetic sayings by Imam Nawawi. These 40 Hadiths cover essential aspects of Islamic morality, ethics and the core values that every Muslim should embody.
-                </p>
-                <p>
-                  This course isn't just about memorizing words—it's about transforming your life. You’ll learn not only the meanings of these Hadiths but also how to apply them in your daily life. Each Hadith provides valuable lessons on how to lead a righteous life, build better character and strengthen your connection with Allah.
-                </p>
-                <p>
-                  Designed for both beginners and those looking to deepen their understanding of Islam, this course will help you internalize the noble teachings of the Prophet Muhammad (PBUH) and bring those teachings into your own life, every day.
-                </p>
-              </div>
+              <p>
+                Step into the wisdom of Prophet Muhammad (PBUH) with our 40 Hadees Course, a comprehensive guide to one of the most significant compilations of prophetic sayings by Imam Nawawi. These 40 Hadiths cover essential aspects of Islamic morality, ethics and the core values that every Muslim should embody.
+              </p>
+              <p>
+                This course isn't just about memorizing words—it's about transforming your life. You’ll learn not only the meanings of these Hadiths but also how to apply them in your daily life. Each Hadith provides valuable lessons on how to lead a righteous life, build better character and strengthen your connection with Allah.
+              </p>
+              <p>
+                Designed for both beginners and those looking to deepen their understanding of Islam, this course will help you internalize the noble teachings of the Prophet Muhammad (PBUH) and bring those teachings into your own life, every day.
+              </p>
+            </div>
           </div>
         </div>
       </section>
