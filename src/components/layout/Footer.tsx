@@ -146,7 +146,7 @@ export function Footer() {
                   <p className="text-[9px] text-slate-500 mt-1 uppercase tracking-widest">Global Islamic Education Platform</p>
               </div>
               <div className="flex space-x-8 text-[11px] text-slate-300 uppercase tracking-widest font-medium">
-                  <Link href="#" className="hover:text-amber-500 transition-colors">Privacy</Link>
+                  <Link href="/policy" className="hover:text-amber-500 transition-colors">Privacy</Link>
                   <Link href="#" className="hover:text-amber-500 transition-colors">Terms</Link>
                   <Link href="#" className="hover:text-amber-500 transition-colors">Sitemap</Link>
               </div>
