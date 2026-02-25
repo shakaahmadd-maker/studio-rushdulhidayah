@@ -21,15 +21,17 @@ export default function RootLayout({
   const cookieBannerScript = `
     (function () {
       const banner = document.getElementById('cookie-banner');
-      const acceptBtn = document.getElementById('accept-cookies');
-      const rejectBtn = document.getElementById('reject-cookies');
+      if (!banner) return;
+      
+      const consent = localStorage.getItem('cookie_consent');
 
-      if (!banner || !acceptBtn || !rejectBtn) {
-        return;
+      if (!consent) {
+        banner.style.display = 'block';
       }
 
-      function initMetaPixel() {
-        if(window.fbq) return;
+      function loadMetaPixel() {
+        if (window.fbq) return;
+
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -38,37 +40,31 @@ export default function RootLayout({
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
+
         fbq('init', '925486433274757');
         fbq('track', 'PageView');
-        
-        const noscript = document.createElement('noscript');
-        const img = document.createElement('img');
-        img.height = 1;
-        img.width = 1;
-        img.style.display = 'none';
-        img.src = "https://www.facebook.com/tr?id=925486433274757&ev=PageView&noscript=1";
-        noscript.appendChild(img);
-        document.body.appendChild(noscript);
       }
 
-      const consent = localStorage.getItem('cookie_consent');
-
-      if (consent === 'granted') {
-        initMetaPixel();
-      } else if (consent !== 'denied') {
-        banner.style.display = 'block';
+      const acceptBtn = document.getElementById('accept-cookies');
+      if (acceptBtn) {
+        acceptBtn.onclick = function () {
+          localStorage.setItem('cookie_consent', 'accepted');
+          banner.style.display = 'none';
+          loadMetaPixel();
+        };
       }
 
-      acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookie_consent', 'granted');
-        banner.style.display = 'none';
-        initMetaPixel();
-      });
-
-      rejectBtn.addEventListener('click', function() {
-        localStorage.setItem('cookie_consent', 'denied');
-        banner.style.display = 'none';
-      });
+      const rejectBtn = document.getElementById('reject-cookies');
+      if(rejectBtn) {
+        rejectBtn.onclick = function () {
+          localStorage.setItem('cookie_consent', 'rejected');
+          banner.style.display = 'none';
+        };
+      }
+      
+      if (consent === 'accepted') {
+        loadMetaPixel();
+      }
     })();
   `;
   return (
@@ -88,30 +84,43 @@ export default function RootLayout({
             left: 20px;
             right: 20px;
             max-width: 420px;
-            background: #1f2937;
-            color: #fff;
-            padding: 16px;
-            border-radius: 8px;
+            background: #0f2a44; /* Dark Blue */
+            color: #ffffff;     /* White text */
+            padding: 18px;
+            border-radius: 14px;
             font-family: Arial, sans-serif;
             font-size: 14px;
             z-index: 9999;
             display: none;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
           }
+
+          #cookie-banner strong {
+            font-size: 15px;
+            color: #ffffff;
+          }
+
           #cookie-banner button {
-            margin-top: 10px;
-            margin-right: 8px;
-            padding: 6px 14px;
+            margin-top: 14px;
+            margin-right: 10px;
+            padding: 8px 18px;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
+            font-weight: 600;
           }
+
+          /* Accept button */
           #accept-cookies {
-            background: #22c55e;
-            color: #000;
+            background: #ffffff;
+            color: #0f2a44;
           }
+
+          /* Reject button */
           #reject-cookies {
-            background: #9ca3af;
-            color: #000;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
           }
         `}} />
       </head>
@@ -132,11 +141,11 @@ export default function RootLayout({
         </FirebaseClientProvider>
         
         <div id="cookie-banner">
-          <strong>Cookies Notice</strong><br />
-          We use cookies for analytics and marketing (Meta Pixel).
+          <strong>Cookies Notice</strong><br /><br />
+          We use cookies to make your visit smoother and more helpful.
           <br />
-          <button id="accept-cookies">Accept</button>
-          <button id="reject-cookies">Reject</button>
+          <button id="accept-cookies">Allow Cookies</button>
+          <button id="reject-cookies">No, thanks</button>
         </div>
 
         <Script id="cookie-consent-manager" strategy="afterInteractive">
