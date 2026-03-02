@@ -12,9 +12,9 @@ export function Logo() {
       {logoImage && (
         <Image
           src={logoImage.imageUrl}
-          alt="Rushd Ul Hidayah Institute"
-          width={300}
-          height={120}
+          alt="Rushd Ul Hidayah Quran Academy"
+          width={400}
+          height={150}
           className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
           priority
           data-ai-hint={logoImage.imageHint}

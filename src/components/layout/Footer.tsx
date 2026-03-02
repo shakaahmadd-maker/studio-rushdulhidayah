@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Mail, Phone, Clock, Video, Users } from 'lucide-react';
@@ -18,10 +17,10 @@ export function Footer() {
               <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                         {logoImage ? (
-                             <div className='relative w-48 h-20'>
+                             <div className='relative w-64 h-24'>
                                 <Image 
                                     src={logoImage.imageUrl}
-                                    alt="Rushd Ul Hidayah Institute"
+                                    alt="Rushd Ul Hidayah Quran Academy"
                                     fill
                                     className="object-contain logo-glow"
                                     data-ai-hint={logoImage.imageHint}
@@ -30,7 +29,7 @@ export function Footer() {
                         ) : (
                             <div>
                                 <h3 className="text-white font-bold text-xl leading-tight uppercase tracking-widest">Rushd Ul Hidayah</h3>
-                                <p className="text-amber-500 text-xs font-bold tracking-[0.3em]">INSTITUTE</p>
+                                <p className="text-amber-500 text-xs font-bold tracking-[0.3em]">QURAN ACADEMY</p>
                             </div>
                         )}
                   </div>
@@ -141,7 +140,7 @@ export function Footer() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
               <div className="text-center md:text-left">
                   <p className="text-[10px] tracking-[0.3em] text-slate-400 uppercase font-bold">
-                      © {new Date().getFullYear()} RUSHD UL HIDAYAH INSTITUTE.
+                      © {new Date().getFullYear()} RUSHD UL HIDAYAH QURAN ACADEMY.
                   </p>
                   <p className="text-[9px] text-slate-500 mt-1 uppercase tracking-widest">Global Islamic Education Platform</p>
               </div>

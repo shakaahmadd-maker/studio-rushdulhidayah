@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +14,7 @@ export default function Home() {
 
   const sidebarContent = {
     "Leading Online Quran Academy": {
-      description: "Rushd Ul Hidayah brings the Quran to your fingertips, connecting students from every corner of the world. From Basic Noorani Qaida to Quran Reading and Memorization, our expert teachers guide every student with personalized care and attention.",
+      description: "Rushd Ul Hidayah Quran Academy brings the Quran to your fingertips, connecting students from every corner of the world. From Basic Noorani Qaida to Quran Reading and Memorization, our expert teachers guide every student with personalized care and attention.",
       subheading: "Why choose us?",
       points: [
         "Experienced, passionate teachers",
@@ -33,7 +32,7 @@ export default function Home() {
       ]
     },
     "Trustworthy and Reliable Quran Academy": {
-      description: "At Rushd Ul Hidayah, trust is our foundation. With courses like 40 Hadees and 40 Basic Du’a’in, parents can track progress transparently while knowing their children are learning in a safe, supportive environment.",
+      description: "At Rushd Ul Hidayah Quran Academy, trust is our foundation. With courses like 40 Hadees and 40 Basic Du’a’in, parents can track progress transparently while knowing their children are learning in a safe, supportive environment.",
       subheading: "Our promise:",
       points: [
         "Verified student progress",
@@ -67,7 +66,7 @@ export default function Home() {
                 <div className="space-y-4 animate-fade-in">
                     <h1 className="text-4xl md:text-7xl font-black tracking-tight leading-tight uppercase drop-shadow-2xl">
                         ONLINE QURAN <span className="text-accent underline decoration-accent/30 underline-offset-8">LEARNING</span><br />
-                        <span className="text-white">INSTITUTE</span>
+                        <span className="text-white">ACADEMY</span>
                     </h1>
                 </div>
                 
@@ -107,10 +106,10 @@ export default function Home() {
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Trusted Worldwide</p>
                     <div className="h-px w-16 bg-slate-200 hidden md:block"></div>
                     {logoImage && (
-                        <div className="relative w-64 h-24">
+                        <div className="relative w-80 h-32">
                           <Image 
                               src={logoImage.imageUrl} 
-                              alt="Rushd Ul Hidayah Institute Logo" 
+                              alt="Rushd Ul Hidayah Quran Academy Logo" 
                               fill
                               className="object-contain"
                               priority

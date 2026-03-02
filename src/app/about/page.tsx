@@ -81,7 +81,7 @@ export default function AboutPage() {
       <section className="breadcrumb-banner py-20 text-white">
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
-            About <span className="text-accent">Our Institute</span>
+            About <span className="text-accent">Our Academy</span>
           </h1>
           <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
             <Link href="/" className="hover:text-accent flex items-center gap-1">
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 &quot;Our mission is to bridge the gap between traditional Islamic knowledge and modern digital convenience, making the Holy Quran accessible to every household globally.&quot;
               </p>
               <p>
-                <strong className="text-primary">Rushd Ul Hidayah Institute</strong> was established as a comprehensive platform for premium online Quran classes. We specialize in providing carefully designed and effectively executed online Quran learning classes for Muslim men, women, and children of all ages.
+                <strong className="text-primary">Rushd Ul Hidayah Quran Academy</strong> was established as a comprehensive platform for premium online Quran classes. We specialize in providing carefully designed and effectively executed online Quran learning classes for Muslim men, women, and children of all ages.
               </p>
               <p>
                 Suitable for the entire family, we are affordable on your pocket and expert in what we do. Our highly qualified and professional team of Quran teachers is always ready to go the extra mile to help students master Tajweed and Hifz, regardless of their starting level.

@@ -9,8 +9,8 @@ import FirebaseClientProvider from '@/firebase/client-provider';
 import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
 
 export const metadata: Metadata = {
-  title: 'Rushd Ul Hidayah Institute | Online Quran & Islamic Learning',
-  description: 'Rushd-e-Institute help you to read, understand, recite and memorize Quran online with excellence and Tajweed.',
+  title: 'Rushd Ul Hidayah Quran Academy | Online Quran & Islamic Learning',
+  description: 'Rushd Ul Hidayah Quran Academy helps you to read, understand, recite and memorize Quran online with excellence and Tajweed.',
 };
 
 export default function RootLayout({
