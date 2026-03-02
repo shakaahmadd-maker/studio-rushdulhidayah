@@ -1,9 +1,17 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function PolicyPage() {
+  const [lastUpdated, setLastUpdated] = useState<string>('');
+
+  useEffect(() => {
+    // Setting date on mount to avoid hydration mismatch between server and client locales
+    setLastUpdated(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
+  }, []);
+
   return (
     <div className="bg-white text-slate-800">
       {/* Page Header */}
@@ -26,7 +34,7 @@ export default function PolicyPage() {
       <section className="py-24 container mx-auto px-4">
         <div className="prose lg:prose-lg max-w-4xl mx-auto text-justify">
           <p>
-            <strong>Last Updated:</strong> {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            <strong>Last Updated:</strong> {lastUpdated || 'Loading...'}
           </p>
 
           <h2>Introduction</h2>
