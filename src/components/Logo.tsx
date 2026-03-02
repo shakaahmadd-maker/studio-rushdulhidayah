@@ -10,15 +10,16 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center group" suppressHydrationWarning>
       {logoImage && (
-        <Image
-          src={logoImage.imageUrl}
-          alt="Rushd Ul Hidayah Quran Academy"
-          width={300}
-          height={100}
-          className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
-          priority
-          data-ai-hint={logoImage.imageHint}
-        />
+        <div className="relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]">
+          <Image
+            src={logoImage.imageUrl}
+            alt="Rushd Ul Hidayah Quran Academy"
+            fill
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
+            priority
+            data-ai-hint={logoImage.imageHint}
+          />
+        </div>
       )}
     </Link>
   );

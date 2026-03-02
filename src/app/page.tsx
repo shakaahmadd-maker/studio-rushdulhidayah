@@ -106,7 +106,7 @@ export default function Home() {
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Trusted Worldwide</p>
                     <div className="h-px w-16 bg-slate-200 hidden md:block"></div>
                     {logoImage && (
-                        <div className="relative w-80 h-32">
+                        <div className="relative w-72 h-24 md:w-96 md:h-32">
                           <Image 
                               src={logoImage.imageUrl} 
                               alt="Rushd Ul Hidayah Quran Academy Logo" 

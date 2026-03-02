@@ -23,11 +23,11 @@ export function Header() {
   const [coursesMenuOpen, setCoursesMenuOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-slate-100" suppressHydrationWarning>
+    <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-slate-100" suppressHydrationWarning={true}>
       {/* Top Contact Bar */}
       <div className="bg-primary text-primary-foreground text-[10px] md:text-xs py-2 px-4 font-bold uppercase tracking-wider">
-          <div className="container mx-auto w-full flex justify-between items-center">
-              <div className="flex items-center gap-4 md:gap-6" suppressHydrationWarning>
+          <div className="container mx-auto w-full flex justify-between items-center" suppressHydrationWarning={true}>
+              <div className="flex items-center gap-4 md:gap-6" suppressHydrationWarning={true}>
                   <a href="mailto:quranacademy.rushd@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
                     <Mail className="w-3 h-3 text-accent" /> 
                     Email Us
@@ -37,7 +37,7 @@ export function Header() {
                     +92 331 9937355
                   </a>
               </div>
-              <div className="flex items-center gap-3 md:gap-4" suppressHydrationWarning>
+              <div className="flex items-center gap-3 md:gap-4" suppressHydrationWarning={true}>
                   <a href="https://wa.me/923319937355" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-accent transition-colors">
                     <MessageSquare className="w-3 h-3 text-accent" />
                     WhatsApp
@@ -55,13 +55,13 @@ export function Header() {
       </div>
 
       {/* Main Navigation */}
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center gap-4" suppressHydrationWarning>
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center gap-4" suppressHydrationWarning={true}>
         <div className="flex-shrink-0">
           <Logo />
         </div>
         
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-2 xl:gap-4" suppressHydrationWarning>
+        <nav className="hidden lg:flex items-center gap-2 xl:gap-4" suppressHydrationWarning={true}>
             {navLinks.map(link => {
                 if (link.href === "/courses") {
                   return (
