@@ -33,7 +33,7 @@ export default function AboutPage() {
         'Realizing this profound need, we started offering online Quran teaching services for students living in all parts of the world. Our vision was to help parents and individuals find the best online Quran academy no matter which part of the world they reside in.',
         'By bringing together a team of professional Quran teachers we help Muslims overcome the stresses of providing quality Islamic education to their children and family members.',
       ],
-      imageId: 'new-course-1',
+      imageId: 'vision-1',
       imageTitle: 'Serving the Global Ummah',
     },
     'Global Reach': {
@@ -44,7 +44,7 @@ export default function AboutPage() {
         'We believe that knowledge should be accessible to everyone, regardless of their location. Our flexible scheduling and diverse team of tutors from various backgrounds ensure that we can cater to a global audience.',
         'Through technology, we are building a global community of learners united by their love for the Quran and Islamic knowledge.',
       ],
-      imageId: 'new-course-9',
+      imageId: 'vision-2',
       imageTitle: 'A Global Classroom',
     },
     'Curriculum Focus': {
@@ -66,7 +66,7 @@ export default function AboutPage() {
         'We also plan to expand our course offerings to include more specialized subjects in Islamic sciences, and to create a resource hub with articles, videos, and lectures from renowned scholars.',
         'Our ultimate aim is to be a beacon of authentic Islamic knowledge in the digital age, continuously adapting to meet the evolving needs of the Ummah.',
       ],
-      imageId: 'hero-1',
+      imageId: 'vision-4',
       imageTitle: 'The Path Forward',
     },
   };

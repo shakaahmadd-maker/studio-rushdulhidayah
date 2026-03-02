@@ -89,6 +89,24 @@
       "description": "Main brand logo for Rushd Ul Hidayah Institute.",
       "imageUrl": "/logo.png",
       "imageHint": "brand logo"
+    },
+    {
+      "id": "vision-1",
+      "description": "Our Motivation - Empowering the next generation",
+      "imageUrl": "/vision-image-1.png",
+      "imageHint": "quran teaching"
+    },
+    {
+      "id": "vision-2",
+      "description": "Global Reach - Connecting Muslims worldwide",
+      "imageUrl": "/vision-image-2.png",
+      "imageHint": "global connection"
+    },
+    {
+      "id": "vision-4",
+      "description": "Future Goals - Innovating for Islamic education",
+      "imageUrl": "/vision-image-4.png",
+      "imageHint": "modern education"
     }
   ]
 }
