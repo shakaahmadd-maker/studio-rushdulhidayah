@@ -8,7 +8,7 @@ export function Logo() {
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-main');
 
   return (
-    <Link href="/" className="flex items-center group">
+    <Link href="/" className="flex items-center group" suppressHydrationWarning>
       {logoImage && (
         <Image
           src={logoImage.imageUrl}
