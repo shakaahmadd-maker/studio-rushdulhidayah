@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Mail, Phone, Clock, Video, Users } from 'lucide-react';
@@ -17,13 +18,12 @@ export function Footer() {
               <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                         {logoImage ? (
-                             <div className='w-48'>
+                             <div className='relative w-48 h-20'>
                                 <Image 
                                     src={logoImage.imageUrl}
                                     alt="Rushd Ul Hidayah Institute"
-                                    width={192}
-                                    height={87}
-                                    className="logo-glow"
+                                    fill
+                                    className="object-contain logo-glow"
                                     data-ai-hint={logoImage.imageHint}
                                 />
                              </div>

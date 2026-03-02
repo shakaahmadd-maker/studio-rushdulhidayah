@@ -16,7 +16,7 @@ export function Logo() {
           alt="Rushd Ul Hidayah Institute"
           width={300}
           height={120}
-          className="h-20 w-auto transition-transform duration-300 group-hover:scale-105"
+          className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
           priority
           data-ai-hint={logoImage.imageHint}
         />

@@ -101,21 +101,23 @@ export default function Home() {
         </header>
         
         {/* Brand Identity Bar */}
-        <section className="bg-white py-12 border-b border-slate-100">
+        <section className="bg-white py-16 border-b border-slate-100">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8 opacity-80">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-12">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Trusted Worldwide</p>
-                    <div className="h-px w-12 bg-slate-200 hidden md:block"></div>
+                    <div className="h-px w-16 bg-slate-200 hidden md:block"></div>
                     {logoImage && (
-                        <Image 
-                            src={logoImage.imageUrl} 
-                            alt="Brand Mark" 
-                            width={120} 
-                            height={50} 
-                            className="grayscale hover:grayscale-0 transition-all duration-500 opacity-50 hover:opacity-100"
-                        />
+                        <div className="relative w-64 h-24">
+                          <Image 
+                              src={logoImage.imageUrl} 
+                              alt="Rushd Ul Hidayah Institute Logo" 
+                              fill
+                              className="object-contain"
+                              priority
+                          />
+                        </div>
                     )}
-                    <div className="h-px w-12 bg-slate-200 hidden md:block"></div>
+                    <div className="h-px w-16 bg-slate-200 hidden md:block"></div>
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Since 2009</p>
                 </div>
             </div>
