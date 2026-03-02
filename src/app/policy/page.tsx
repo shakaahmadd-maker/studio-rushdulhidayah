@@ -1,17 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function PolicyPage() {
-  const [lastUpdated, setLastUpdated] = useState<string>('');
-
-  useEffect(() => {
-    // Setting date on mount to avoid hydration mismatch between server and client locales
-    setLastUpdated(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
-  }, []);
-
   return (
     <div className="bg-white text-slate-800">
       {/* Page Header */}
@@ -32,79 +24,138 @@ export default function PolicyPage() {
 
       {/* Policy Content */}
       <section className="py-24 container mx-auto px-4">
-        <div className="prose lg:prose-lg max-w-4xl mx-auto text-justify">
-          <p>
-            <strong>Last Updated:</strong> {lastUpdated || 'Loading...'}
+        <div className="prose lg:prose-lg max-w-4xl mx-auto text-justify prose-headings:text-primary prose-strong:text-slate-900 prose-li:text-slate-600 prose-p:text-slate-600">
+          <h1 className="text-3xl font-black mb-2">Privacy Policy: Rushd Ul Hidayah Institute</h1>
+          <p className="text-sm font-bold text-accent uppercase tracking-widest mb-12">
+            Last Updated: March 2, 2026
           </p>
 
-          <h2>Introduction</h2>
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">1</span>
+            Introduction
+          </h2>
           <p>
-            Welcome to Rushd Ul Hidayah Institute (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services. Please read this policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+            Welcome to Rushd Ul Hidayah Institute (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are deeply committed to protecting your privacy and ensuring that your personal information is handled in a secure and responsible manner. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our educational services.
+          </p>
+          <p>
+            By accessing our site, you agree to the terms outlined in this policy. If you do not agree with these terms, please discontinue use of our services immediately.
           </p>
 
-          <h2>Information We Collect</h2>
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">2</span>
+            Information We Collect
+          </h2>
           <p>
-            We may collect information about you in a variety of ways. The information we may collect on the Site includes:
-          </p>
-          <h4>Personal Data</h4>
-          <p>
-            Personally identifiable information, such as your name, email address, phone number, and demographic information, like your age, gender, and country, that you voluntarily give to us when you register for a free trial or contact us through our contact form.
-          </p>
-
-          <h2>How We Use Your Information</h2>
-          <p>
-            Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
+            We collect information that helps us provide a personalized and high-quality learning experience. This includes:
           </p>
           <ul>
-            <li>Create and manage your account.</li>
-            <li>Contact you regarding your trial classes, account, or orders.</li>
-            <li>Email you with newsletters or other information about our courses.</li>
-            <li>Respond to your inquiries and offer support.</li>
-            <li>Improve our website and service offerings.</li>
+            <li><strong>Personal Identification Data:</strong> Name, email address, phone number (WhatsApp), and home address.</li>
+            <li><strong>Demographic Data:</strong> Age, gender, and country of residence, which helps us assign appropriate tutors.</li>
+            <li><strong>Educational Data:</strong> Information regarding your current level of Quranic proficiency or specific learning goals.</li>
+            <li><strong>Technical Data:</strong> IP address, browser type, and operating system collected automatically via cookies for site optimization.</li>
           </ul>
 
-          <h2>Disclosure of Your Information</h2>
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">3</span>
+            How We Use Your Information
+          </h2>
           <p>
-            We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential.
-          </p>
-
-          <h2>Security of Your Information</h2>
-          <p>
-            We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
-          </p>
-          
-          <h2>Cookie Policy</h2>
-          <p>
-            We use cookies to enhance your experience, for analytics, and for marketing purposes (such as the Meta Pixel). When you first visit our site, you will be prompted with a cookie banner asking for your consent. You can accept or reject the use of non-essential cookies. Your preferences are stored and can be changed at any time.
-          </p>
-
-          <h2>Your Rights</h2>
-          <p>
-            You have the right to:
+            Your data is used strictly to enhance your experience with the Institute. Specific uses include:
           </p>
           <ul>
-            <li>Request access to the personal data we hold about you.</li>
-            <li>Request a correction of any incorrect data we have about you.</li>
-            <li>Request the deletion of your personal data.</li>
-            <li>Object to the processing of your personal data.</li>
+            <li><strong>Account Management:</strong> Creating and maintaining your student profile.</li>
+            <li><strong>Communication:</strong> Sending reminders for trial classes, schedules, and administrative updates.</li>
+            <li><strong>Marketing & Newsletters:</strong> Sharing updates on new courses or educational content (you may opt-out at any time).</li>
+            <li><strong>Service Improvement:</strong> Analyzing website traffic to make our platform more user-friendly.</li>
+            <li><strong>Support:</strong> Efficiently responding to your inquiries and technical issues.</li>
+          </ul>
+
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">4</span>
+            Disclosure of Your Information
+          </h2>
+          <p>
+            We do not sell, trade, or rent your Personal Identifiable Information to third parties. We only share information with trusted service providers (such as hosting partners or payment processors) who assist us in operating our business. These parties are legally bound to keep your information confidential and are prohibited from using your data for any other purpose.
+          </p>
+
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">5</span>
+            Security of Your Information
+          </h2>
+          <p>
+            We implement a variety of administrative, technical, and physical security measures to protect your data.
+          </p>
+          <ul>
+            <li><strong>Encryption:</strong> We use standard encryption protocols for data transmission.</li>
+            <li><strong>Access Control:</strong> Only authorized staff members involved in your education have access to your personal details.</li>
+            <li><strong>Risk Acknowledgment:</strong> While we strive for 100% security, please note that no digital transmission over the internet is entirely immune to interception.</li>
+          </ul>
+
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">6</span>
+            Children’s Privacy
+          </h2>
+          <p>
+            As an institute that provides services to minors, we take children&apos;s privacy very seriously.
+          </p>
+          <ul>
+            <li>We do not knowingly collect personal information from children under 13 without explicit parental or guardian consent.</li>
+            <li>If you are a parent and believe your child has provided us with personal data without your permission, please contact us immediately so we can delete the information.</li>
+          </ul>
+
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">7</span>
+            Cookie Policy & Tracking
+          </h2>
+          <p>
+            We use cookies and tracking technologies (like the Meta Pixel) to:
+          </p>
+          <ul>
+            <li>Analyze website traffic.</li>
+            <li>Remember your preferences for future visits.</li>
+            <li>Measure the effectiveness of our advertisements.</li>
           </ul>
           <p>
-            To exercise these rights, please contact us at quranacademy.rushd@gmail.com.
+            Upon your first visit, a Cookie Banner will allow you to &quot;Accept&quot; or &quot;Reject&quot; non-essential cookies. You can modify these settings through your browser at any time.
           </p>
 
-          <h2>Changes to This Privacy Policy</h2>
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">8</span>
+            Your Legal Rights
+          </h2>
           <p>
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
+            You maintain full control over your data. You have the right to:
+          </p>
+          <ul>
+            <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+            <li><strong>Correction:</strong> Request that we update any inaccurate or incomplete information.</li>
+            <li><strong>Deletion:</strong> Request that we erase your personal data from our records.</li>
+            <li><strong>Withdrawal of Consent:</strong> Opt-out of marketing emails or data processing at any time.</li>
+          </ul>
+          <p>
+            To exercise these rights, please email us at <a href="mailto:quranacademy.rushd@gmail.com" className="text-primary font-bold hover:underline">quranacademy.rushd@gmail.com</a>.
           </p>
 
-          <h2>Contact Us</h2>
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">9</span>
+            Changes to This Policy
+          </h2>
           <p>
-            If you have questions or comments about this Privacy Policy, please contact us at:
-            <br />
-            <strong>Email:</strong> quranacademy.rushd@gmail.com
-            <br />
-            <strong>Phone:</strong> +92 331 9937355
+            We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. Any updates will be posted on this page with a revised &quot;Last Updated&quot; date. We encourage you to review this policy regularly.
           </p>
+
+          <h2 className="text-2xl font-black mt-12 mb-6 flex items-center gap-3">
+            <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">10</span>
+            Contact Information
+          </h2>
+          <p>
+            If you have any questions, concerns, or complaints regarding this Privacy Policy, please reach out to us:
+          </p>
+          <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 space-y-4">
+            <p className="m-0"><strong>Email:</strong> <a href="mailto:quranacademy.rushd@gmail.com" className="text-primary hover:underline">quranacademy.rushd@gmail.com</a></p>
+            <p className="m-0"><strong>Phone/WhatsApp:</strong> +92 331 9937355</p>
+            <p className="m-0"><strong>Website:</strong> <Link href="/" className="text-primary hover:underline font-bold">www.rushdulhidayah.com</Link></p>
+          </div>
         </div>
       </section>
     </div>
