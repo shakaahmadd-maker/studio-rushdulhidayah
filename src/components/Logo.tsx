@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -16,7 +15,7 @@ export function Logo() {
           alt="Rushd Ul Hidayah Quran Academy"
           width={300}
           height={100}
-          className="h-12 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+          className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
           priority
           data-ai-hint={logoImage.imageHint}
         />
