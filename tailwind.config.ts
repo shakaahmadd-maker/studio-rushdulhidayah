@@ -17,8 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
-        arabic: ['Amiri', 'serif'],
+        body: ['var(--font-poppins)', 'sans-serif'],
+        arabic: ['var(--font-amiri)', 'serif'],
+        jakarta: ['var(--font-jakarta)', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

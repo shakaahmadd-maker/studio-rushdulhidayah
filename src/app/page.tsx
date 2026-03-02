@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { ArrowRight, ChevronRight, GraduationCap, Monitor, Plus, ThumbsUp, Users, CheckCircle } from 'lucide-react';
+import { ArrowRight, ChevronRight, Plus, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { newCourses, features as whyChooseUsFeatures, classTypes, sidebarItems } from '@/lib/data';
@@ -56,13 +56,18 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
-        {/* Hero Section */}
-        <header 
-          className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('/hero.png')" }}
-        >
-            <div className="absolute inset-0 bg-slate-900/75 backdrop-blur-[2px]"></div>
-            <div className="relative max-w-4xl space-y-10 z-10">
+        {/* Hero Section - Optimized for LCP */}
+        <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
+            <Image 
+              src="/hero.png" 
+              alt="Hero Background" 
+              fill 
+              className="object-cover z-0" 
+              priority 
+              quality={85}
+            />
+            <div className="absolute inset-0 bg-slate-900/75 backdrop-blur-[2px] z-10"></div>
+            <div className="relative max-w-4xl space-y-10 z-20">
                 <div className="space-y-4 animate-fade-in">
                     <h1 className="text-4xl md:text-7xl font-black tracking-tight leading-tight uppercase drop-shadow-2xl">
                         ONLINE QURAN <span className="text-accent underline decoration-accent/30 underline-offset-8">LEARNING</span><br />
@@ -94,7 +99,7 @@ export default function Home() {
             </div>
             
             {/* Animated Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50 z-20">
                 <div className="w-1 h-12 rounded-full bg-gradient-to-b from-accent to-transparent"></div>
             </div>
         </header>
