@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -59,7 +60,7 @@ export default function Home() {
         {/* Hero Section - Optimized for LCP */}
         <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
             <Image 
-              src="/hero.png" 
+              src="/hero.webp" 
               alt="Hero Background" 
               fill 
               className="object-cover z-0" 

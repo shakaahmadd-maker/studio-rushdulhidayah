@@ -9,7 +9,7 @@
     {
       "id": "new-course-1",
       "description": "A child learning the Arabic alphabet.",
-      "imageUrl": "/new-course-1.png",
+      "imageUrl": "/new-course-1.webp",
       "imageHint": "arabic alphabet"
     },
     {
@@ -86,8 +86,8 @@
     },
     {
       "id": "logo-main",
-      "description": "Main brand logo for Rushd Ul Hidayah Institute.",
-      "imageUrl": "/logo.png",
+      "description": "Main brand logo for Rushd Ul Hidayah Quran Academy.",
+      "imageUrl": "/logo.webp",
       "imageHint": "brand logo"
     },
     {
