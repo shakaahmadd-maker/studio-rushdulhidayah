@@ -100,13 +100,13 @@ export default function Home() {
         </header>
         
         {/* Brand Identity Bar */}
-        <section className="bg-white py-16 border-b border-slate-100">
+        <section className="bg-white py-12 border-b border-slate-100">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-12">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Trusted Worldwide</p>
                     <div className="h-px w-16 bg-slate-200 hidden md:block"></div>
                     {logoImage && (
-                        <div className="relative w-72 h-24 md:w-96 md:h-32">
+                        <div className="relative w-[240px] h-[80px] md:w-[300px] md:h-[100px]">
                           <Image 
                               src={logoImage.imageUrl} 
                               alt="Rushd Ul Hidayah Quran Academy Logo" 
@@ -141,7 +141,7 @@ export default function Home() {
                 <h4 className="text-accent font-black tracking-[0.4em] text-xs uppercase">Our Expertise</h4>
                 <h2 className="text-4xl md:text-6xl font-black text-primary uppercase leading-tight">Explore Our <span className="text-accent">Courses</span></h2>
                 <div className="w-24 h-2 bg-accent mx-auto rounded-full"></div>
-                <p className="text-slate-500 max-w-2xl mx-auto font-semibold text-lg">Offering Wide Range of Online Quran Courses Since 2009 Highly Trained and Qualified Male and Female Quran Tutors.</p>
+                <p className="text-slate-500 max-w-2xl mx-auto font-semibold text-lg text-center">Offering Wide Range of Online Quran Courses Since 2009 Highly Trained and Qualified Male and Female Quran Tutors.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -159,7 +159,7 @@ export default function Home() {
                             </div>
                             <div className="p-10 flex flex-col flex-1 bg-white">
                                 <h3 className="text-2xl font-black text-primary mb-4 leading-tight group-hover:text-accent transition-colors">{course.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed mb-10 flex-1">{course.shortDescription}</p>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-10 flex-1 text-center md:text-justify">{course.shortDescription}</p>
                                 <div className="flex items-center justify-between mt-auto pt-8 border-t border-slate-50">
                                     <Link href={`/courses/${course.slug}`} className="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-3 group-hover:text-accent transition-all">
                                         View Details <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
@@ -222,10 +222,10 @@ export default function Home() {
                       </div>
                         
                         <div key={activeSidebarItem} className="p-10 animate-fade-in flex-1">
-                            <p className="text-slate-600 text-lg leading-relaxed mb-8 font-medium italic border-l-4 border-accent pl-6">
+                            <p className="text-slate-600 text-lg leading-relaxed mb-8 font-medium italic border-l-4 border-accent pl-6 text-center md:text-justify">
                                 {currentContent.description}
                             </p>
-                            <h4 className="font-black text-primary mb-6 uppercase tracking-widest text-sm">{currentContent.subheading}</h4>
+                            <h4 className="font-black text-primary mb-6 uppercase tracking-widest text-sm text-center md:text-left">{currentContent.subheading}</h4>
                             <ul className="space-y-4">
                                 {currentContent.points.map((point, index) => (
                                     <li key={index} className="flex items-center gap-4 text-base text-slate-500 font-bold">
