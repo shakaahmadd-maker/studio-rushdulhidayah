@@ -19,6 +19,7 @@ export function CookieBanner() {
   const loadMetaPixel = () => {
     if (typeof window === 'undefined' || (window as any).fbq) return;
 
+    // Use standard non-blocking loading pattern
     (function(f: any, b: any, e: string, v: string, n?: any, t?: any, s?: any) {
       if (f.fbq) return;
       n = f.fbq = function() {
@@ -54,7 +55,7 @@ export function CookieBanner() {
   if (!isVisible) return null;
 
   return (
-    <div id="cookie-banner" className="fixed bottom-5 left-5 right-5 max-w-[420px] bg-[#0f2a44] text-white p-[18px] rounded-[14px] font-sans text-sm z-[9999] shadow-[0_12px_30px_rgba(0,0,0,0.25)] block">
+    <div id="cookie-banner" className="fixed bottom-5 left-5 right-5 max-w-[420px] bg-[#0f2a44] text-white p-[18px] rounded-[14px] font-sans text-sm z-[9999] shadow-[0_12px_30px_rgba(0,0,0,0.25)] block" suppressHydrationWarning>
       <strong className="text-[15px]">Cookies Notice</strong>
       <br /><br />
       We use cookies to make your visit smoother and more helpful.

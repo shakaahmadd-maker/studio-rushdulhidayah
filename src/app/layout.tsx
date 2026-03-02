@@ -14,6 +14,7 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-poppins',
   display: 'swap',
+  preload: true,
 });
 
 const amiri = Amiri({
@@ -21,6 +22,7 @@ const amiri = Amiri({
   weight: ['400', '700'],
   variable: '--font-amiri',
   display: 'swap',
+  preload: true,
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -28,11 +30,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-jakarta',
   display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
   title: 'Rushd Ul Hidayah Quran Academy | Online Quran & Islamic Learning',
   description: 'Rushd Ul Hidayah Quran Academy helps you to read, understand, recite and memorize Quran online with excellence and Tajweed.',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
 };
 
 export default function RootLayout({
@@ -42,6 +46,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light" suppressHydrationWarning={true}>
+      <head>
+        <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://apis.google.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossOrigin="anonymous" />
+      </head>
       <body
         className={cn(
           'min-h-screen bg-background font-body antialiased',
