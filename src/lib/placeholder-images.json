@@ -87,19 +87,19 @@
     {
       "id": "vision-1",
       "description": "Our Motivation - Empowering the next generation",
-      "imageUrl": "/vision-image-1.png",
+      "imageUrl": "/vision-image-1.avif",
       "imageHint": "quran teaching"
     },
     {
       "id": "vision-2",
       "description": "Global Reach - Connecting Muslims worldwide",
-      "imageUrl": "/vision-image-2.png",
+      "imageUrl": "/vision-image-2.avif",
       "imageHint": "global connection"
     },
     {
       "id": "vision-4",
       "description": "Future Goals - Innovating for Islamic education",
-      "imageUrl": "/vision-image-4.png",
+      "imageUrl": "/vision-image-4.avif",
       "imageHint": "modern education"
     }
   ]
