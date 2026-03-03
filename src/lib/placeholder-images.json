@@ -1,10 +1,10 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-new",
-      "description": "A dark green background with an intricate gold mandala pattern, evoking a sense of Islamic art and spirituality.",
-      "imageUrl": "https://images.unsplash.com/photo-1600185935384-954932454553?auto=format&fit=crop&q=80&w=1920",
-      "imageHint": "islamic pattern"
+      "id": "hero-main",
+      "description": "Main hero background image for the academy.",
+      "imageUrl": "/hero.webp",
+      "imageHint": "islamic background"
     },
     {
       "id": "new-course-1",
@@ -79,15 +79,9 @@
       "imageHint": "quran certificate"
     },
     {
-      "id": "hero-1",
-      "description": "An open Quran on a book stand with intricate details.",
-      "imageUrl": "https://images.unsplash.com/photo-1591879322339-16a4b5262788?auto=format&fit=crop&q=80&w=600",
-      "imageHint": "quran stand"
-    },
-    {
       "id": "logo-main",
       "description": "Main brand logo for Rushd Ul Hidayah Quran Academy.",
-      "imageUrl": "/logo.webp",
+      "imageUrl": "/logo.avif",
       "imageHint": "brand logo"
     },
     {

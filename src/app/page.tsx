@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,6 +11,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 export default function Home() {
   const [activeSidebarItem, setActiveSidebarItem] = useState(sidebarItems[0]);
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-main');
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-main');
 
   const sidebarContent = {
     "Leading Online Quran Academy": {
@@ -59,14 +59,17 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section - Optimized for LCP */}
         <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
-            <Image 
-              src="/hero.webp" 
-              alt="Hero Background" 
-              fill 
-              className="object-cover z-0" 
-              priority 
-              quality={85}
-            />
+            {heroImage && (
+              <Image 
+                src={heroImage.imageUrl} 
+                alt="Academy Hero Background" 
+                fill 
+                className="object-cover z-0" 
+                priority 
+                quality={85}
+                data-ai-hint={heroImage.imageHint}
+              />
+            )}
             <div className="absolute inset-0 bg-slate-900/75 backdrop-blur-[2px] z-10"></div>
             <div className="relative max-w-4xl space-y-10 z-20">
                 <div className="space-y-4 animate-fade-in">
