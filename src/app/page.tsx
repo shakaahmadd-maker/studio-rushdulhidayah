@@ -58,7 +58,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
         {/* Hero Section - Optimized for LCP */}
-        <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
+        <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden" suppressHydrationWarning>
             {heroImage && (
               <Image 
                 src={heroImage.imageUrl} 
@@ -66,7 +66,7 @@ export default function Home() {
                 fill 
                 className="object-cover z-0" 
                 priority 
-                quality={85}
+                quality={90}
                 data-ai-hint={heroImage.imageHint}
               />
             )}

@@ -13,15 +13,15 @@ export function Logo() {
     setMounted(true);
   }, []);
 
-  // Use a fixed aspect ratio container to prevent layout shift and mismatches
-  const containerClasses = "relative w-[180px] h-[60px] md:w-[220px] md:h-[74px]";
+  // Fixed container to prevent layout shift
+  const containerClasses = "relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]";
 
   if (!mounted) {
     return <div className={containerClasses} />;
   }
 
   return (
-    <Link href="/" className="flex items-center group">
+    <Link href="/" className="flex items-center group" suppressHydrationWarning={true}>
       {logoImage && (
         <div className={containerClasses}>
           <Image
@@ -30,6 +30,7 @@ export function Logo() {
             fill
             className="object-contain transition-transform duration-300 group-hover:scale-105"
             priority
+            quality={90}
             data-ai-hint={logoImage.imageHint}
           />
         </div>

@@ -50,6 +50,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://apis.google.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://identitytoolkit.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://securetoken.googleapis.com" crossOrigin="anonymous" />
       </head>
       <body
         className={cn(
