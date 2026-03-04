@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Poppins, Amiri, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
@@ -11,7 +12,7 @@ import { CookieBanner } from '@/components/layout/CookieBanner';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '600', '700', '800'],
   variable: '--font-poppins',
   display: 'swap',
   preload: true,
@@ -27,7 +28,7 @@ const amiri = Amiri({
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600', '700'],
   variable: '--font-jakarta',
   display: 'swap',
   preload: true,
@@ -47,6 +48,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="light" suppressHydrationWarning={true}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://apis.google.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossOrigin="anonymous" />
