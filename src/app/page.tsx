@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -58,8 +57,8 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
-        {/* Hero Section - Highly Optimized for LCP */}
-        <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden" suppressHydrationWarning>
+        {/* Hero Section - Optimized for LCP */}
+        <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
             {heroImage && (
               <Image 
                 src={heroImage.imageUrl} 
@@ -68,20 +67,21 @@ export default function Home() {
                 className="object-cover z-0" 
                 priority 
                 fetchPriority="high"
+                loading="eager"
                 quality={90}
                 data-ai-hint={heroImage.imageHint}
               />
             )}
             <div className="absolute inset-0 bg-slate-900/75 backdrop-blur-[2px] z-10"></div>
             <div className="relative max-w-4xl space-y-10 z-20">
-                <div className="space-y-4 animate-fade-in">
+                <div className="space-y-4">
                     <h1 className="text-4xl md:text-7xl font-black tracking-tight leading-tight uppercase drop-shadow-2xl">
                         ONLINE QURAN <span className="text-accent underline decoration-accent/30 underline-offset-8">LEARNING</span><br />
                         <span className="text-white">ACADEMY</span>
                     </h1>
                 </div>
                 
-                <div className="space-y-6 animate-fade-in [animation-delay:200ms]">
+                <div className="space-y-6">
                     <p className="arabic text-5xl md:text-7xl text-white font-medium drop-shadow-2xl text-center leading-relaxed">
                         خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
                     </p>
@@ -90,11 +90,11 @@ export default function Home() {
                     </p>
                 </div>
 
-                <p className="text-base md:text-lg max-w-xl mx-auto text-slate-200 font-medium animate-fade-in [animation-delay:400ms] text-center">
+                <p className="text-base md:text-lg max-w-xl mx-auto text-slate-200 font-medium text-center">
                     With our Qualified teachers for 3 days of free trial classes, let&apos;s study how to understand the Holy Quran Online.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6 animate-fade-in [animation-delay:600ms]">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
                     <Button asChild size="lg" className="px-10 py-6 rounded-2xl font-black transition-all shadow-2xl uppercase text-sm tracking-widest h-auto bg-primary hover:bg-primary/90 hover:scale-105 active:scale-95">
                         <Link href="/courses">START A COURSE</Link>
                     </Button>
@@ -117,7 +117,7 @@ export default function Home() {
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Trusted Worldwide</p>
                     <div className="h-px w-16 bg-slate-200 hidden md:block"></div>
                     {logoImage && (
-                        <div className="relative w-[240px] h-[80px] md:w-[300px] md:h-[100px]">
+                        <div className="relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]">
                           <Image 
                               src={logoImage.imageUrl} 
                               alt="Rushd Ul Hidayah Quran Academy Logo" 
@@ -232,7 +232,7 @@ export default function Home() {
                         ))}
                       </div>
                         
-                        <div key={activeSidebarItem} className="p-10 animate-fade-in flex-1">
+                        <div key={activeSidebarItem} className="p-10 flex-1">
                             <p className="text-slate-600 text-lg leading-relaxed mb-8 font-medium italic border-l-4 border-accent pl-6 text-center md:text-justify">
                                 {currentContent.description}
                             </p>

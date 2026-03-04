@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { Poppins, Amiri, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
@@ -48,16 +47,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="light" suppressHydrationWarning={true}>
       <head>
-        {/* Limit preconnects to critical origins only to avoid network congestion */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://apis.google.com" crossOrigin="anonymous" />
-        
-        {/* DNS Prefetch for secondary origins */}
         <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
-        <link rel="dns-prefetch" href="https://identitytoolkit.googleapis.com" />
-        <link rel="dns-prefetch" href="https://securetoken.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.gstatic.com" />
       </head>
       <body
         className={cn(

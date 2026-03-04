@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -16,14 +15,15 @@ export function Logo() {
 
   const containerClasses = "relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]";
 
+  // Server and initial client render must be identical to avoid hydration mismatch
   if (!mounted) {
     return <div className={containerClasses} />;
   }
 
   return (
-    <Link href="/" className="flex items-center group" suppressHydrationWarning>
+    <Link href="/" className="flex items-center group">
       {logoImage && (
-        <div className={containerClasses} suppressHydrationWarning>
+        <div className={containerClasses}>
           <Image
             src={logoImage.imageUrl}
             alt="Rushd Ul Hidayah Quran Academy"
