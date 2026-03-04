@@ -47,6 +47,7 @@ export default function RootLayout({
           poppins.variable,
           amiri.variable
         )}
+        suppressHydrationWarning
       >
         <FirebaseClientProvider>
           <div className="relative flex min-h-screen flex-col">

@@ -20,7 +20,12 @@ import {
 export function Header() {
   const pathname = usePathname();
   const { user } = useUser();
+  const [mounted, setMounted] = React.useState(false);
   const [coursesMenuOpen, setCoursesMenuOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navTextClasses = "nav-link text-[10px] xl:text-[12px] font-black tracking-widest uppercase transition-colors whitespace-nowrap";
   const topBarContactClasses = "flex items-center gap-4 md:gap-6";
@@ -30,7 +35,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-slate-100">
       {/* Top Contact Bar */}
-      <div className="bg-primary text-primary-foreground text-[10px] md:text-xs py-2 px-4 font-bold uppercase tracking-wider">
+      <div className="bg-primary text-primary-foreground text-[10px] md:text-xs py-2 px-4 font-bold uppercase tracking-wider" suppressHydrationWarning>
           <div className="container mx-auto w-full flex justify-between items-center">
               <div className={topBarContactClasses}>
                   <a href="mailto:quranacademy.rushd@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
@@ -52,7 +57,7 @@ export function Header() {
                     Zoom
                   </a>
                   <Link href="/contact" className="hover:text-accent transition-colors">Contact</Link>
-                  {user && (
+                  {mounted && user && (
                      <Link href="/admin" className="bg-accent text-primary px-2 py-0.5 rounded-full hover:bg-white transition-colors">Admin</Link>
                   )}
               </div>
