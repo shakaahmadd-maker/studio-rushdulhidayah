@@ -3,15 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { newCourses, features as whyChooseUsFeatures } from '@/lib/data';
+import { newCourses } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ClassTypesAccordion } from '@/components/home/ClassTypesAccordion';
 import { ChoiceSidebar } from '@/components/home/ChoiceSidebar';
 
-/**
- * @fileOverview Homepage for Rushd Ul Hidayah Quran Academy.
- * Performance targeted: Optimized image loading, stripped heavy payloads.
- */
 export default function Home() {
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-main');
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-main');
@@ -20,7 +16,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
         {/* Hero Section */}
-        <header className="hero-section relative min-h-[80vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
+        <header className="hero-section relative min-h-[70vh] md:min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
             {heroImage && (
               <Image 
                 src={heroImage.imageUrl} 
@@ -35,7 +31,7 @@ export default function Home() {
                 data-ai-hint={heroImage.imageHint}
               />
             )}
-            <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px] z-10"></div>
+            <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[1px] z-10"></div>
             <div className="relative max-w-4xl space-y-8 z-20 pt-10">
                 <div className="space-y-4">
                     <h1 className="text-3xl md:text-7xl font-black tracking-tight leading-tight uppercase drop-shadow-2xl">
@@ -45,7 +41,7 @@ export default function Home() {
                 </div>
                 
                 <div className="space-y-4">
-                    <p className="arabic text-4xl md:text-7xl text-white font-medium drop-shadow-2xl text-center leading-relaxed">
+                    <p className="arabic text-5xl md:text-7xl text-white font-medium drop-shadow-2xl text-center leading-relaxed">
                         خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
                     </p>
                     <p className="text-lg md:text-2xl italic font-light text-slate-100 max-w-2xl mx-auto text-center border-y border-white/10 py-3">
@@ -54,7 +50,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-sm md:text-lg max-w-xl mx-auto text-slate-200 font-medium text-center px-4">
-                    With our Qualified teachers for 3 days of free trial classes, let&apos;s study how to understand the Holy Quran Online.
+                    With our Qualified teachers for 3 days of free trial classes, let's study how to understand the Holy Quran Online.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 px-6">
@@ -112,7 +108,7 @@ export default function Home() {
                                       alt={course.title} 
                                       fill 
                                       className="object-cover group-hover:scale-110 transition-transform duration-700" 
-                                      sizes="(max-width: 768px) 100vw, 33vw"
+                                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                       quality={75}
                                       data-ai-hint={courseImage.imageHint} 
                                     />
