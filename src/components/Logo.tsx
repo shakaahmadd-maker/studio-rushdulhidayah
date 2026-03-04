@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -18,6 +19,7 @@ export function Logo() {
           className="object-contain transition-transform duration-300 group-hover:scale-105 h-auto w-[200px] md:w-[240px]"
           priority
           quality={90}
+          sizes="(max-width: 768px) 200px, 240px"
           data-ai-hint={logoImage.imageHint}
         />
       )}

@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Poppins, Amiri } from 'next/font/google';
 import './globals.css';
@@ -37,8 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://studio-6106608140-351dd.firebaseapp.com" />
         <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
       </head>
       <body

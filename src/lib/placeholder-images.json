@@ -15,61 +15,61 @@
     {
       "id": "new-course-2",
       "description": "An open Quran on a stand.",
-      "imageUrl": "/new-course-2.png",
+      "imageUrl": "/new-course-2.webp",
       "imageHint": "quran reading"
     },
     {
       "id": "new-course-3",
       "description": "A man deeply focused on reading the Quran.",
-      "imageUrl": "/new-course-3.png",
+      "imageUrl": "/new-course-3.webp",
       "imageHint": "quran reading"
     },
     {
       "id": "new-course-4",
       "description": "Intricate Islamic calligraphy on a mosque wall.",
-      "imageUrl": "/new-course-4.png",
+      "imageUrl": "/new-course-4.webp",
       "imageHint": "islamic calligraphy"
     },
     {
       "id": "new-course-5",
       "description": "A father teaching his son from the Quran.",
-      "imageUrl": "/new-course-5.png",
+      "imageUrl": "/new-course-5.webp",
       "imageHint": "father son"
     },
     {
       "id": "new-course-6",
       "description": "A person praying on a prayer mat.",
-      "imageUrl": "/new-course-6.png",
+      "imageUrl": "/new-course-6.webp",
       "imageHint": "muslim prayer"
     },
     {
       "id": "new-course-7",
       "description": "A stack of old Islamic books.",
-      "imageUrl": "/new-course-7.png",
+      "imageUrl": "/new-course-7.webp",
       "imageHint": "islamic books"
     },
     {
       "id": "new-course-8",
       "description": "Hands raised in prayer.",
-      "imageUrl": "/new-course-8.png",
+      "imageUrl": "/new-course-8.webp",
       "imageHint": "dua course"
     },
     {
       "id": "new-course-9",
       "description": "An intricate blue and gold Islamic geometric pattern.",
-      "imageUrl": "/new-course-9.png",
+      "imageUrl": "/new-course-9.webp",
       "imageHint": "islamic pattern"
     },
     {
       "id": "tutor-1",
       "description": "Image of a male tutor.",
-      "imageUrl": "/male-tutor.png",
+      "imageUrl": "/male-tutor.webp",
       "imageHint": "male tutor"
     },
     {
       "id": "tutor-2",
       "description": "Image of a female tutor.",
-      "imageUrl": "/female-tutor.png",
+      "imageUrl": "/female-tutor.webp",
       "imageHint": "female tutor"
     },
     {

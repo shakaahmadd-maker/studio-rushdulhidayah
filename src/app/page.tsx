@@ -1,6 +1,7 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { newCourses, features as whyChooseUsFeatures } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -9,8 +10,7 @@ import { ChoiceSidebar } from '@/components/home/ChoiceSidebar';
 
 /**
  * @fileOverview Homepage for Rushd Ul Hidayah Quran Academy.
- * Converted to a Server Component to ensure the Hero Image is discoverable
- * by the browser immediately in the initial HTML payload (optimizing LCP).
+ * Optimized for performance: Server component, discoverable LCP image, and optimized image sizing.
  */
 export default function Home() {
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-main');
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
-        {/* Hero Section - Optimized for LCP discovery */}
+        {/* Hero Section - Preload discoverable LCP asset */}
         <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
             {heroImage && (
               <Image 
@@ -153,7 +153,7 @@ export default function Home() {
             </div>
         </section>
 
-        {/* Interactive Sections - Moved to Client Components for Performance */}
+        {/* Interactive Sections */}
         <section className="bg-slate-50 py-24 px-4 overflow-hidden border-y border-slate-100">
             <div className="container mx-auto grid lg:grid-cols-2 gap-20">
                 <div className="space-y-10">
