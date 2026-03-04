@@ -21,28 +21,11 @@ export function Header() {
   const pathname = usePathname();
   const { user } = useUser();
   const [coursesMenuOpen, setCoursesMenuOpen] = React.useState(false);
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const navTextClasses = "nav-link text-[10px] xl:text-[12px] font-black tracking-widest uppercase transition-colors whitespace-nowrap";
   const topBarContactClasses = "flex items-center gap-4 md:gap-6";
   const topBarSocialClasses = "flex items-center gap-3 md:gap-4";
   const mainNavClasses = "container mx-auto px-4 py-2 flex justify-between items-center gap-4";
-
-  if (!mounted) {
-    return (
-      <header className="sticky top-0 z-50 w-full bg-white h-[124px] border-b border-slate-100 shadow-sm">
-        <div className="bg-primary h-[32px] md:h-[36px]" />
-        <div className={mainNavClasses}>
-          <div className="relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]" />
-          <div className="hidden lg:flex items-center gap-2 xl:gap-4" />
-        </div>
-      </header>
-    );
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-slate-100">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins, Amiri, Plus_Jakarta_Sans } from 'next/font/google';
+import { Poppins, Amiri } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
@@ -14,7 +14,6 @@ const poppins = Poppins({
   weight: ['400', '600', '700', '800'],
   variable: '--font-poppins',
   display: 'swap',
-  preload: true,
 });
 
 const amiri = Amiri({
@@ -22,15 +21,6 @@ const amiri = Amiri({
   weight: ['400', '700'],
   variable: '--font-amiri',
   display: 'swap',
-  preload: true,
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-jakarta',
-  display: 'swap',
-  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -45,21 +35,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light" suppressHydrationWarning={true}>
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
-        <link rel="dns-prefetch" href="https://www.gstatic.com" />
       </head>
       <body
         className={cn(
           'min-h-screen bg-background font-body antialiased',
           poppins.variable,
-          amiri.variable,
-          plusJakartaSans.variable
+          amiri.variable
         )}
-        suppressHydrationWarning={true}
       >
         <FirebaseClientProvider>
           <div className="relative flex min-h-screen flex-col">

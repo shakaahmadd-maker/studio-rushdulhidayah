@@ -8,7 +8,9 @@ export function CookieBanner() {
   useEffect(() => {
     const consent = localStorage.getItem('cookie_consent');
     if (!consent) {
-      setIsVisible(true);
+      // Delay visibility to not interfere with initial render metrics
+      const timer = setTimeout(() => setIsVisible(true), 2000);
+      return () => clearTimeout(timer);
     }
 
     if (consent === 'accepted') {
@@ -19,7 +21,6 @@ export function CookieBanner() {
   const loadMetaPixel = () => {
     if (typeof window === 'undefined' || (window as any).fbq) return;
 
-    // Use standard non-blocking loading pattern
     (function(f: any, b: any, e: string, v: string, n?: any, t?: any, s?: any) {
       if (f.fbq) return;
       n = f.fbq = function() {
@@ -55,21 +56,21 @@ export function CookieBanner() {
   if (!isVisible) return null;
 
   return (
-    <div id="cookie-banner" className="fixed bottom-5 left-5 right-5 max-w-[420px] bg-[#0f2a44] text-white p-[18px] rounded-[14px] font-sans text-sm z-[9999] shadow-[0_12px_30px_rgba(0,0,0,0.25)] block" suppressHydrationWarning>
-      <strong className="text-[15px]">Cookies Notice</strong>
-      <br /><br />
-      We use cookies to make your visit smoother and more helpful.
-      <br />
-      <div className="mt-3.5 flex gap-2.5">
+    <div id="cookie-banner" className="fixed bottom-5 left-5 right-5 max-w-[420px] bg-[#0f2a44] text-white p-5 rounded-2xl font-sans text-sm z-[9999] shadow-2xl border border-white/10 animate-fade-in">
+      <strong className="text-base">Cookies Notice</strong>
+      <p className="mt-2 text-slate-200">
+        We use cookies to make your visit smoother and more helpful.
+      </p>
+      <div className="mt-4 flex gap-3">
         <button 
           onClick={handleAccept}
-          className="bg-white text-[#0f2a44] py-2 px-[18px] rounded-lg cursor-pointer font-semibold hover:bg-white/90 transition-colors"
+          className="bg-white text-[#0f2a44] py-2 px-5 rounded-lg cursor-pointer font-bold hover:bg-white/90 transition-colors"
         >
           Allow Cookies
         </button>
         <button 
           onClick={handleReject}
-          className="bg-transparent text-white border border-white py-2 px-[18px] rounded-lg cursor-pointer font-semibold hover:bg-white/10 transition-colors"
+          className="bg-transparent text-white border border-white py-2 px-5 rounded-lg cursor-pointer font-bold hover:bg-white/10 transition-colors"
         >
           No, thanks
         </button>

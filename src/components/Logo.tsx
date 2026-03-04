@@ -1,24 +1,12 @@
-'use client';
+"use client";
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { useState, useEffect } from 'react';
 
 export function Logo() {
-  const [mounted, setMounted] = useState(false);
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-main');
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const containerClasses = "relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]";
-
-  // Server and initial client render must be identical to avoid hydration mismatch
-  if (!mounted) {
-    return <div className={containerClasses} />;
-  }
 
   return (
     <Link href="/" className="flex items-center group">
@@ -30,8 +18,8 @@ export function Logo() {
             fill
             className="object-contain transition-transform duration-300 group-hover:scale-105"
             priority
-            fetchPriority="high"
             quality={90}
+            sizes="(max-width: 768px) 200px, 240px"
             data-ai-hint={logoImage.imageHint}
           />
         </div>

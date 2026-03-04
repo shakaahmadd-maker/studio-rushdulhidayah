@@ -1,63 +1,25 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { ArrowRight, ChevronRight, Plus, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { newCourses, features as whyChooseUsFeatures, classTypes, sidebarItems } from '@/lib/data';
+import { newCourses, features as whyChooseUsFeatures } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ClassTypesAccordion } from '@/components/home/ClassTypesAccordion';
+import { ChoiceSidebar } from '@/components/home/ChoiceSidebar';
 
+/**
+ * @fileOverview Homepage for Rushd Ul Hidayah Quran Academy.
+ * Converted to a Server Component to ensure the Hero Image is discoverable
+ * by the browser immediately in the initial HTML payload (optimizing LCP).
+ */
 export default function Home() {
-  const [activeSidebarItem, setActiveSidebarItem] = useState(sidebarItems[0]);
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-main');
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-main');
-
-  const sidebarContent = {
-    "Leading Online Quran Academy": {
-      description: "Rushd Ul Hidayah Quran Academy brings the Quran to your fingertips, connecting students from every corner of the world. From Basic Noorani Qaida to Quran Reading and Memorization, our expert teachers guide every student with personalized care and attention.",
-      subheading: "Why choose us?",
-      points: [
-        "Experienced, passionate teachers",
-        "Students from across the globe",
-        "Complete courses for beginners to advanced learners"
-      ]
-    },
-    "Effective Quran Teaching Methodology": {
-      description: "We blend traditional Quranic teachings with modern online learning to make learning meaningful and fun. Courses like Quran Translation, Asaan Namaz and Islamic Studies for Kids help students understand, memorize and apply the Quran in daily life.",
-      subheading: "Why it works:",
-      points: [
-        "Step-by-Step learning for every level",
-        "Focus on Tajweed, memorization and comprehension",
-        "Interactive, engaging online classes"
-      ]
-    },
-    "Trustworthy and Reliable Quran Academy": {
-      description: "At Rushd Ul Hidayah Quran Academy, trust is our foundation. With courses like 40 Hadees and 40 Basic Du’a’in, parents can track progress transparently while knowing their children are learning in a safe, supportive environment.",
-      subheading: "Our promise:",
-      points: [
-        "Verified student progress",
-        "Secure, reliable online platform",
-        "Transparent teaching & feedback"
-      ]
-    },
-    "Internationally Acclaimed Quran Academy": {
-      description: "Our academy is recognized worldwide, welcoming students from Pakistan, USA, UK, UAE and beyond. With certificate-based courses and specialized programs, students gain Quranic knowledge that is respected internationally.",
-      subheading: "Global edge:",
-      points: [
-        "Students from multiple countries",
-        "Courses designed to international standards",
-        "Certificates for all major courses"
-      ]
-    }
-  };
-
-  const currentContent = sidebarContent[activeSidebarItem as keyof typeof sidebarContent];
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
-        {/* Hero Section - Optimized for LCP */}
+        {/* Hero Section - Optimized for LCP discovery */}
         <header className="hero-section relative min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden">
             {heroImage && (
               <Image 
@@ -69,6 +31,7 @@ export default function Home() {
                 fetchPriority="high"
                 loading="eager"
                 quality={90}
+                sizes="100vw"
                 data-ai-hint={heroImage.imageHint}
               />
             )}
@@ -104,7 +67,6 @@ export default function Home() {
                 </div>
             </div>
             
-            {/* Animated Scroll Indicator */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50 z-20">
                 <div className="w-1 h-12 rounded-full bg-gradient-to-b from-accent to-transparent"></div>
             </div>
@@ -123,6 +85,7 @@ export default function Home() {
                               alt="Rushd Ul Hidayah Quran Academy Logo" 
                               fill
                               className="object-contain"
+                              sizes="(max-width: 768px) 200px, 240px"
                               priority
                           />
                         </div>
@@ -162,7 +125,14 @@ export default function Home() {
                         <div key={course.id} className="bg-card rounded-[40px] border border-slate-100 shadow-xl overflow-hidden flex flex-col group transition-all duration-500 ease-in-out hover:-translate-y-4 hover:shadow-2xl">
                             <div className="h-64 relative overflow-hidden">
                                 {courseImage && (
-                                    <Image src={courseImage.imageUrl} alt={course.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" data-ai-hint={courseImage.imageHint} />
+                                    <Image 
+                                      src={courseImage.imageUrl} 
+                                      alt={course.title} 
+                                      fill 
+                                      className="object-cover group-hover:scale-110 transition-transform duration-700" 
+                                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                      data-ai-hint={courseImage.imageHint} 
+                                    />
                                 )}
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent flex items-end p-8">
                                     <span className="bg-accent text-accent-foreground text-[11px] font-black uppercase px-4 py-1.5 rounded-full shadow-lg">New Batch Available</span>
@@ -183,77 +153,30 @@ export default function Home() {
             </div>
         </section>
 
-        {/* Classes and Why Choose Us Section */}
+        {/* Interactive Sections - Moved to Client Components for Performance */}
         <section className="bg-slate-50 py-24 px-4 overflow-hidden border-y border-slate-100">
             <div className="container mx-auto grid lg:grid-cols-2 gap-20">
-                
-                {/* Start Your Classes Now (Accordion) */}
                 <div className="space-y-10">
                     <div className="space-y-4">
                         <h4 className="text-accent font-black tracking-[0.4em] text-xs uppercase">Get Started</h4>
                         <h2 className="text-4xl font-black text-primary uppercase tracking-tight leading-tight">Start <span className="text-accent">Your Classes</span> Now</h2>
                         <div className="w-16 h-1.5 bg-accent rounded-full"></div>
                     </div>
-                    <Accordion type="single" collapsible className="w-full space-y-4">
-                      {classTypes.map((item, index) => (
-                        <AccordionItem key={index} value={`item-${index}`} className="bg-white rounded-3xl border-none shadow-sm hover:shadow-md transition-all overflow-hidden">
-                          <AccordionTrigger className="w-full p-6 text-left flex justify-between items-center group font-bold text-slate-700 hover:text-primary transition-colors uppercase text-sm hover:no-underline">
-                              <span>{item.title}</span>
-                              <div className="w-10 h-10 rounded-2xl bg-slate-50 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all ml-4">
-                                  <Plus className="w-5 h-5 transition-transform duration-300 group-data-[state=open]:rotate-45" />
-                              </div>
-                          </AccordionTrigger>
-                          <AccordionContent className="p-6 pt-0 text-slate-500 text-base leading-relaxed font-medium">
-                            {item.content}
-                          </AccordionContent>
-                        </AccordionItem>
-                      ))}
-                    </Accordion>
+                    <ClassTypesAccordion />
                 </div>
 
-                {/* Best Choice Sidebar/List */}
                 <div className="space-y-10">
                     <div className="space-y-4">
                         <h4 className="text-accent font-black tracking-[0.4em] text-xs uppercase">Our Promise</h4>
                         <h2 className="text-4xl font-black text-primary uppercase tracking-tight leading-tight">Why <span className="text-accent">The Best Choice</span> For You?</h2>
                         <div className="w-16 h-1.5 bg-accent rounded-full"></div>
                     </div>
-                    <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-slate-100 flex flex-col">
-                      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-1 border-b border-slate-50">
-                        {sidebarItems.map(item => (
-                            <div 
-                            key={item} 
-                            onClick={() => setActiveSidebarItem(item)}
-                            className={`p-6 border-r border-slate-50 lg:border-r-0 lg:border-b last:border-0 flex items-center justify-between cursor-pointer transition-all ${activeSidebarItem === item ? 'bg-primary text-white scale-[1.02] z-10 shadow-lg' : 'hover:bg-slate-50 text-slate-600'}`}
-                            >
-                                <span className="font-bold text-xs uppercase tracking-wider">{item}</span>
-                                <ChevronRight className={`w-5 h-5 hidden lg:block transition-colors ${activeSidebarItem === item ? 'text-accent' : 'text-slate-300'}`} />
-                            </div>
-                        ))}
-                      </div>
-                        
-                        <div key={activeSidebarItem} className="p-10 flex-1">
-                            <p className="text-slate-600 text-lg leading-relaxed mb-8 font-medium italic border-l-4 border-accent pl-6 text-center md:text-justify">
-                                {currentContent.description}
-                            </p>
-                            <h4 className="font-black text-primary mb-6 uppercase tracking-widest text-sm text-center md:text-left">{currentContent.subheading}</h4>
-                            <ul className="space-y-4">
-                                {currentContent.points.map((point, index) => (
-                                    <li key={index} className="flex items-center gap-4 text-base text-slate-500 font-bold">
-                                        <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
-                                            <CheckCircle className="w-4 h-4 text-accent" />
-                                        </div>
-                                        <span>{point}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                    <ChoiceSidebar />
                 </div>
             </div>
         </section>
 
-        {/* Why Choose Us Grid (Icons) */}
+        {/* Why Choose Us Grid */}
         <section className="py-24 container mx-auto px-4 islamic-pattern">
             <div className="text-center mb-20 space-y-4">
                 <h4 className="text-accent font-black tracking-[0.4em] text-xs uppercase">Core Values</h4>
