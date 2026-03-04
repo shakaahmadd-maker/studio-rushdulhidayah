@@ -27,8 +27,23 @@ export function Header() {
     setMounted(true);
   }, []);
 
+  // Standardized dimensions and gaps to prevent hydration errors
+  const topBarContactGap = "gap-4 md:gap-6";
+  const topBarSocialGap = "gap-3 md:gap-4";
+  const mainNavGap = "gap-4";
+  const desktopMenuGap = "gap-2 xl:gap-4";
+  const navTextClasses = "nav-link text-[10px] xl:text-[12px] font-black tracking-widest uppercase transition-colors whitespace-nowrap";
+
   if (!mounted) {
-    return <header className="sticky top-0 z-50 w-full bg-white h-24 border-b border-slate-100" />;
+    return (
+      <header className="sticky top-0 z-50 w-full bg-white h-[124px] border-b border-slate-100">
+        <div className="bg-primary h-[32px] md:h-[36px]" />
+        <div className="container mx-auto px-4 h-[88px] flex items-center justify-between">
+          <div className="relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]" />
+          <div className="hidden lg:flex items-center gap-4" />
+        </div>
+      </header>
+    );
   }
 
   return (
@@ -36,7 +51,7 @@ export function Header() {
       {/* Top Contact Bar */}
       <div className="bg-primary text-primary-foreground text-[10px] md:text-xs py-2 px-4 font-bold uppercase tracking-wider" suppressHydrationWarning={true}>
           <div className="container mx-auto w-full flex justify-between items-center" suppressHydrationWarning={true}>
-              <div className="flex items-center gap-4 md:gap-6" suppressHydrationWarning={true}>
+              <div className={cn("flex items-center", topBarContactGap)} suppressHydrationWarning={true}>
                   <a href="mailto:quranacademy.rushd@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
                     <Mail className="w-3 h-3 text-accent" /> 
                     Email Us
@@ -46,7 +61,7 @@ export function Header() {
                     +92 331 9937355
                   </a>
               </div>
-              <div className="flex items-center gap-3 md:gap-4" suppressHydrationWarning={true}>
+              <div className={cn("flex items-center", topBarSocialGap)} suppressHydrationWarning={true}>
                   <a href="https://wa.me/923319937355" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-accent transition-colors">
                     <MessageSquare className="w-3 h-3 text-accent" />
                     WhatsApp
@@ -64,13 +79,13 @@ export function Header() {
       </div>
 
       {/* Main Navigation */}
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center gap-4" suppressHydrationWarning={true}>
+      <div className={cn("container mx-auto px-4 py-2 flex justify-between items-center", mainNavGap)} suppressHydrationWarning={true}>
         <div className="flex-shrink-0">
           <Logo />
         </div>
         
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-2 xl:gap-4" suppressHydrationWarning={true}>
+        <nav className={cn("hidden lg:flex items-center", desktopMenuGap)} suppressHydrationWarning={true}>
             {navLinks.map(link => {
                 if (link.href === "/courses") {
                   return (
@@ -81,7 +96,8 @@ export function Header() {
                         onMouseLeave={() => setCoursesMenuOpen(false)}
                       >
                         <Link href="/courses" className={cn(
-                          "nav-link text-[10px] xl:text-[12px] font-black tracking-widest flex items-center gap-0.5 transition-colors whitespace-nowrap",
+                          navTextClasses,
+                          "flex items-center gap-0.5",
                           pathname.startsWith('/courses') ? "text-primary border-b-2 border-accent pb-1" : "text-slate-600 hover:text-primary"
                         )}>
                           {link.label}
@@ -111,7 +127,7 @@ export function Header() {
                     key={link.href} 
                     href={link.href} 
                     className={cn(
-                        "nav-link text-[10px] xl:text-[12px] font-black tracking-widest transition-all whitespace-nowrap", 
+                        navTextClasses, 
                         pathname === link.href ? "text-primary border-b-2 border-accent pb-1" : "text-slate-600 hover:text-primary"
                     )}
                   >

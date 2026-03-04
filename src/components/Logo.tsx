@@ -13,7 +13,7 @@ export function Logo() {
     setMounted(true);
   }, []);
 
-  // Fixed container to prevent layout shift
+  // Fixed container to prevent layout shift and hydration mismatches
   const containerClasses = "relative w-[200px] h-[66px] md:w-[240px] md:h-[80px]";
 
   if (!mounted) {
@@ -23,7 +23,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center group" suppressHydrationWarning={true}>
       {logoImage && (
-        <div className={containerClasses}>
+        <div className={containerClasses} suppressHydrationWarning={true}>
           <Image
             src={logoImage.imageUrl}
             alt="Rushd Ul Hidayah Quran Academy"
