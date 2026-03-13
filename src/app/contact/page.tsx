@@ -41,12 +41,27 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <CardTitle className="font-headline text-xl">Phone / WhatsApp</CardTitle>
-                  <CardDescription>24/7 (All days of week)</CardDescription>
+                  <CardTitle className="font-headline text-xl">Phone (Pakistan)</CardTitle>
+                  <CardDescription>24/7 Support</CardDescription>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">+92 331 9937355</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card">
+              <CardHeader className="flex flex-row items-center gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <CardTitle className="font-headline text-xl">Phone (UK)</CardTitle>
+                  <CardDescription>International Support</CardDescription>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">+44 7451 298124</p>
               </CardContent>
             </Card>
 

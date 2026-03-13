@@ -38,13 +38,17 @@ export function Header() {
       <div className="bg-primary text-primary-foreground text-[10px] md:text-xs py-2 px-4 font-bold uppercase tracking-wider" suppressHydrationWarning>
           <div className="container mx-auto w-full flex justify-between items-center">
               <div className={topBarContactClasses}>
-                  <a href="mailto:quranacademy.rushd@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-                    <Mail className="w-3 h-3 text-accent" /> 
-                    Email Us
-                  </a>
-                  <a href="tel:+923319937355" className="hidden sm:flex items-center gap-2 hover:text-accent transition-colors">
+                  <a href="tel:+923319937355" className="flex items-center gap-2 hover:text-accent transition-colors">
                     <Phone className="w-3 h-3 text-accent" /> 
                     +92 331 9937355
+                  </a>
+                  <a href="tel:+447451298124" className="hidden sm:flex items-center gap-2 hover:text-accent transition-colors">
+                    <Phone className="w-3 h-3 text-accent" /> 
+                    +44 7451 298124
+                  </a>
+                  <a href="mailto:quranacademy.rushd@gmail.com" className="hidden xl:flex items-center gap-2 hover:text-accent transition-colors">
+                    <Mail className="w-3 h-3 text-accent" /> 
+                    Email
                   </a>
               </div>
               <div className={topBarSocialClasses}>

@@ -24,6 +24,7 @@ export function Footer() {
                                     fill
                                     className="object-contain logo-glow"
                                     data-ai-hint={logoImage.imageHint}
+                                    sizes="256px"
                                 />
                              </div>
                         ) : (
@@ -98,8 +99,17 @@ export function Footer() {
                               <Phone className="text-amber-500 w-4 h-4" />
                           </div>
                           <div className="flex flex-col">
-                              <span className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Call Support</span>
+                              <span className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">PK Support</span>
                               <span className="text-xs text-slate-200">+92 331 9937355</span>
+                          </div>
+                      </a>
+                      <a href="tel:+447451298124" className="contact-card p-4 rounded-xl flex items-center space-x-4">
+                          <div className="w-10 h-10 rounded-lg bg-amber-600/20 flex items-center justify-center flex-shrink-0">
+                              <Phone className="text-amber-500 w-4 h-4" />
+                          </div>
+                          <div className="flex flex-col">
+                              <span className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">UK Support</span>
+                              <span className="text-xs text-slate-200">+44 7451 298124</span>
                           </div>
                       </a>
                       <a href="https://us05web.zoom.us/chat/invite/0c2aY4nBB7gpYp82Y_GKA" target="_blank" rel="noopener noreferrer" className="contact-card p-4 rounded-xl flex items-center space-x-4">
@@ -109,15 +119,6 @@ export function Footer() {
                           <div className="flex flex-col">
                               <span className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Zoom</span>
                               <span className="text-xs text-slate-200">Join our Zoom chat</span>
-                          </div>
-                      </a>
-                      <a href="https://teams.live.com/l/invite/FEAbutBuRQ0iihAVAE?v=g1" target="_blank" rel="noopener noreferrer" className="contact-card p-4 rounded-xl flex items-center space-x-4">
-                          <div className="w-10 h-10 rounded-lg bg-amber-600/20 flex items-center justify-center flex-shrink-0">
-                              <Users className="text-amber-500 w-4 h-4" />
-                          </div>
-                          <div className="flex flex-col">
-                              <span className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Teams</span>
-                              <span className="text-xs text-slate-200">Join our Teams chat</span>
                           </div>
                       </a>
                       <div className="contact-card p-4 rounded-xl flex items-center space-x-4">

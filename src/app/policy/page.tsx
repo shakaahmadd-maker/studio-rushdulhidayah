@@ -153,7 +153,8 @@ export default function PolicyPage() {
           </p>
           <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 space-y-4">
             <p className="m-0"><strong>Email:</strong> <a href="mailto:quranacademy.rushd@gmail.com" className="text-primary hover:underline">quranacademy.rushd@gmail.com</a></p>
-            <p className="m-0"><strong>Phone/WhatsApp:</strong> +92 331 9937355</p>
+            <p className="m-0"><strong>Phone/WhatsApp (PK):</strong> +92 331 9937355</p>
+            <p className="m-0"><strong>Phone (UK):</strong> +44 7451 298124</p>
             <p className="m-0"><strong>Website:</strong> <Link href="/" className="text-primary hover:underline font-bold">www.rushdulhidayah.com</Link></p>
           </div>
         </div>
