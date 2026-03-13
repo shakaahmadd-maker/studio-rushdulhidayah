@@ -46,9 +46,9 @@ export function Header() {
                     <Phone className="w-3 h-3 text-accent" /> 
                     +44 7451 298124
                   </a>
-                  <a href="mailto:quranacademy.rushd@gmail.com" className="hidden xl:flex items-center gap-2 hover:text-accent transition-colors">
+                  <a href="mailto:quranacademy.rushd@gmail.com" className="hidden md:flex items-center gap-2 hover:text-accent transition-colors">
                     <Mail className="w-3 h-3 text-accent" /> 
-                    Email
+                    Email Us
                   </a>
               </div>
               <div className={topBarSocialClasses}>
