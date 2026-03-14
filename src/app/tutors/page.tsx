@@ -55,7 +55,7 @@ export default function TutorsPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                         sizes="128px"
                         priority={index < 4}
-                        data-ai-hint={tutorImage.imageHint}
+                        unoptimized={false}
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-primary/10 text-primary">

@@ -3,73 +3,73 @@
     {
       "id": "hero-main",
       "description": "Main hero background image for the academy.",
-      "imageUrl": "/hero.webp?v=6",
+      "imageUrl": "/hero.webp?v=7",
       "imageHint": "islamic background"
     },
     {
       "id": "new-course-1",
       "description": "A child learning the Arabic alphabet.",
-      "imageUrl": "/new-course-1.webp?v=6",
+      "imageUrl": "/new-course-1.webp?v=7",
       "imageHint": "arabic alphabet"
     },
     {
       "id": "new-course-2",
       "description": "An open Quran on a stand.",
-      "imageUrl": "/new-course-2.webp?v=6",
+      "imageUrl": "/new-course-2.webp?v=7",
       "imageHint": "quran reading"
     },
     {
       "id": "new-course-3",
       "description": "A man deeply focused on reading the Quran.",
-      "imageUrl": "/new-course-3.webp?v=6",
+      "imageUrl": "/new-course-3.webp?v=7",
       "imageHint": "quran reading"
     },
     {
       "id": "new-course-4",
       "description": "Intricate Islamic calligraphy on a mosque wall.",
-      "imageUrl": "/new-course-4.webp?v=6",
+      "imageUrl": "/new-course-4.webp?v=7",
       "imageHint": "islamic calligraphy"
     },
     {
       "id": "new-course-5",
       "description": "A father teaching his son from the Quran.",
-      "imageUrl": "/new-course-5.webp?v=6",
+      "imageUrl": "/new-course-5.webp?v=7",
       "imageHint": "father son"
     },
     {
       "id": "new-course-6",
       "description": "A person praying on a prayer mat.",
-      "imageUrl": "/new-course-6.webp?v=6",
+      "imageUrl": "/new-course-6.webp?v=7",
       "imageHint": "muslim prayer"
     },
     {
       "id": "new-course-7",
       "description": "A stack of old Islamic books.",
-      "imageUrl": "/new-course-7.webp?v=6",
+      "imageUrl": "/new-course-7.webp?v=7",
       "imageHint": "islamic books"
     },
     {
       "id": "new-course-8",
       "description": "Hands raised in prayer.",
-      "imageUrl": "/new-course-8.webp?v=6",
+      "imageUrl": "/new-course-8.webp?v=7",
       "imageHint": "dua course"
     },
     {
       "id": "new-course-9",
       "description": "An intricate blue and gold Islamic geometric pattern.",
-      "imageUrl": "/new-course-9.webp?v=6",
+      "imageUrl": "/new-course-9.webp?v=7",
       "imageHint": "islamic pattern"
     },
     {
       "id": "tutor-male",
-      "description": "Image of a male tutor.",
-      "imageUrl": "/male-tutor.webp?v=6",
+      "description": "Centralized image for all male tutors.",
+      "imageUrl": "/male-tutor.webp?v=7",
       "imageHint": "male tutor"
     },
     {
       "id": "tutor-female",
-      "description": "Image of a female tutor.",
-      "imageUrl": "/female-tutor.webp?v=6",
+      "description": "Centralized image for all female tutors.",
+      "imageUrl": "/female-tutor.webp?v=7",
       "imageHint": "female tutor"
     },
     {
@@ -81,25 +81,25 @@
     {
       "id": "logo-main",
       "description": "Main brand logo for Rushd Ul Hidayah Quran Academy.",
-      "imageUrl": "/logo.webp?v=6",
+      "imageUrl": "/logo.webp?v=7",
       "imageHint": "brand logo"
     },
     {
       "id": "vision-1",
       "description": "Our Motivation - Empowering the next generation",
-      "imageUrl": "/vision-image-1.webp?v=6",
+      "imageUrl": "/vision-image-1.webp?v=7",
       "imageHint": "quran teaching"
     },
     {
       "id": "vision-2",
       "description": "Global Reach - Connecting Muslims worldwide",
-      "imageUrl": "/vision-image-2.webp?v=6",
+      "imageUrl": "/vision-image-2.webp?v=7",
       "imageHint": "global connection"
     },
     {
       "id": "vision-4",
       "description": "Future Goals - Innovating for Islamic education",
-      "imageUrl": "/vision-image-4.webp?v=6",
+      "imageUrl": "/vision-image-4.webp?v=7",
       "imageHint": "modern education"
     }
   ]
