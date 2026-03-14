@@ -61,13 +61,13 @@
       "imageHint": "islamic pattern"
     },
     {
-      "id": "tutor-1",
+      "id": "tutor-male",
       "description": "Image of a male tutor.",
       "imageUrl": "/male-tutor.webp?v=6",
       "imageHint": "male tutor"
     },
     {
-      "id": "tutor-2",
+      "id": "tutor-female",
       "description": "Image of a female tutor.",
       "imageUrl": "/female-tutor.webp?v=6",
       "imageHint": "female tutor"

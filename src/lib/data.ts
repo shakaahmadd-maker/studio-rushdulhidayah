@@ -1,3 +1,4 @@
+
 import { GraduationCap, Users, Monitor, ThumbsUp } from 'lucide-react';
 
 export const navLinks = [
@@ -251,7 +252,7 @@ export const tutors = [
     specialty: 'Admin & General Tutoring',
     bio: 'Admin with Hifz & Dars-e-Nizami qualifications and 5 years of experience. Offers a beginner-friendly approach. Speaks English and Urdu.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 2,
@@ -259,7 +260,7 @@ export const tutors = [
     specialty: 'Norani Qaida & Memorization',
     bio: 'Hifz & Dars-e-Nizami qualified with 3 years of experience. Provides personalized teaching. Speaks English and Urdu.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 3,
@@ -267,7 +268,7 @@ export const tutors = [
     specialty: 'Quran Memorization & Reading',
     bio: 'DPT, Hifz qualified with 2 years of experience. Uses an interactive and beginner-friendly approach. Speaks English and Urdu.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 4,
@@ -275,7 +276,7 @@ export const tutors = [
     specialty: 'Norani Qaida & Quran Reading',
     bio: 'Hifz qualified with 5 years of experience. Employs an interactive & personalized style. Speaks English, Urdu, and Punjabi.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 5,
@@ -283,7 +284,7 @@ export const tutors = [
     specialty: 'Quranic & Islamic Studies',
     bio: 'Hifz & Islamic Studies qualified with 1 year of experience. Beginner-friendly teaching approach. Speaks Urdu.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 6,
@@ -291,7 +292,7 @@ export const tutors = [
     specialty: 'Norani Qaida & Quran Memorization',
     bio: 'Hifz & Dars-e-Nizami qualified with 4 years of online teaching experience. Beginner-friendly approach. Speaks English and Urdu.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 7,
@@ -299,7 +300,7 @@ export const tutors = [
     specialty: 'Quran Translation & Memorization',
     bio: 'Double M.A in Islamiat, Hifz & Dars-e-Nizami. 15 years of experience with a beginner-friendly style. Speaks English, Urdu, and Arabic.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 8,
@@ -307,7 +308,7 @@ export const tutors = [
     specialty: 'Quran Translation & Reading',
     bio: 'B.A in Islamiat & Dars-e-Nizami with 10 years of experience. Beginner-friendly & interactive style. Speaks English, Urdu, and Arabic.',
     gender: 'Female',
-    imageId: 'tutor-2'
+    imageId: 'tutor-female'
   },
   {
     id: 9,
@@ -315,7 +316,7 @@ export const tutors = [
     specialty: 'Quran Reading & Islamic Studies',
     bio: 'B.A in Islamiat & Hifz with 10 years of experience. Interactive and personalized methodology. Speaks English, Urdu, and Arabic.',
     gender: 'Male',
-    imageId: 'tutor-1'
+    imageId: 'tutor-male'
   },
   {
     id: 10,
@@ -323,7 +324,7 @@ export const tutors = [
     specialty: 'Noorani Qaida & Tajweed',
     bio: 'Expert in teaching children and beginners with a patient and engaging style. Hafiza with 5 years experience. Speaks English and Urdu.',
     gender: 'Female',
-    imageId: 'tutor-2'
+    imageId: 'tutor-female'
   },
   {
     id: 11,
@@ -331,7 +332,7 @@ export const tutors = [
     specialty: 'Islamic Studies for Kids',
     bio: 'Makes learning Islam fun and interactive for young minds. Holds a degree in Islamic Studies. 4 years experience. Speaks English and Arabic.',
     gender: 'Female',
-    imageId: 'tutor-2'
+    imageId: 'tutor-female'
   },
   {
     id: 12,
@@ -339,7 +340,7 @@ export const tutors = [
     specialty: 'Quran Reading & Translation',
     bio: 'Passionate about helping students understand the Quran. Dars-e-Nizami graduate with 6 years experience. Speaks English, Urdu, and Arabic.',
     gender: 'Female',
-    imageId: 'tutor-2'
+    imageId: 'tutor-female'
   }
 ];
 

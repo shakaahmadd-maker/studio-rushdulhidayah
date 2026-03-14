@@ -46,20 +46,23 @@ export default function TutorsPage() {
             return (
               <Card key={tutor.id} className="bg-card flex flex-col overflow-hidden text-center shadow-lg hover:shadow-2xl transition-all duration-300 border-slate-100 group">
                 <CardHeader className="items-center pb-4 pt-8">
-                  {tutorImage && (
-                    <div className="relative h-32 w-32">
-                      <div className="absolute inset-0 bg-primary/5 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
+                  <div className="relative h-32 w-32 rounded-full overflow-hidden border-4 border-white shadow-md bg-slate-100">
+                    {tutorImage ? (
                       <Image
                         src={tutorImage.imageUrl}
                         alt={tutor.name}
                         fill
-                        className="rounded-full object-cover border-4 border-white shadow-md relative z-10"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                         sizes="128px"
                         priority={index < 4}
                         data-ai-hint={tutorImage.imageHint}
                       />
-                    </div>
-                  )}
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
+                        <User className="w-12 h-12" />
+                      </div>
+                    )}
+                  </div>
                   <CardTitle className="font-headline text-xl pt-6 group-hover:text-primary transition-colors">{tutor.name}</CardTitle>
                   <CardDescription className="flex items-center justify-center gap-2 pt-1 text-accent font-bold uppercase text-[10px] tracking-widest">
                     <GraduationCap className="h-3 w-3" /> {tutor.specialty}
