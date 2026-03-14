@@ -1,53 +1,30 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* white */
-    --foreground: 224 20% 24%; /* slate-800 */
+    --background: 0 0% 100%;
+    --foreground: 224 20% 24%;
     --card: 0 0% 100%;
     --card-foreground: 224 20% 24%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 20% 24%;
-    --primary: 224 67% 33%; /* brand-blue: #1e3a8a */
+    --primary: 224 67% 33%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 220 29% 96%; /* brand-gray: #f1f5f9 */
+    --secondary: 220 29% 96%;
     --secondary-foreground: 224 67% 33%;
     --muted: 220 14% 96%;
     --muted-foreground: 225 9% 47%;
-    --accent: 38 92% 50%; /* brand-orange: #f59e0b */
+    --accent: 38 92% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 224 67% 33%;
-    --radius: 0.75rem; /* 12px */
+    --radius: 0.75rem;
     --whatsapp: 142 71% 48%;
-  }
-
-  .dark {
-    --background: 224 71% 4%;
-    --foreground: 210 40% 98%;
-    --card: 224 71% 4%;
-    --card-foreground: 210 40% 98%;
-    --popover: 224 71% 4%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 224 67% 33%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 38 92% 50%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 215 20.2% 65.1%;
   }
 }
 
@@ -56,150 +33,54 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#f8fafc] text-slate-800;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
   p {
     @apply text-justify;
   }
   .arabic { 
-    font-family: 'Amiri', serif;
+    @apply font-amiri;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .mask-fade-right {
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  }
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
 
 @layer components {
-    .nav-link {
-        @apply relative text-xs uppercase font-bold tracking-tight text-slate-600;
-    }
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        @apply bg-accent;
-        transition: width 0.3s;
-    }
-    .nav-link:hover::after {
-        width: 100%;
-    }
+  .nav-link {
+    @apply relative text-xs uppercase font-bold tracking-tight text-slate-600;
+  }
+  
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30l15-15v30L30 30zm0 0L15 15v30l15-15z' fill='%231e3a8a' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
 
-    .breadcrumb-banner {
-        background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
-        position: relative;
-        overflow: hidden;
-    }
+  .logo-glow {
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.3));
+  }
 
-    .vision-sidebar-item {
-        @apply p-5 border-b border-secondary cursor-pointer transition-all font-bold uppercase text-xs tracking-wider flex justify-between items-center;
-    }
-    .vision-sidebar-item.active {
-        @apply bg-primary text-primary-foreground;
-        border-left: 6px solid hsl(var(--accent));
-    }
-    .vision-sidebar-item:not(.active):hover {
-        @apply bg-secondary text-primary;
-    }
-
-    .islamic-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30l15-15v30L30 30zm0 0L15 15v30l15-15z' fill='%231e3a8a' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-    }
-
-    .artistic-footer {
-        background: #000000;
-        position: relative;
-        overflow: hidden;
-        color: #d1d5db;
-        padding-top: 80px;
-    }
-
-    .artistic-footer::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.03;
-        background-image: url('data:image/svg+xml,%3Csvg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M40 0l8.5 25.5H75L53.5 41L62 66.5L40 51L18 66.5L26.5 41L5 25.5h26.5L40 0z" fill="%23ffffff" fill-rule="evenodd"/%3E%3C/svg%3E');
-        pointer-events: none;
-    }
-
-    .footer-link {
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-    }
-
-    .footer-link::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background-color: #f59e0b;
-        transition: width 0.3s ease;
-    }
-
-    .footer-link:hover {
-        color: #ffffff;
-        transform: translateX(4px);
-    }
-
-    .footer-link:hover::after {
-        width: 100%;
-    }
-
-    .section-accent {
-        width: 4px;
-        height: 24px;
-        background: linear-gradient(to bottom, #f59e0b, transparent);
-        border-radius: 2px;
-    }
-
-    .contact-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        backdrop-filter: blur(12px);
-        transition: all 0.3s ease;
-    }
-
-    .contact-card:hover {
-        transform: translateY(-2px);
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(245, 158, 11, 0.3);
-    }
-
-    .logo-glow {
-        filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.4));
-    }
-
-    .hero-section p {
-        @apply text-center;
-    }
-
+  .chat-bubble {
+    @apply fixed bottom-24 right-6 w-14 h-14 bg-[#10b981] rounded-full flex items-center justify-center text-white shadow-xl z-50 transition-transform active:scale-95;
+  }
+  
+  @media (min-width: 1024px) {
     .chat-bubble {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 60px;
-        height: 60px;
-        background: #10b981;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 26px;
-        box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.5);
-        cursor: pointer;
-        z-index: 50;
-        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      @apply bottom-8 right-8 w-16 h-16;
     }
-
-    .chat-bubble:hover {
-        transform: scale(1.1);
-    }
+  }
 }

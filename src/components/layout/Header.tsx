@@ -3,19 +3,19 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
+import Image from 'next/image';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { navLinks, courses } from '@/lib/data';
-import { MobileNav } from './MobileNav';
-import { Mail, Phone, Video, ChevronDown, MessageSquare } from 'lucide-react';
 import { useUser } from '@/firebase/auth/use-user';
+import { Mail, Phone, MessageSquare, Video, ChevronDown } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { navLinks, courses } from '@/lib/data';
 
 export function Header() {
   const pathname = usePathname();
@@ -27,112 +27,90 @@ export function Header() {
     setMounted(true);
   }, []);
 
-  const navTextClasses = "nav-link text-[10px] xl:text-[12px] font-black tracking-widest uppercase transition-colors whitespace-nowrap";
-  const topBarContactClasses = "flex items-center gap-4 md:gap-6";
-  const topBarSocialClasses = "flex items-center gap-3 md:gap-4";
-  const mainNavClasses = "container mx-auto px-4 py-2 flex justify-between items-center gap-4";
-
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-slate-100">
-      {/* Top Contact Bar */}
-      <div className="bg-primary text-primary-foreground text-[10px] md:text-xs py-2 px-4 font-bold uppercase tracking-wider" suppressHydrationWarning>
-          <div className="container mx-auto w-full flex justify-between items-center">
-              <div className={topBarContactClasses}>
-                  <a href="tel:+923319937355" className="flex items-center gap-2 hover:text-accent transition-colors">
-                    <Phone className="w-3 h-3 text-accent" /> 
-                    +92 331 9937355
-                  </a>
-                  <a href="tel:+447451298124" className="hidden sm:flex items-center gap-2 hover:text-accent transition-colors">
-                    <Phone className="w-3 h-3 text-accent" /> 
-                    +44 7451 298124
-                  </a>
-                  <a href="mailto:quranacademy.rushd@gmail.com" className="hidden md:flex items-center gap-2 hover:text-accent transition-colors">
-                    <Mail className="w-3 h-3 text-accent" /> 
-                    Email Us
-                  </a>
-              </div>
-              <div className={topBarSocialClasses}>
-                  <a href="https://wa.me/923319937355" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-accent transition-colors">
-                    <MessageSquare className="w-3 h-3 text-accent" />
-                    WhatsApp
-                  </a>
-                  <a href="https://us05web.zoom.us/chat/invite/0c2aY4nBB7gpYp82Y_GKA" target="_blank" rel="noopener noreferrer" className="hidden lg:flex items-center gap-1 hover:text-accent transition-colors">
-                    <Video className="w-3 h-3 text-accent" /> 
-                    Zoom
-                  </a>
-                  <Link href="/contact" className="hover:text-accent transition-colors">Contact</Link>
-                  {mounted && user && (
-                     <Link href="/admin" className="bg-accent text-primary px-2 py-0.5 rounded-full hover:bg-white transition-colors">Admin</Link>
-                  )}
-              </div>
+    <header className="sticky top-0 z-50 w-full shadow-md lg:shadow-sm border-b border-slate-100 bg-white">
+      {/* Top Info Bar - Precise Match to Reference */}
+      <div className="bg-[#1a365d] text-white py-2 px-4">
+        <div className="container mx-auto flex justify-between items-center text-[9px] md:text-[10px] font-medium">
+          <div className="flex gap-3 md:gap-6">
+            <a href="tel:+923319937355" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <img src="https://flagcdn.com/w20/pk.png" className="w-3.5 h-2.5 object-cover rounded-[1px]" alt="PK" />
+              +92 331 9937355
+            </a>
+            <a href="tel:+447451298124" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <img src="https://flagcdn.com/w20/gb.png" className="w-3.5 h-2.5 object-cover rounded-[1px]" alt="UK" />
+              +44 7451 298124
+            </a>
+            <a href="mailto:quranacademy.rushd@gmail.com" className="hidden sm:flex items-center gap-1 hover:text-accent transition-colors uppercase">
+              <Mail className="w-3 h-3 text-amber-400" /> EMAIL US
+            </a>
           </div>
+          <div className="flex gap-3 font-bold uppercase tracking-wider">
+            <a href="https://wa.me/923319937355" className="flex items-center gap-1 hover:text-accent transition-colors">
+              <MessageSquare className="w-3 h-3" /> WHATSAPP
+            </a>
+            <a href="https://us05web.zoom.us/chat/invite/0c2aY4nBB7gpYp82Y_GKA" className="hidden sm:flex items-center gap-1 hover:text-accent transition-colors">
+              <Video className="w-3 h-3" /> ZOOM
+            </a>
+            {mounted && user && (
+              <Link href="/admin" className="text-amber-400">ADMIN</Link>
+            )}
+          </div>
+        </div>
       </div>
 
-      {/* Main Navigation */}
-      <div className={mainNavClasses}>
-        <div className="flex-shrink-0">
+      {/* Main Brand Header */}
+      <div className="bg-white border-b border-slate-50">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <Logo />
-        </div>
-        
-        {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map(link => {
-                if (link.href === "/courses") {
-                  return (
-                    <DropdownMenu key={link.href} open={coursesMenuOpen} onOpenChange={setCoursesMenuOpen}>
-                      <DropdownMenuTrigger
-                        asChild
-                        onMouseEnter={() => setCoursesMenuOpen(true)}
-                        onMouseLeave={() => setCoursesMenuOpen(false)}
-                      >
-                        <Link href="/courses" className={cn(
-                          navTextClasses,
-                          "flex items-center gap-0.5",
-                          pathname.startsWith('/courses') ? "text-primary border-b-2 border-accent pb-1" : "text-slate-600 hover:text-primary"
-                        )}>
-                          {link.label}
-                          <ChevronDown className={cn("w-2.5 h-2.5 transition-transform duration-300", coursesMenuOpen && "rotate-180")} />
-                        </Link>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent 
-                        className="w-64 p-2 bg-white rounded-2xl shadow-2xl border-slate-100"
-                        onMouseEnter={() => setCoursesMenuOpen(true)}
-                        onMouseLeave={() => setCoursesMenuOpen(false)}
-                      >
-                        <DropdownMenuItem asChild className="rounded-xl font-bold text-xs uppercase tracking-widest focus:bg-primary focus:text-white p-3">
-                          <Link href="/courses">All Course Catalog</Link>
-                        </DropdownMenuItem>
-                        <div className="h-px bg-slate-100 my-2 mx-2"></div>
-                        {courses.map(course => (
-                          <DropdownMenuItem key={course.id} asChild className="rounded-xl font-bold text-xs uppercase tracking-widest focus:bg-primary focus:text-white p-3">
-                            <Link href={`/courses/${course.slug}`}>{course.title}</Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  );
-                }
+              if (link.href === "/courses") {
                 return (
-                  <Link 
-                    key={link.href} 
-                    href={link.href} 
-                    className={cn(
-                        navTextClasses, 
-                        pathname === link.href ? "text-primary border-b-2 border-accent pb-1" : "text-slate-600 hover:text-primary"
-                    )}
-                  >
-                      {link.label}
-                  </Link>
-                )
+                  <DropdownMenu key={link.href} open={coursesMenuOpen} onOpenChange={setCoursesMenuOpen}>
+                    <DropdownMenuTrigger asChild>
+                      <Link href="/courses" className={cn(
+                        "text-xs font-black uppercase tracking-widest flex items-center gap-1",
+                        pathname.startsWith('/courses') ? "text-primary border-b-2 border-accent pb-1" : "text-slate-600 hover:text-primary"
+                      )}>
+                        {link.label}
+                        <ChevronDown className={cn("w-3 h-3 transition-transform", coursesMenuOpen && "rotate-180")} />
+                      </Link>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-64 p-2 bg-white rounded-xl shadow-2xl">
+                      <DropdownMenuItem asChild className="rounded-lg p-3 focus:bg-primary focus:text-white font-bold text-[10px] uppercase tracking-widest">
+                        <Link href="/courses">All Course Catalog</Link>
+                      </DropdownMenuItem>
+                      <div className="h-px bg-slate-100 my-2"></div>
+                      {courses.map(course => (
+                        <DropdownMenuItem key={course.id} asChild className="rounded-lg p-3 focus:bg-primary focus:text-white font-bold text-[10px] uppercase tracking-widest">
+                          <Link href={`/courses/${course.slug}`}>{course.title}</Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
+              return (
+                <Link 
+                  key={link.href} 
+                  href={link.href} 
+                  className={cn(
+                    "text-xs font-black uppercase tracking-widest",
+                    pathname === link.href ? "text-primary border-b-2 border-accent pb-1" : "text-slate-600 hover:text-primary"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
             })}
-             <Button asChild className="bg-accent text-primary-foreground font-black px-3 xl:px-5 py-1.5 rounded-xl hover:bg-primary hover:text-white transition-all shadow-lg shadow-accent/20 ml-1 h-auto uppercase text-[9px] xl:text-[11px] tracking-widest hover:scale-105 active:scale-95 whitespace-nowrap">
-                <Link href="/register">Book Trial</Link>
-             </Button>
-        </nav>
+          </nav>
 
-        {/* Mobile Menu Toggle */}
-        <div className="lg:hidden">
-          <MobileNav />
+          <Button asChild className="bg-amber-500 hover:bg-amber-600 text-white text-[10px] font-extrabold px-4 py-2 rounded shadow-sm uppercase tracking-wide h-auto">
+            <Link href="/register">BOOK TRIAL</Link>
+          </Button>
         </div>
       </div>
     </header>
