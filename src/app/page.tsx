@@ -36,28 +36,28 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 to-slate-900/95 z-10"></div>
         
-        <div className="relative z-20 max-w-4xl mx-auto w-full">
+        <div className="relative z-20 max-w-4xl mx-auto w-full flex flex-col items-center">
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black leading-[1.1] tracking-tight uppercase mb-8">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black leading-[1.1] tracking-tight uppercase mb-8 text-center">
             ONLINE QURAN <span className="text-accent inline-block relative">LEARNING<span className="absolute bottom-1 left-0 w-full h-[3px] md:h-2 bg-accent"></span></span>
             <br />
             ACADEMY
           </h1>
           
           {/* Arabic Text & Translation */}
-          <div className="mb-8 px-2">
-            <p className="arabic text-3xl sm:text-5xl md:text-7xl mb-6 leading-normal drop-shadow-2xl text-white">
+          <div className="mb-8 px-2 w-full">
+            <p className="arabic text-2xl sm:text-5xl md:text-7xl mb-6 leading-normal drop-shadow-2xl text-white text-center !text-center">
               خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
             </p>
-            <p className="text-[13px] sm:text-xl md:text-3xl font-medium text-slate-100 italic tracking-tight leading-relaxed max-w-3xl mx-auto">
+            <p className="text-[13px] sm:text-xl md:text-3xl font-medium text-slate-100 italic tracking-tight leading-relaxed max-w-3xl mx-auto text-center !text-center">
               &quot;The best of you are those who learn the Quran and teach it&quot;
             </p>
           </div>
 
           {/* Separator & Subtext */}
-          <div className="max-w-2xl mx-auto mb-10">
+          <div className="max-w-2xl mx-auto mb-10 w-full">
             <div className="w-full h-px bg-white/20 mb-10"></div>
-            <p className="text-[11px] sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed px-4">
+            <p className="text-[11px] sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed px-4 text-center !text-center">
               With our Qualified teachers for 3 days of free trial classes, 
               <br className="hidden sm:block" />
               let&apos;s study how to understand the Holy Quran Online.
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-6 w-full max-w-md sm:max-w-none">
             <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white py-7 px-12 rounded-2xl font-black text-xs sm:text-sm uppercase tracking-widest shadow-2xl h-auto border-b-4 border-black/20 transition-all active:scale-95">
               <Link href="/courses">START A COURSE</Link>
             </Button>
@@ -106,7 +106,7 @@ export default function Home() {
                   <feature.icon size={32} />
                 </div>
                 <h3 className="text-lg font-bold text-primary mb-3 uppercase tracking-tight">{feature.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>
+                <p className="text-sm text-slate-500 leading-relaxed text-center">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -120,7 +120,7 @@ export default function Home() {
             EXPLORE OUR <span className="text-amber-500">COURSES</span>
           </h2>
           <div className="w-20 h-1.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
-          <p className="mt-6 text-slate-500 max-w-2xl mx-auto">Structured learning programs designed for excellence in Quranic education.</p>
+          <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-center">Structured learning programs designed for excellence in Quranic education.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
