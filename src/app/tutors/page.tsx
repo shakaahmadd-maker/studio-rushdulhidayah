@@ -1,15 +1,32 @@
 
+'use client';
+
 import Image from 'next/image';
 import { tutors } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User, GraduationCap } from 'lucide-react';
+import { User, GraduationCap, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
+import { useState, useEffect } from 'react';
 
 export default function TutorsPage() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader2 className="h-12 w-12 animate-spin text-primary" />
+      </div>
+    );
+  }
+
   return (
     <div className="bg-secondary/30">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
