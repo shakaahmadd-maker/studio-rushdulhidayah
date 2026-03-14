@@ -21,8 +21,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Redesigned for Mobile-First & Desktop High Impact */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center justify-center text-center text-white px-6 py-16 overflow-hidden">
+      {/* Hero Section - Matched to provided reference image */}
+      <section className="relative min-h-[75vh] md:min-h-[90vh] flex items-center justify-center text-center text-white px-6 py-20 overflow-hidden">
         {heroImage && (
           <Image 
             src={heroImage.imageUrl} 
@@ -34,28 +34,37 @@ export default function Home() {
             sizes="100vw"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/75 to-[#0f172a]/85 z-10"></div>
-        <div className="relative z-20 max-w-4xl mx-auto space-y-8">
-          <h1 className="text-3xl md:text-6xl font-extrabold leading-tight tracking-tight uppercase">
-            ONLINE QURAN <span className="gold-underline">LEARNING</span> ACADEMY
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/80 to-[#0f172a]/90 z-10"></div>
+        
+        <div className="relative z-20 max-w-5xl mx-auto space-y-10">
+          {/* Main Title */}
+          <h1 className="text-4xl md:text-7xl font-black leading-tight tracking-tighter uppercase">
+            ONLINE QURAN <span className="text-accent gold-underline">LEARNING</span> ACADEMY
           </h1>
           
-          <div className="space-y-4">
-            <p className="arabic text-4xl md:text-8xl drop-shadow-2xl">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
-            <p className="text-[13px] md:text-2xl font-medium text-slate-100 italic">
+          {/* Arabic Text & Translation */}
+          <div className="space-y-6">
+            <p className="arabic text-5xl md:text-8xl drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
+            <p className="text-base md:text-3xl font-medium text-slate-100 italic tracking-tight">
               &quot;The best of you are those who learn the Quran and teach it&quot;
             </p>
           </div>
 
-          <p className="text-[11px] md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            With our Qualified teachers for 3 days of free trial classes, let&apos;s study how to understand the Holy Quran Online.
-          </p>
+          {/* Subtext with Separator */}
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="w-full h-px bg-white/10"></div>
+            <p className="text-xs md:text-xl text-slate-300 font-medium leading-relaxed">
+              With our Qualified teachers for 3 days of free trial classes, <br className="hidden md:block" />
+              let&apos;s study how to understand the Holy Quran Online.
+            </p>
+          </div>
 
-          <div className="flex flex-col gap-3 px-4 sm:flex-row sm:justify-center">
-            <Button asChild size="lg" className="bg-blue-700 hover:bg-blue-800 text-white py-6 md:py-8 md:px-10 rounded-md font-bold text-xs md:text-sm uppercase tracking-widest shadow-lg h-auto">
+          {/* Action Buttons */}
+          <div className="flex flex-col gap-4 px-4 sm:flex-row sm:justify-center pt-4">
+            <Button asChild size="lg" className="bg-[#1e3a8a] hover:bg-blue-800 text-white py-7 px-10 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-xl h-auto border-b-4 border-black/20 transition-transform active:scale-95">
               <Link href="/courses">START A COURSE</Link>
             </Button>
-            <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900 py-6 md:py-8 md:px-10 rounded-md font-bold text-xs md:text-sm uppercase tracking-widest shadow-lg h-auto">
+            <Button asChild size="lg" className="bg-accent hover:bg-amber-600 text-slate-900 py-7 px-10 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-xl h-auto border-b-4 border-black/20 transition-transform active:scale-95">
               <Link href="/register">FREE 3 DAYS TRIAL</Link>
             </Button>
           </div>
@@ -79,7 +88,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Features Section - Restored from Desktop Version */}
+      {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-5">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
