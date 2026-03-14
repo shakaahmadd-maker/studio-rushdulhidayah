@@ -29,7 +29,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-md lg:shadow-sm border-b border-slate-100 bg-white">
-      {/* Top Info Bar - Precise Match to Reference */}
+      {/* Top Info Bar - Mobile-First Responsive */}
       <div className="bg-[#1a365d] text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-[9px] md:text-[10px] font-medium">
           <div className="flex gap-3 md:gap-6">
@@ -47,7 +47,7 @@ export function Header() {
           </div>
           <div className="flex gap-3 font-bold uppercase tracking-wider">
             <a href="https://wa.me/923319937355" className="flex items-center gap-1 hover:text-accent transition-colors">
-              <MessageSquare className="w-3 h-3" /> WHATSAPP
+              <MessageSquare className="w-3 h-3" /> <span className="hidden xs:inline">WHATSAPP</span>
             </a>
             <a href="https://us05web.zoom.us/chat/invite/0c2aY4nBB7gpYp82Y_GKA" className="hidden sm:flex items-center gap-1 hover:text-accent transition-colors">
               <Video className="w-3 h-3" /> ZOOM
@@ -55,6 +55,7 @@ export function Header() {
             {mounted && user && (
               <Link href="/admin" className="text-amber-400">ADMIN</Link>
             )}
+            <Link href="/contact" className="hover:text-accent transition-colors">CONTACT</Link>
           </div>
         </div>
       </div>
@@ -64,7 +65,7 @@ export function Header() {
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <Logo />
           
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Hidden on Mobile */}
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map(link => {
               if (link.href === "/courses") {

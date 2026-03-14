@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Mobile Optimized */}
+      {/* Hero Section - Redesigned for Mobile-First */}
       <section className="relative min-h-[60vh] flex items-center justify-center text-center text-white px-6 py-16 overflow-hidden">
         {heroImage && (
           <Image 
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/75 to-[#0f172a]/85 z-10"></div>
         <div className="relative z-20 max-w-sm mx-auto space-y-8">
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight uppercase">
-            ONLINE QURAN <span className="text-amber-500 relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-1 after:w-full after:height-[3px] after:bg-amber-500">LEARNING</span> ACADEMY
+            ONLINE QURAN <span className="gold-underline">LEARNING</span> ACADEMY
           </h1>
           
           <div className="space-y-4">
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Horizontal Categories - Scrollable */}
+      {/* Horizontal Categories - Scrollable Pill Navbar */}
       <div className="px-5 -mt-6 relative z-20 lg:container lg:mx-auto">
         <div className="flex overflow-x-auto gap-3 no-scrollbar pb-2 mask-fade-right">
           {categories.map((cat) => (
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main Content / Courses Grid */}
+      {/* Main Content / Courses Grid - Floating Card Style */}
       <main className="container mx-auto px-5 mt-12 pb-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-[#1e3a8a] uppercase tracking-tight">

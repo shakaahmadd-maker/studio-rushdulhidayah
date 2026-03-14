@@ -83,4 +83,8 @@
       @apply bottom-8 right-8 w-16 h-16;
     }
   }
+
+  .gold-underline {
+    @apply relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-1 after:w-full after:h-[3px] after:bg-accent;
+  }
 }
