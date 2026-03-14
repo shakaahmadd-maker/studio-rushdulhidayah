@@ -21,8 +21,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Matched to provided reference image */}
-      <section className="relative min-h-[75vh] md:min-h-[90vh] flex items-center justify-center text-center text-white px-6 py-20 overflow-hidden">
+      {/* Hero Section - Precise alignment to reference image */}
+      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center text-center text-white px-4 py-16 overflow-hidden">
         {heroImage && (
           <Image 
             src={heroImage.imageUrl} 
@@ -34,37 +34,42 @@ export default function Home() {
             sizes="100vw"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/80 to-[#0f172a]/90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 to-slate-900/95 z-10"></div>
         
-        <div className="relative z-20 max-w-5xl mx-auto space-y-10">
+        <div className="relative z-20 max-w-4xl mx-auto w-full">
           {/* Main Title */}
-          <h1 className="text-4xl md:text-7xl font-black leading-tight tracking-tighter uppercase">
-            ONLINE QURAN <span className="text-accent gold-underline">LEARNING</span> ACADEMY
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black leading-[1.1] tracking-tight uppercase mb-8">
+            ONLINE QURAN <span className="text-accent inline-block relative">LEARNING<span className="absolute bottom-1 left-0 w-full h-[3px] md:h-2 bg-accent"></span></span>
+            <br />
+            ACADEMY
           </h1>
           
           {/* Arabic Text & Translation */}
-          <div className="space-y-6">
-            <p className="arabic text-5xl md:text-8xl drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
-            <p className="text-base md:text-3xl font-medium text-slate-100 italic tracking-tight">
+          <div className="mb-8 px-2">
+            <p className="arabic text-3xl sm:text-5xl md:text-7xl mb-6 leading-normal drop-shadow-2xl text-white">
+              خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
+            </p>
+            <p className="text-[13px] sm:text-xl md:text-3xl font-medium text-slate-100 italic tracking-tight leading-relaxed max-w-3xl mx-auto">
               &quot;The best of you are those who learn the Quran and teach it&quot;
             </p>
           </div>
 
-          {/* Subtext with Separator */}
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div className="w-full h-px bg-white/10"></div>
-            <p className="text-xs md:text-xl text-slate-300 font-medium leading-relaxed">
-              With our Qualified teachers for 3 days of free trial classes, <br className="hidden md:block" />
+          {/* Separator & Subtext */}
+          <div className="max-w-2xl mx-auto mb-10">
+            <div className="w-full h-px bg-white/20 mb-10"></div>
+            <p className="text-[11px] sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed px-4">
+              With our Qualified teachers for 3 days of free trial classes, 
+              <br className="hidden sm:block" />
               let&apos;s study how to understand the Holy Quran Online.
             </p>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col gap-4 px-4 sm:flex-row sm:justify-center pt-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white py-7 px-10 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-xl h-auto border-b-4 border-black/20 transition-transform active:scale-95">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-6">
+            <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white py-7 px-12 rounded-2xl font-black text-xs sm:text-sm uppercase tracking-widest shadow-2xl h-auto border-b-4 border-black/20 transition-all active:scale-95">
               <Link href="/courses">START A COURSE</Link>
             </Button>
-            <Button asChild size="lg" className="bg-accent hover:bg-amber-600 text-slate-900 py-7 px-10 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-xl h-auto border-b-4 border-black/20 transition-transform active:scale-95">
+            <Button asChild size="lg" className="w-full sm:w-auto bg-accent hover:bg-amber-600 text-slate-900 py-7 px-12 rounded-2xl font-black text-xs sm:text-sm uppercase tracking-widest shadow-2xl h-auto border-b-4 border-black/20 transition-all active:scale-95">
               <Link href="/register">FREE 3 DAYS TRIAL</Link>
             </Button>
           </div>
@@ -128,9 +133,11 @@ export default function Home() {
                     <Image 
                       src={courseImage.imageUrl} 
                       alt={course.title} 
-                      fill 
-                      className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                       sizes="(max-width: 768px) 100vw, 400px"
+                      data-ai-hint={courseImage.imageHint}
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
