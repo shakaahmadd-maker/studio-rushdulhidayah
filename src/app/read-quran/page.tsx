@@ -6,6 +6,7 @@ import { quranChapters } from '@/lib/data';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { BookOpen, Hash } from 'lucide-react';
+import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
 
 export default function ReadQuranPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -66,6 +67,9 @@ export default function ReadQuranPage() {
           </div>
         )}
       </div>
+
+      {/* CTA Section */}
+      <GiftOfKnowledgeCTA />
     </div>
   );
 }

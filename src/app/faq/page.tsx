@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { Home, ChevronRight, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
+import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
 
 const faqData = [
   {
@@ -181,6 +182,9 @@ export default function FaqPage() {
           ))}
         </div>
       </section>
+
+      {/* CTA Section */}
+      <GiftOfKnowledgeCTA />
     </div>
   );
 }

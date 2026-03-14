@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { tutors } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -7,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { User, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
 
 export default function TutorsPage() {
   return (
@@ -67,6 +67,9 @@ export default function TutorsPage() {
           })}
         </div>
       </div>
+
+      {/* CTA Section */}
+      <GiftOfKnowledgeCTA />
     </div>
   );
 }

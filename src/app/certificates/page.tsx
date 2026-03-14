@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
 
 const certificateImage = PlaceHolderImages.find(img => img.id === 'certificate-1');
 
@@ -39,14 +40,11 @@ export default function CertificatesPage() {
                 )}
             </CardContent>
           </Card>
-           <div className="text-center mt-12">
-              <p className="text-muted-foreground mb-4">Ready to earn yours?</p>
-              <Button asChild size="lg">
-                <Link href="/courses">Explore Our Courses</Link>
-              </Button>
-            </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <GiftOfKnowledgeCTA />
     </div>
   );
 }

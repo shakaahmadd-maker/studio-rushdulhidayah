@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { courses } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { GiftOfKnowledgeCTA } from "@/components/GiftOfKnowledgeCTA";
 
 export default function CoursesPage() {
   return (
@@ -61,6 +62,9 @@ export default function CoursesPage() {
           })}
         </div>
       </div>
+
+      {/* CTA Section */}
+      <GiftOfKnowledgeCTA />
     </div>
   );
 }
