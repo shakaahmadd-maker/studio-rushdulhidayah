@@ -62,8 +62,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Horizontal Categories - Scrollable Pill Navbar (Visible on Mobile, Hidden or Styled on Desktop) */}
-      <div className="px-5 -mt-6 relative z-20 lg:container lg:mx-auto">
+      {/* Horizontal Categories - Scrollable Pill Navbar (Visible ONLY on Mobile) */}
+      <div className="px-5 -mt-6 relative z-20 lg:hidden">
         <div className="flex overflow-x-auto gap-3 no-scrollbar pb-2 mask-fade-right">
           {categories.map((cat) => (
             <button
