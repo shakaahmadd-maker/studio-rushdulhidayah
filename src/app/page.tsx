@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -14,10 +13,10 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-main');
 
   const categories = [
-    { label: 'All Courses', active: true },
-    { label: 'For Kids', active: false },
-    { label: 'Tajweed', active: false },
-    { label: 'Hifz', active: false },
+    { label: 'All Courses', href: '/courses', active: true },
+    { label: 'For Kids', href: '/courses/islamic-studies-for-kids', active: false },
+    { label: 'Tajweed', href: '/courses/quran-reading', active: false },
+    { label: 'Hifz', href: '/courses/quran-memorization', active: false },
   ];
 
   return (
@@ -72,19 +71,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Horizontal Categories - Scrollable Pill Navbar (Visible ONLY on Mobile) */}
+      {/* Horizontal Categories - Functional Links (Visible ONLY on Mobile) */}
       <div className="px-5 -mt-6 relative z-20 lg:hidden">
         <div className="flex overflow-x-auto gap-3 no-scrollbar pb-2 mask-fade-right">
           {categories.map((cat) => (
-            <button
+            <Link
               key={cat.label}
+              href={cat.href}
               className={cn(
-                "flex-shrink-0 px-6 py-2.5 rounded-full font-bold text-[13px] border shadow-sm transition-all",
-                cat.active ? "bg-primary text-white border-primary" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+                "flex-shrink-0 px-6 py-2.5 rounded-full font-bold text-[13px] border shadow-md transition-all active:scale-95",
+                cat.active 
+                  ? "bg-primary text-white border-primary" 
+                  : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
               )}
             >
               {cat.label}
-            </button>
+            </Link>
           ))}
         </div>
       </div>
