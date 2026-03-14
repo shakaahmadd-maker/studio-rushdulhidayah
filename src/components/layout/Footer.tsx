@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Mail, Phone, Clock, Video, Users } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, Clock, Video } from 'lucide-react';
 import { navLinks, courses } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
