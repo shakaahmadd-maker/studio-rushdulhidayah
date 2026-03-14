@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -61,7 +62,7 @@ export default function Home() {
 
           {/* Action Buttons */}
           <div className="flex flex-col gap-4 px-4 sm:flex-row sm:justify-center pt-4">
-            <Button asChild size="lg" className="bg-[#1e3a8a] hover:bg-blue-800 text-white py-7 px-10 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-xl h-auto border-b-4 border-black/20 transition-transform active:scale-95">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white py-7 px-10 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-xl h-auto border-b-4 border-black/20 transition-transform active:scale-95">
               <Link href="/courses">START A COURSE</Link>
             </Button>
             <Button asChild size="lg" className="bg-accent hover:bg-amber-600 text-slate-900 py-7 px-10 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-xl h-auto border-b-4 border-black/20 transition-transform active:scale-95">
@@ -79,7 +80,7 @@ export default function Home() {
               key={cat.label}
               className={cn(
                 "flex-shrink-0 px-6 py-2.5 rounded-full font-bold text-[13px] border shadow-sm transition-all",
-                cat.active ? "bg-[#1e3a8a] text-white border-[#1e3a8a]" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+                cat.active ? "bg-primary text-white border-primary" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
               )}
             >
               {cat.label}
@@ -94,10 +95,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col items-center text-center p-6 rounded-2xl hover:bg-slate-50 transition-colors group">
-                <div className="w-16 h-16 bg-blue-50 text-blue-900 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-900 group-hover:text-white transition-all">
+                <div className="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all">
                   <feature.icon size={32} />
                 </div>
-                <h3 className="text-lg font-bold text-blue-900 mb-3 uppercase tracking-tight">{feature.title}</h3>
+                <h3 className="text-lg font-bold text-primary mb-3 uppercase tracking-tight">{feature.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -108,7 +109,7 @@ export default function Home() {
       {/* Main Content / Courses Grid - Floating Card Style */}
       <main className="container mx-auto px-5 py-20 bg-slate-50/50">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#1e3a8a] uppercase tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-primary uppercase tracking-tight">
             EXPLORE OUR <span className="text-amber-500">COURSES</span>
           </h2>
           <div className="w-20 h-1.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
@@ -130,19 +131,19 @@ export default function Home() {
                       sizes="(max-width: 768px) 100vw, 400px"
                     />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 bg-amber-500 text-white text-[9px] px-3 py-1.5 rounded-full font-bold uppercase shadow-lg">
                     NEW BATCH
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-extrabold text-[#1e3a8a] mb-4 leading-tight group-hover:text-amber-600 transition-colors">{course.title}</h3>
+                  <h3 className="text-xl font-extrabold text-primary mb-4 leading-tight group-hover:text-amber-600 transition-colors">{course.title}</h3>
                   <p className="text-sm text-slate-500 leading-relaxed mb-8 flex-1 text-justify">
                     {course.shortDescription}
                   </p>
                   <Link 
                     href={`/courses/${course.slug}`} 
-                    className="text-[#1e3a8a] font-bold text-xs flex items-center gap-2 uppercase tracking-widest mt-auto group-hover:gap-3 transition-all hover:text-amber-600"
+                    className="text-primary font-bold text-xs flex items-center gap-2 uppercase tracking-widest mt-auto group-hover:gap-3 transition-all hover:text-amber-600"
                   >
                     VIEW DETAILS <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
@@ -160,7 +161,7 @@ export default function Home() {
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-4">
                 <h4 className="text-amber-500 font-black tracking-[0.3em] text-xs uppercase">Your Trusted Partner</h4>
-                <h2 className="text-4xl md:text-5xl font-black text-blue-900 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight">
                   Why Choose <span className="text-amber-500">Rushd Ul Hidayah?</span>
                 </h2>
                 <div className="w-24 h-2 bg-amber-500 rounded-full"></div>
@@ -172,7 +173,7 @@ export default function Home() {
                 {['Certified Professional Tutors', 'Flexible 24/7 Scheduling', '1-on-1 Personalized Attention'].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="text-amber-500 w-6 h-6" />
-                    <span className="font-bold text-blue-900 uppercase text-sm tracking-wide">{item}</span>
+                    <span className="font-bold text-primary uppercase text-sm tracking-wide">{item}</span>
                   </div>
                 ))}
               </div>
@@ -188,7 +189,7 @@ export default function Home() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-5">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-blue-900 uppercase mb-6">
+            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase mb-6">
               Everything You <span className="text-amber-500">Need to Know</span>
             </h2>
             <p className="text-slate-500 text-lg">Detailed information about our class structures and methodologies.</p>

@@ -1,9 +1,9 @@
+
 "use client";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
-import Image from 'next/image';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -16,6 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { navLinks, courses } from '@/lib/data';
+import { MobileNav } from '@/components/layout/MobileNav';
 
 export function Header() {
   const pathname = usePathname();
@@ -63,7 +64,12 @@ export function Header() {
       {/* Main Brand Header */}
       <div className="bg-white border-b border-slate-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Logo />
+          <div className="flex items-center gap-1">
+            <div className="lg:hidden">
+              <MobileNav />
+            </div>
+            <Logo />
+          </div>
           
           {/* Desktop Navigation - Hidden on Mobile */}
           <nav className="hidden lg:flex items-center gap-6">
