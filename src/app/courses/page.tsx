@@ -6,11 +6,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { courses } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { GiftOfKnowledgeCTA } from "@/components/GiftOfKnowledgeCTA";
+import { BackButton } from "@/components/BackButton";
 
 export default function CoursesPage() {
   return (
     <div className="bg-secondary/30">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="text-center mb-16">
           <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
             Our Courses

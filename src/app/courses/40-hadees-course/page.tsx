@@ -20,6 +20,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { BackButton } from '@/components/BackButton';
 
 export default function HadeesCoursePage() {
   const [activeTab, setActiveTab] = useState('USA');
@@ -97,6 +98,7 @@ export default function HadeesCoursePage() {
       {/* Page Header */}
       <section className="breadcrumb-banner py-20 text-white">
         <div className="container mx-auto px-4 relative z-10">
+          <BackButton variant="light" />
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
             40 Hadees <span className="text-accent">Course</span>
           </h1>

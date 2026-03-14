@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -11,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
 import { useState, useEffect } from 'react';
+import { BackButton } from '@/components/BackButton';
 
 export default function TutorsPage() {
   const [mounted, setMounted] = useState(false);
@@ -30,6 +30,7 @@ export default function TutorsPage() {
   return (
     <div className="bg-secondary/30">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="text-center mb-16">
           <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl uppercase">
             Our Expert <span className="text-accent">Tutors</span>

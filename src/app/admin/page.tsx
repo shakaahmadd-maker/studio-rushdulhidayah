@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
+import { BackButton } from '@/components/BackButton';
 
 export default function AdminPage() {
   const { user, loading: userLoading } = useUser();
@@ -69,6 +70,7 @@ export default function AdminPage() {
 
   return (
     <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <BackButton />
       <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-12">
         <div>
           <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl">

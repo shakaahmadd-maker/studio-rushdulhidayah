@@ -1,11 +1,13 @@
 import { ContactForm } from '@/components/forms/ContactForm';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Phone, Video, Users } from 'lucide-react';
+import { BackButton } from '@/components/BackButton';
 
 export default function ContactPage() {
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="text-center mb-16">
           <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
             Get in Touch

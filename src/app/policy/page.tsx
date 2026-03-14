@@ -2,6 +2,7 @@
 
 import { Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import { BackButton } from '@/components/BackButton';
 
 export default function PolicyPage() {
   return (
@@ -9,6 +10,7 @@ export default function PolicyPage() {
       {/* Page Header */}
       <section className="breadcrumb-banner py-20 text-white">
         <div className="container mx-auto px-4 relative z-10">
+          <BackButton variant="light" />
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
             Privacy <span className="text-accent">Policy</span>
           </h1>

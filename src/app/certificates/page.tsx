@@ -4,6 +4,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
+import { BackButton } from '@/components/BackButton';
 
 const certificateImage = PlaceHolderImages.find(img => img.id === 'certificate-1');
 
@@ -11,6 +12,7 @@ export default function CertificatesPage() {
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="text-center mb-12">
           <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
             Course Certificates

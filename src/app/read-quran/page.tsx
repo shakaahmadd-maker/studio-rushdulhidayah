@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { BookOpen, Hash } from 'lucide-react';
 import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
+import { BackButton } from '@/components/BackButton';
 
 export default function ReadQuranPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,6 +21,7 @@ export default function ReadQuranPage() {
   return (
     <div className="bg-secondary/30 min-h-screen">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="text-center mb-12">
           <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
             Read The Holy Quran

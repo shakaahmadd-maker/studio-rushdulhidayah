@@ -2,15 +2,13 @@ import { notFound } from "next/navigation";
 import { quranChapters } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
+import { BackButton } from "@/components/BackButton";
 
 type SurahPageProps = {
   params: {
     surah: string;
   };
 };
-
-// This page is a placeholder for reading a full surah.
-// In a real application, you would fetch the verses for the given surah number from an API.
 
 export async function generateStaticParams() {
     return quranChapters.map((chapter) => ({
@@ -29,6 +27,7 @@ export default function SurahPage({ params }: SurahPageProps) {
   return (
     <div className="bg-background min-h-screen">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-lg">
             <CardHeader className="text-center bg-secondary/30">

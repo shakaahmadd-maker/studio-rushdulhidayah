@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { BackButton } from '@/components/BackButton';
 
 export default function AdditionalCoursesPage() {
 
@@ -30,6 +31,7 @@ export default function AdditionalCoursesPage() {
       {/* Page Header */}
       <section className="breadcrumb-banner py-20 text-white">
         <div className="container mx-auto px-4 relative z-10">
+          <BackButton variant="light" />
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
             Additional & Custom <span className="text-accent">Courses</span>
           </h1>

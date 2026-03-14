@@ -1,10 +1,12 @@
 import { RegisterForm } from '@/components/forms/RegisterForm';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { BackButton } from '@/components/BackButton';
 
 export default function RegisterPage() {
   return (
     <div className="bg-secondary/30">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="max-w-3xl mx-auto">
           <Card className="shadow-2xl">
             <CardHeader className="text-center p-8">

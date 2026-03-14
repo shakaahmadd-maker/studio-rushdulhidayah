@@ -9,6 +9,7 @@ import {
 import { Home, ChevronRight, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
 import { GiftOfKnowledgeCTA } from '@/components/GiftOfKnowledgeCTA';
+import { BackButton } from '@/components/BackButton';
 
 const faqData = [
   {
@@ -140,6 +141,7 @@ export default function FaqPage() {
       {/* Page Header */}
       <section className="breadcrumb-banner py-20 text-white">
         <div className="container mx-auto px-4 relative z-10">
+          <BackButton variant="light" />
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
             Frequently Asked <span className="text-accent">Questions</span>
           </h1>

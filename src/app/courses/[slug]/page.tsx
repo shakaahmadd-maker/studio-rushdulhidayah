@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Check, Clock, Users, ArrowRight } from "lucide-react";
+import { BackButton } from "@/components/BackButton";
 
 type CoursePageProps = {
   params: {
@@ -15,8 +16,6 @@ type CoursePageProps = {
 };
 
 export async function generateStaticParams() {
-  // This is intentionally left empty to prevent this dynamic route from
-  // overriding the static pages created for each course.
   return [];
 }
 
@@ -32,6 +31,7 @@ export default function CoursePage({ params }: CoursePageProps) {
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="grid lg:grid-cols-3 lg:gap-12">
           {/* Main content */}
           <div className="lg:col-span-2">

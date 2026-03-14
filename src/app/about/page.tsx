@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
+import { BackButton } from '@/components/BackButton';
 
 const aboutImage1 = PlaceHolderImages.find(img => img.id === 'new-course-3');
 
@@ -80,6 +81,7 @@ export default function AboutPage() {
       {/* Page Header / Breadcrumbs */}
       <section className="breadcrumb-banner py-20 text-white">
         <div className="container mx-auto px-4 relative z-10">
+          <BackButton variant="light" />
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
             About <span className="text-accent">Our Academy</span>
           </h1>

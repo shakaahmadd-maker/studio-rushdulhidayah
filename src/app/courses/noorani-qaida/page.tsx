@@ -20,6 +20,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { BackButton } from '@/components/BackButton';
 
 export default function NooraniQaidaCoursePage() {
   const [activeTab, setActiveTab] = useState('USA');
@@ -80,6 +81,7 @@ export default function NooraniQaidaCoursePage() {
       {/* Page Header */}
       <section className="breadcrumb-banner py-20 text-white">
         <div className="container mx-auto px-4 relative z-10">
+          <BackButton variant="light" />
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
             Basic Noorani Qaida <span className="text-accent">Course</span>
           </h1>

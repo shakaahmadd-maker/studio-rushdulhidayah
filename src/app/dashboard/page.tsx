@@ -1,11 +1,13 @@
 import { LearningPathForm } from "@/components/forms/LearningPathForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lightbulb } from "lucide-react";
+import { BackButton } from "@/components/BackButton";
 
 export default function DashboardPage() {
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <BackButton />
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
