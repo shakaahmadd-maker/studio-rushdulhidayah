@@ -10,16 +10,24 @@ import { useCollection } from './firestore/use-collection';
 import { useDoc } from './firestore/use-doc';
 
 export function initializeFirebase(): {
-  firebaseApp: FirebaseApp;
-  auth: Auth;
-  firestore: Firestore;
-  storage: FirebaseStorage;
+  firebaseApp: FirebaseApp | null;
+  auth: Auth | null;
+  firestore: Firestore | null;
+  storage: FirebaseStorage | null;
 } {
-  const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-  const auth = getAuth(firebaseApp);
-  const firestore = getFirestore(firebaseApp);
-  const storage = getStorage(firebaseApp);
-  return { firebaseApp, auth, firestore, storage };
+  try {
+    if (!firebaseConfig.apiKey && !firebaseConfig.projectId) {
+      return { firebaseApp: null, auth: null, firestore: null, storage: null };
+    }
+    const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    const auth = getAuth(firebaseApp);
+    const firestore = getFirestore(firebaseApp);
+    const storage = getStorage(firebaseApp);
+    return { firebaseApp, auth, firestore, storage };
+  } catch (err) {
+    console.warn('[AI Studio] Firebase init warning:', err);
+    return { firebaseApp: null, auth: null, firestore: null, storage: null };
+  }
 }
 
 export {

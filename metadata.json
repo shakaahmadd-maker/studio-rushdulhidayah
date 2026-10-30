@@ -1,0 +1,6 @@
+{
+  "name": "Rushd Ul Hidayah Quran Academy",
+  "description": "Online Quran and Islamic learning academy platform offering interactive courses, tutor matching, and Quran reading.",
+  "prompt": "Online Quran and Islamic learning academy platform",
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

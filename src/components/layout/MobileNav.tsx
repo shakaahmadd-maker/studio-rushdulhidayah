@@ -31,7 +31,6 @@ export function MobileNav() {
     if (open) {
       setOpen(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (

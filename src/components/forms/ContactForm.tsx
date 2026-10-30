@@ -17,9 +17,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { ArrowRight, Loader2 } from 'lucide-react';
-import { useFirestore } from '@/firebase';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { useState } from 'react';
+import { submitContact } from '@/lib/api-client';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -38,7 +37,6 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const { toast } = useToast();
-  const firestore = useFirestore();
   const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -52,32 +50,25 @@ export function ContactForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!firestore) {
-      toast({
-        variant: 'destructive',
-        title: 'Error',
-        description: 'An unexpected error occurred. Please try again later.',
-      });
-      return;
-    }
     setLoading(true);
     try {
-      const contactsCol = collection(firestore, 'contacts');
-      await addDoc(contactsCol, {
-        ...values,
-        createdAt: serverTimestamp(),
+      await submitContact({
+        name: values.name,
+        email: values.email,
+        subject: values.subject,
+        message: values.message,
       });
       toast({
         title: 'Message Sent!',
         description: 'Thank you for contacting us. We will get back to you shortly.',
       });
       form.reset();
-    } catch (error) {
-      console.error('Error adding document: ', error);
+    } catch (error: any) {
+      console.error('Error submitting contact message:', error);
       toast({
         variant: 'destructive',
         title: 'Send Failed',
-        description: 'There was a problem sending your message. Please try again.',
+        description: error.message || 'There was a problem sending your message. Please try again.',
       });
     } finally {
       setLoading(false);
