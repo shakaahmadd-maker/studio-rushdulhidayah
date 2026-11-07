@@ -11,7 +11,7 @@ export function GiftOfKnowledgeCTA() {
         <div className="relative z-10 space-y-8">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-6xl font-black uppercase leading-tight">
-              Give Your Child the <br/><span className="text-accent">Gift of Knowledge</span>
+              Book a Free 3-Day Trial <br/><span className="text-accent">Quran Class for Your Child</span>
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
           </div>

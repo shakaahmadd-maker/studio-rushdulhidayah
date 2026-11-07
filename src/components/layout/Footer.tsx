@@ -29,7 +29,7 @@ export function Footer() {
                              </div>
                         ) : (
                             <div>
-                                <h3 className="text-white font-bold text-xl leading-tight uppercase tracking-widest">Rushd Ul Hidayah</h3>
+                                <p className="text-white font-bold text-xl leading-tight uppercase tracking-widest">Rushd Ul Hidayah</p>
                                 <p className="text-amber-500 text-xs font-bold tracking-[0.3em]">QURAN ACADEMY</p>
                             </div>
                         )}
@@ -51,7 +51,7 @@ export function Footer() {
               <div>
                   <div className="flex items-center space-x-3 mb-8">
                       <div className="section-accent"></div>
-                      <h4 className="text-white font-bold tracking-widest uppercase text-xs">Our Courses</h4>
+                      <p className="text-white font-bold tracking-widest uppercase text-xs">Our Courses</p>
                   </div>
                   <ul className="space-y-4">
                       {courses.slice(0, 5).map(course => (
@@ -66,7 +66,7 @@ export function Footer() {
               <div>
                   <div className="flex items-center space-x-3 mb-8">
                       <div className="section-accent"></div>
-                      <h4 className="text-white font-bold tracking-widest uppercase text-xs">Quick Links</h4>
+                      <p className="text-white font-bold tracking-widest uppercase text-xs">Quick Links</p>
                   </div>
                   <ul className="grid grid-cols-2 gap-y-4 gap-x-4">
                       {navLinks.map(link => (
@@ -82,7 +82,7 @@ export function Footer() {
               <div>
                   <div className="flex items-center space-x-3 mb-8">
                       <div className="section-accent"></div>
-                      <h4 className="text-white font-bold tracking-widest uppercase text-xs">Contact Us</h4>
+                      <p className="text-white font-bold tracking-widest uppercase text-xs">Contact Us</p>
                   </div>
                   <div className="space-y-3">
                       <a href="mailto:quranacademy.rushd@gmail.com" className="contact-card p-4 rounded-xl flex items-start space-x-4">

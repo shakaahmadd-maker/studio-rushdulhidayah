@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Precise alignment to reference image */}
+      {/* Hero Section */}
       <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center text-center text-white px-4 py-16 overflow-hidden">
         {heroImage && (
           <Image 
@@ -37,12 +37,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 to-slate-900/95 z-10"></div>
         
         <div className="relative z-20 max-w-4xl mx-auto w-full flex flex-col items-center">
-          {/* Main Title */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black leading-[1.1] tracking-tight uppercase mb-8 text-center">
-            ONLINE QURAN <span className="text-accent inline-block relative">LEARNING<span className="absolute bottom-1 left-0 w-full h-[3px] md:h-2 bg-accent"></span></span>
-            <br />
-            ACADEMY
+          {/* Main Title - H1 */}
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black leading-[1.1] tracking-tight uppercase mb-6 text-center">
+            Online Quran Classes for Kids &amp; Adults &ndash; <span className="text-accent inline-block relative">Rushd Ul Hidayah<span className="absolute bottom-1 left-0 w-full h-[3px] md:h-2 bg-accent"></span></span> Academy
           </h1>
+
+          {/* Subtitle / Paragraph */}
+          <p className="text-sm sm:text-xl md:text-2xl font-bold uppercase tracking-widest text-slate-200 mb-8 text-center">
+            Online Quran Learning Academy
+          </p>
           
           {/* Arabic Text & Translation */}
           <div className="mb-8 px-2 w-full">
@@ -99,6 +102,12 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-5">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-primary uppercase tracking-tight">
+              Learn Quran Online with <span className="text-amber-500">Qualified Tutors</span>
+            </h2>
+            <div className="w-20 h-1.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col items-center text-center p-6 rounded-2xl hover:bg-slate-50 transition-colors group">
@@ -117,7 +126,7 @@ export default function Home() {
       <main className="container mx-auto px-5 py-20 bg-slate-50/50">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-primary uppercase tracking-tight">
-            EXPLORE OUR <span className="text-amber-500">COURSES</span>
+            Explore Our <span className="text-amber-500">Online Quran Courses</span>
           </h2>
           <div className="w-20 h-1.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
           <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-center">Structured learning programs designed for excellence in Quranic education.</p>
@@ -146,7 +155,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-extrabold text-primary mb-4 leading-tight group-hover:text-amber-600 transition-colors">{course.title}</h3>
+                  <h3 className="text-xl font-extrabold text-primary mb-4 leading-tight transition-colors">
+                    <Link href={`/courses/${course.slug}`} className="hover:text-amber-600 transition-colors">
+                      {course.title}
+                    </Link>
+                  </h3>
                   <p className="text-sm text-slate-500 leading-relaxed mb-8 flex-1 text-justify">
                     {course.shortDescription}
                   </p>
@@ -169,9 +182,9 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-4">
-                <h4 className="text-amber-500 font-black tracking-[0.3em] text-xs uppercase">Your Trusted Partner</h4>
+                <p className="text-amber-500 font-black tracking-[0.3em] text-xs uppercase">Your Trusted Partner</p>
                 <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight">
-                  Why Choose <span className="text-amber-500">Rushd Ul Hidayah?</span>
+                  Why Choose <span className="text-amber-500">Rushd Ul Hidayah Quran Academy?</span>
                 </h2>
                 <div className="w-24 h-2 bg-amber-500 rounded-full"></div>
               </div>
@@ -199,7 +212,7 @@ export default function Home() {
         <div className="container mx-auto px-5">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-primary uppercase mb-6">
-              Everything You <span className="text-amber-500">Need to Know</span>
+              Everything You Need to Know About Our <span className="text-amber-500">Online Quran Classes</span>
             </h2>
             <p className="text-slate-500 text-lg">Detailed information about our class structures and methodologies.</p>
           </div>
@@ -209,6 +222,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Final Free Trial CTA Section */}
       <GiftOfKnowledgeCTA />
     </div>
   );

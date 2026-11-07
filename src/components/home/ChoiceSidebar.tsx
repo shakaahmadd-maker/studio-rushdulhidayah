@@ -66,7 +66,7 @@ export function ChoiceSidebar() {
             <p className="text-slate-600 text-lg leading-relaxed mb-8 font-medium italic border-l-4 border-accent pl-6 text-center md:text-justify">
                 {currentContent.description}
             </p>
-            <h4 className="font-black text-primary mb-6 uppercase tracking-widest text-sm text-center md:text-left">{currentContent.subheading}</h4>
+            <h3 className="font-black text-primary mb-6 uppercase tracking-widest text-sm text-center md:text-left">Experienced Quran Teachers and Flexible Scheduling</h3>
             <ul className="space-y-4">
                 {currentContent.points.map((point, index) => (
                     <li key={index} className="flex items-center gap-4 text-base text-slate-500 font-bold">

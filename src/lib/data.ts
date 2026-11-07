@@ -16,63 +16,63 @@ export const newCourses = [
     { 
         id: 1,
         slug: 'noorani-qaida',
-        title: "Basic Noorani Qaida Course", 
+        title: "Online Noorani Qaida Course for Beginners", 
         imageId: "new-course-1",
         shortDescription: "Suitable for beginners of all ages, both male and female students can join this course. It is the start of your beautiful learning journey." 
     },
     { 
         id: 2,
         slug: 'quran-reading',
-        title: "Quran Reading Course", 
+        title: "Online Quran Reading Course with Tajweed", 
         imageId: "new-course-2",
         shortDescription: "This course is designed for both adults and children, to learn and improve your Quran recitation with Tajweed." 
     },
     { 
         id: 3,
         slug: 'quran-memorization',
-        title: "Quran Memorization Course", 
+        title: "Online Quran Memorization (Hifz) Course", 
         imageId: "new-course-3",
         shortDescription: "Our expert Quran teachers will help you memorize the surah and verses of this Holy book in the most effective manner." 
     },
     { 
         id: 4,
         slug: 'quran-translation',
-        title: "Quran Translation Course", 
+        title: "Online Quran Translation Course", 
         imageId: "new-course-4",
         shortDescription: "We help students learn and understand the teachings of the Quran through verse by verse translation." 
     },
     { 
         id: 5,
         slug: 'islamic-studies-for-kids',
-        title: "Islamic Studies For Kids", 
+        title: "Islamic Studies for Kids Online", 
         imageId: "new-course-5",
         shortDescription: "Designed for kids of all ages, our course helps your children's hearts shine with the brightness of Islamic teachings." 
     },
     { 
         id: 6,
         slug: 'asaan-namaz-course',
-        title: "Asaan Namaz Course", 
+        title: "Asaan Namaz Course – Learn Salah Online", 
         imageId: "new-course-6",
         shortDescription: "We enable you to learn the right way of offering Salah through specialized online step-by-step guidance." 
     },
     { 
         id: 7,
         slug: '40-hadees-course',
-        title: "40 Hadees Course", 
+        title: "40 Hadith (Hadees) Course Online", 
         imageId: "new-course-7",
         shortDescription: "Learn 40 of the most powerful Hadith and use them to inculcate a true Muslim character in yourself." 
     },
     { 
         id: 8,
         slug: '40-basic-duain-course',
-        title: "40 Basic Dua'in Course", 
+        title: "40 Basic Duas Course", 
         imageId: "new-course-8",
         shortDescription: "Learn the best duas and small prayers for your daily routine and enrich your every act with Allah's blessings." 
     },
     { 
         id: 9,
         slug: 'additional-courses',
-        title: "Additional Courses", 
+        title: "Custom Quran Courses", 
         imageId: "new-course-9",
         shortDescription: "We also offer customized courses to suit your unique Quran learning needs. Get in touch with us for a detailed overview." 
     }
@@ -183,58 +183,58 @@ export const courses = [
 export const features = [
     {
         icon: GraduationCap,
-        title: "Online Quran Classes",
+        title: "Live Online Quran Classes",
         description: "Designed several different online courses to help kids and adults learn to read, memorize and understand."
     },
     {
         icon: Users,
-        title: "Tailor-Made Courses",
+        title: "Tailor-Made Quran Courses",
         description: "Realizing the uniqueness of your individual needs, we cater to small groups and families requiring specific learning."
     },
     {
         icon: Monitor,
-        title: "Remote Learning",
+        title: "Learn Quran Online from Anywhere",
         description: "With our online platform, you can opt for a variety of Quran classes no matter where you live in the world."
     },
     {
         icon: ThumbsUp,
-        title: "Flexible and Convenient",
+        title: "Flexible Quran Class Timings",
         description: "Our classes are flexible and convenient, allowing you to learn from home according to your preferred schedule."
     }
 ];
 
 export const classTypes = [
     {
-        title: "Noorani Qaida Classes",
-        content: "Master the foundations of Quranic reading with our specialized instructors. This session covers phonetics, pronunciation, and basic grammar rules required for fluent recitation."
+        title: "Noorani Qaida Classes Online",
+        content: "Master the foundations of Quranic reading with our specialized instructors. This session covers Arabic phonetics, correct pronunciation, and basic Tajweed rules required for fluent recitation. Students learn letter recognition, vowels, and word connections in an easy step-by-step manner."
     },
     {
-        title: "Convenient Quran Classes",
-        content: "Learn at your own pace from anywhere in the world. Our flexible scheduling allows you to fit Quranic education into your busy life."
+        title: "Convenient Quran Classes from Home",
+        content: "Learn at your own pace from the comfort of your home anywhere in the world. Our flexible scheduling allows you to easily fit Quranic education into your busy family routine. Whether early morning or evening hours, our qualified tutors are available 24/7 to accommodate your time zone."
     },
     {
-        title: "Online Quran Classes",
-        content: "Interactive, one-on-one sessions with our qualified tutors using state-of-the-art video conferencing tools."
+        title: "How Our Online Quran Classes Work",
+        content: "Our online Quran classes feature interactive, one-on-one sessions with certified tutors using modern video conferencing tools. We provide structured lesson plans, live pronunciation correction, and weekly progress tracking for every student. Learners receive dedicated personal attention tailored specifically to their individual pace and goals."
     },
     {
-        title: "Quran Classes Via Skype & Zoom",
-        content: "We use popular and easy-to-use platforms like Skype and Zoom for our live classes, ensuring a smooth learning experience."
+        title: "Quran Classes via Skype and Zoom",
+        content: "We utilize popular and accessible platforms like Zoom and Skype to deliver high-quality live classes. Every lesson features digital screen sharing, interactive Quran software, and crystal-clear real-time audio interaction. Getting started is seamless, requiring no complicated software setup or technical expertise."
     },
     {
-        title: "Home Based Quran Classes",
-        content: "Enjoy the comfort and convenience of learning from your own home. No need to travel, saving you time and effort."
+        title: "Home-Based Quran Classes",
+        content: "Enjoy the safety, comfort, and convenience of studying the Holy Quran directly from home. Eliminate commuting stress and save valuable travel time for parents and children alike. Create a focused, distraction-free Islamic learning atmosphere in the familiar surroundings of your household."
     },
     {
-        title: "Islamic Studies For Kids Classes",
-        content: "Engaging and fun classes designed to teach children the fundamentals of Islam in an enjoyable way."
+        title: "Islamic Studies for Kids Classes",
+        content: "Our fun and engaging classes are specially designed to teach young children the beautiful fundamentals of Islam. Kids explore the Five Pillars of Islam, inspiring stories of the Prophets, daily Sunnah prayers, and moral manners. Our child-friendly teaching style keeps young learners enthusiastic, motivated, and spiritually connected."
     },
     {
-        title: "Self-paced Quran Classes",
-        content: "Progress at a speed that suits you. Our tutors adapt their teaching methods to your individual learning style."
+        title: "Self-Paced Quran Classes",
+        content: "Progress at a speed that fits your individual learning capacity and lifestyle commitments. Our instructors adapt their teaching methodology to your personal memory retention and recitation strengths. Whether you prefer an intensive daily program or relaxed weekend sessions, the learning schedule remains entirely in your hands."
     },
     {
-        title: "Benefits Of Online Quran Classes",
-        content: "Access to the best tutors globally, flexible scheduling, personalized attention, and a safe learning environment."
+        title: "Benefits of Online Quran Classes",
+        content: "Online Quran education provides direct access to certified Islamic scholars and experienced Qaris worldwide. Students benefit from affordable monthly tuition fees, flexible schedules, and customized one-on-one attention without geographical limitations. Parents can effortlessly monitor daily lessons and observe continuous improvement in recitation and Tajweed."
     }
 ];
 
