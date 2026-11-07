@@ -4,7 +4,7 @@ import { useUser } from '@/firebase/auth/use-user';
 import { useAuth } from '@/firebase';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { format } from 'date-fns';
-import { Loader2, LogOut, Settings, RefreshCw, AlertCircle } from 'lucide-react';
+import { Loader2, LogOut, RefreshCw, AlertCircle, BookOpen, Users, Mail, Sparkles } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { courses } from '@/lib/data';
@@ -14,6 +14,8 @@ import { signOut } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 import { BackButton } from '@/components/BackButton';
 import { fetchRegistrations, fetchContacts } from '@/lib/api-client';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { BlogManager } from '@/components/admin/BlogManager';
 
 export default function AdminPage() {
   const { user, loading: userLoading } = useUser();
@@ -21,6 +23,7 @@ export default function AdminPage() {
   const router = useRouter();
   const { toast } = useToast();
   const [loggingOut, setLoggingOut] = useState(false);
+  const [activeTab, setActiveTab] = useState('blogs');
 
   const [registrations, setRegistrations] = useState<any[]>([]);
   const [registrationsLoading, setRegistrationsLoading] = useState(true);
@@ -58,10 +61,8 @@ export default function AdminPage() {
   }, []);
 
   useEffect(() => {
-    if (user) {
-      loadData();
-    }
-  }, [user, loadData]);
+    loadData();
+  }, [loadData]);
 
   const handleLogout = async () => {
     if (!auth) return;
@@ -100,182 +101,229 @@ export default function AdminPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 max-w-7xl">
       <BackButton />
-      <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-12">
+      
+      {/* Header Banner */}
+      <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-10">
         <div>
-          <h1 className="text-4xl font-headline font-bold tracking-tight text-primary sm:text-5xl">
+          <span className="text-xs font-bold text-accent uppercase tracking-widest block mb-1">
+            Management Portal
+          </span>
+          <h1 className="text-3xl sm:text-5xl font-black text-primary">
             Admin Dashboard
           </h1>
-          <p className="mt-2 max-w-2xl text-lg text-muted-foreground">
-            {user ? `Welcome, ${user.email}.` : 'Manage registrations and messages.'}
+          <p className="mt-2 text-slate-500 text-sm sm:text-base">
+            {user ? `Logged in as ${user.email}.` : 'Manage blog posts, registrations, and student inquiries.'}
           </p>
         </div>
         <div className="flex gap-2 self-start md:self-center">
-          <Button variant="outline" onClick={loadData} disabled={registrationsLoading || contactsLoading}>
+          <Button variant="outline" onClick={loadData} disabled={registrationsLoading || contactsLoading} className="rounded-xl">
             <RefreshCw className={`mr-2 h-4 w-4 ${registrationsLoading || contactsLoading ? 'animate-spin' : ''}`} />
             Refresh
           </Button>
-          <Button variant="destructive" onClick={handleLogout} disabled={loggingOut}>
-            {loggingOut ? (
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            ) : (
-              <LogOut className="mr-2 h-4 w-4" />
-            )}
-            Logout
-          </Button>
+          {user && (
+            <Button variant="destructive" onClick={handleLogout} disabled={loggingOut} className="rounded-xl">
+              {loggingOut ? (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              ) : (
+                <LogOut className="mr-2 h-4 w-4" />
+              )}
+              Logout
+            </Button>
+          )}
         </div>
       </div>
 
-      <div className="space-y-8">
-        {/* Registrations Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Recent Registrations</CardTitle>
-            <CardDescription>
-              {registrationsLoading
-                ? 'Loading registrations...'
-                : registrationsError
-                ? 'Unable to load registrations from the database.'
-                : registrations.length > 0
-                ? `Showing ${registrations.length} registrations.`
-                : 'No registrations yet.'}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {registrationsLoading ? (
-              <div className="flex items-center justify-center py-12 text-muted-foreground">
-                <Loader2 className="h-8 w-8 animate-spin mr-3 text-primary" />
-                <span>Fetching registrations from database...</span>
-              </div>
-            ) : registrationsError ? (
-              <div className="p-6 bg-destructive/10 text-destructive rounded-xl flex items-center gap-3">
-                <AlertCircle className="h-6 w-6 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold">Error Loading Registrations</p>
-                  <p className="text-sm">{registrationsError}</p>
-                </div>
-              </div>
-            ) : registrations.length > 0 ? (
-              <Accordion type="single" collapsible className="w-full">
-                {registrations.map((reg: any) => (
-                  <AccordionItem value={String(reg.id)} key={reg.id}>
-                    <AccordionTrigger>
-                      <div className="flex justify-between w-full pr-4">
-                        <div className="text-left">
-                          <p className="font-semibold">
-                            {reg.studentName} ({reg.studentAge})
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {getCourseTitle(reg.course)}
-                          </p>
-                        </div>
-                        <p className="text-sm text-muted-foreground self-center">
-                          {formatDate(reg.createdAt)}
-                        </p>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="p-4 bg-secondary/50 rounded-md">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-                        <p>
-                          <span className="font-semibold text-primary">Email:</span> {reg.email}
-                        </p>
-                        <p>
-                          <span className="font-semibold text-primary">Phone:</span> {reg.phone}
-                        </p>
-                        <p>
-                          <span className="font-semibold text-primary">Country:</span> {reg.country}
-                        </p>
-                        <p>
-                          <span className="font-semibold text-primary">Gender:</span>{' '}
-                          <span className="capitalize">{reg.gender}</span>
-                        </p>
-                        <p>
-                          <span className="font-semibold text-primary">Schedule:</span>{' '}
-                          {reg.classDays}
-                        </p>
-                        <p>
-                          <span className="font-semibold text-primary">Tutor:</span>{' '}
-                          <span className="capitalize">{reg.tutorPreference}</span>
-                        </p>
-                        {reg.message && (
-                          <p className="md:col-span-2 pt-2 mt-2 border-t border-border">
-                            <span className="font-semibold text-primary">Message:</span>{' '}
-                            {reg.message}
-                          </p>
-                        )}
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            ) : (
-              <div className="text-center py-12 text-muted-foreground">
-                <p>No registrations have been submitted yet.</p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
+      {/* Tabs */}
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
+        <TabsList className="bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm inline-flex h-auto gap-1">
+          <TabsTrigger
+            value="blogs"
+            className="rounded-xl px-5 py-2.5 text-xs font-bold uppercase tracking-wider data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md transition-all flex items-center gap-2"
+          >
+            <BookOpen className="w-4 h-4 text-accent" />
+            <span>Blog Management</span>
+          </TabsTrigger>
+          <TabsTrigger
+            value="registrations"
+            className="rounded-xl px-5 py-2.5 text-xs font-bold uppercase tracking-wider data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md transition-all flex items-center gap-2"
+          >
+            <Users className="w-4 h-4" />
+            <span>Registrations</span>
+            <span className="ml-1 px-2 py-0.5 rounded-full text-[10px] bg-slate-100 text-slate-700 data-[state=active]:bg-white/20 data-[state=active]:text-white">
+              {registrations.length}
+            </span>
+          </TabsTrigger>
+          <TabsTrigger
+            value="contacts"
+            className="rounded-xl px-5 py-2.5 text-xs font-bold uppercase tracking-wider data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md transition-all flex items-center gap-2"
+          >
+            <Mail className="w-4 h-4" />
+            <span>Messages</span>
+            <span className="ml-1 px-2 py-0.5 rounded-full text-[10px] bg-slate-100 text-slate-700 data-[state=active]:bg-white/20 data-[state=active]:text-white">
+              {contacts.length}
+            </span>
+          </TabsTrigger>
+        </TabsList>
 
-        {/* Contact Form Messages Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Contact Form Messages</CardTitle>
-            <CardDescription>
-              {contactsLoading
-                ? 'Loading contact messages...'
-                : contactsError
-                ? 'Unable to load messages from the database.'
-                : contacts.length > 0
-                ? `Showing ${contacts.length} messages.`
-                : 'No messages yet.'}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {contactsLoading ? (
-              <div className="flex items-center justify-center py-12 text-muted-foreground">
-                <Loader2 className="h-8 w-8 animate-spin mr-3 text-primary" />
-                <span>Fetching contact messages from database...</span>
-              </div>
-            ) : contactsError ? (
-              <div className="p-6 bg-destructive/10 text-destructive rounded-xl flex items-center gap-3">
-                <AlertCircle className="h-6 w-6 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold">Error Loading Messages</p>
-                  <p className="text-sm">{contactsError}</p>
+        {/* Tab 1: Blog Management */}
+        <TabsContent value="blogs">
+          <BlogManager />
+        </TabsContent>
+
+        {/* Tab 2: Registrations */}
+        <TabsContent value="registrations">
+          <Card className="rounded-3xl border-slate-100 shadow-sm">
+            <CardHeader>
+              <CardTitle>Recent Student Registrations</CardTitle>
+              <CardDescription>
+                {registrationsLoading
+                  ? 'Loading registrations...'
+                  : registrationsError
+                  ? 'Unable to load registrations from the database.'
+                  : registrations.length > 0
+                  ? `Showing ${registrations.length} registered students.`
+                  : 'No registrations yet.'}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {registrationsLoading ? (
+                <div className="flex items-center justify-center py-12 text-muted-foreground">
+                  <Loader2 className="h-8 w-8 animate-spin mr-3 text-primary" />
+                  <span>Fetching registrations...</span>
                 </div>
-              </div>
-            ) : contacts.length > 0 ? (
-              <Accordion type="single" collapsible className="w-full">
-                {contacts.map((msg: any) => (
-                  <AccordionItem value={String(msg.id)} key={msg.id}>
-                    <AccordionTrigger>
-                      <div className="flex justify-between w-full pr-4">
-                        <div className="text-left">
-                          <p className="font-semibold">{msg.subject}</p>
-                          <p className="text-sm text-muted-foreground">
-                            {msg.name} - {msg.email}
+              ) : registrationsError ? (
+                <div className="p-6 bg-destructive/10 text-destructive rounded-xl flex items-center gap-3">
+                  <AlertCircle className="h-6 w-6 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Error Loading Registrations</p>
+                    <p className="text-sm">{registrationsError}</p>
+                  </div>
+                </div>
+              ) : registrations.length > 0 ? (
+                <Accordion type="single" collapsible className="w-full">
+                  {registrations.map((reg: any) => (
+                    <AccordionItem value={String(reg.id)} key={reg.id}>
+                      <AccordionTrigger>
+                        <div className="flex justify-between w-full pr-4">
+                          <div className="text-left">
+                            <p className="font-semibold">
+                              {reg.studentName} ({reg.studentAge} yrs)
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {getCourseTitle(reg.course)}
+                            </p>
+                          </div>
+                          <p className="text-sm text-muted-foreground self-center">
+                            {formatDate(reg.createdAt)}
                           </p>
                         </div>
-                        <p className="text-sm text-muted-foreground self-center">
-                          {formatDate(msg.createdAt)}
-                        </p>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="p-4 bg-secondary/50 rounded-md">
-                      {msg.message}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            ) : (
-              <div className="text-center py-12 text-muted-foreground">
-                <p>No contact messages have been submitted yet.</p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="p-4 bg-slate-50 rounded-xl">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm">
+                          <p>
+                            <span className="font-semibold text-primary">Email:</span> {reg.email}
+                          </p>
+                          <p>
+                            <span className="font-semibold text-primary">Phone:</span> {reg.phone}
+                          </p>
+                          <p>
+                            <span className="font-semibold text-primary">Country:</span> {reg.country}
+                          </p>
+                          <p>
+                            <span className="font-semibold text-primary">Gender:</span>{' '}
+                            <span className="capitalize">{reg.gender}</span>
+                          </p>
+                          <p>
+                            <span className="font-semibold text-primary">Schedule:</span>{' '}
+                            {reg.classDays}
+                          </p>
+                          <p>
+                            <span className="font-semibold text-primary">Tutor:</span>{' '}
+                            <span className="capitalize">{reg.tutorPreference}</span>
+                          </p>
+                          {reg.message && (
+                            <p className="md:col-span-2 pt-2 mt-2 border-t border-slate-200">
+                              <span className="font-semibold text-primary">Message:</span>{' '}
+                              {reg.message}
+                            </p>
+                          )}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              ) : (
+                <div className="text-center py-12 text-muted-foreground">
+                  <p>No registrations have been submitted yet.</p>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Tab 3: Contact Messages */}
+        <TabsContent value="contacts">
+          <Card className="rounded-3xl border-slate-100 shadow-sm">
+            <CardHeader>
+              <CardTitle>Contact Form Messages</CardTitle>
+              <CardDescription>
+                {contactsLoading
+                  ? 'Loading contact messages...'
+                  : contactsError
+                  ? 'Unable to load messages from the database.'
+                  : contacts.length > 0
+                  ? `Showing ${contacts.length} messages.`
+                  : 'No messages yet.'}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {contactsLoading ? (
+                <div className="flex items-center justify-center py-12 text-muted-foreground">
+                  <Loader2 className="h-8 w-8 animate-spin mr-3 text-primary" />
+                  <span>Fetching contact messages...</span>
+                </div>
+              ) : contactsError ? (
+                <div className="p-6 bg-destructive/10 text-destructive rounded-xl flex items-center gap-3">
+                  <AlertCircle className="h-6 w-6 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Error Loading Messages</p>
+                    <p className="text-sm">{contactsError}</p>
+                  </div>
+                </div>
+              ) : contacts.length > 0 ? (
+                <Accordion type="single" collapsible className="w-full">
+                  {contacts.map((msg: any) => (
+                    <AccordionItem value={String(msg.id)} key={msg.id}>
+                      <AccordionTrigger>
+                        <div className="flex justify-between w-full pr-4">
+                          <div className="text-left">
+                            <p className="font-semibold">{msg.subject}</p>
+                            <p className="text-sm text-muted-foreground">
+                              {msg.name} ({msg.email})
+                            </p>
+                          </div>
+                          <p className="text-sm text-muted-foreground self-center">
+                            {formatDate(msg.createdAt)}
+                          </p>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="p-4 bg-slate-50 rounded-xl text-slate-700 leading-relaxed">
+                        {msg.message}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              ) : (
+                <div className="text-center py-12 text-muted-foreground">
+                  <p>No contact messages have been submitted yet.</p>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }

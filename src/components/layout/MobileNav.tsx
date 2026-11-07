@@ -23,6 +23,7 @@ export function MobileNav() {
   const mainLinks = [
     { label: 'Courses', href: '/courses' },
     { label: 'About', href: '/about' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Register', href: '/register' },
     { label: 'FAQ', href: '/faq' },
   ];

@@ -7,6 +7,7 @@ export const navLinks = [
   { href: "/tutors", label: "Tutors" },
   { href: "/courses", label: "Courses" },
   { href: "/read-quran", label: "Read Quran" },
+  { href: "/blog", label: "Blog" },
   { href: "/register", label: "Register" },
   { href: "/certificates", label: "Certificate" },
   { href: "/faq", label: "FAQ" },
